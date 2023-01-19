@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public enum Sides { Left, Mid, Right }
+public enum HorizontalSide { Left, Mid, Right }
 
-public class PlayerMovement : MonoBehaviour
+public class HorizontalSides : MonoBehaviour
 {
-    public Sides side = Sides.Mid;
+    public HorizontalSide horizontalSide = HorizontalSide.Mid;
 
     public float xPosition;
     public float xValue;
@@ -35,29 +35,29 @@ public class PlayerMovement : MonoBehaviour
 
         if (swipeLeft)
         {
-            if (side == Sides.Mid)
+            if (horizontalSide == HorizontalSide.Mid)
             {
                 xPosition = -xValue;
-                side = Sides.Left;
+                horizontalSide = HorizontalSide.Left;
             }
-            else if (side == Sides.Right)
+            else if (horizontalSide == HorizontalSide.Right)
             {
                 xPosition = 0;
-                side = Sides.Mid;
+                horizontalSide = HorizontalSide.Mid;
             }
         }
 
         if (swipeRight)
         {
-            if (side == Sides.Mid)
+            if (horizontalSide == HorizontalSide.Mid)
             {
                 xPosition = xValue;
-                side = Sides.Right;
+                horizontalSide = HorizontalSide.Right;
             }
-            else if (side == Sides.Left)
+            else if (horizontalSide == HorizontalSide.Left)
             {
                 xPosition = 0;
-                side = Sides.Mid;
+                horizontalSide = HorizontalSide.Mid;
             }
         }
 
