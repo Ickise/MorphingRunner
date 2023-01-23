@@ -8,11 +8,13 @@ public class Scoring : MonoBehaviour
 
     public float timer;
 
+    public float timeToGainScore = 2f;
+
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer >= 2f)
+        if (timer >= timeToGainScore)
         {
             score++;
             timer = 0f;

@@ -8,8 +8,7 @@ public enum VerticalSide { Up, Mid, Down }
 public class VerticalSides : MonoBehaviour
 {
     HorizontalSide horizontalSide;
-    public VerticalSide verticalSide = VerticalSide.Mid;
-
+    public static VerticalSide verticalSide = VerticalSide.Mid;
 
     public float yPosition;
     public float yValue;
@@ -26,7 +25,6 @@ public class VerticalSides : MonoBehaviour
 
     void Start()
     {
-
         playerCharacterController = GetComponent<CharacterController>();
     }
 

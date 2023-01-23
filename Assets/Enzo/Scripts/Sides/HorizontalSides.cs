@@ -7,7 +7,7 @@ public enum HorizontalSide { Left, Mid, Right }
 
 public class HorizontalSides : MonoBehaviour
 {
-    public HorizontalSide horizontalSide = HorizontalSide.Mid;
+    public static HorizontalSide horizontalSide = HorizontalSide.Mid;
 
     public float xPosition;
     public float xValue;
