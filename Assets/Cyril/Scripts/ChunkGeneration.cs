@@ -28,41 +28,16 @@ public class ChunkGeneration : MonoBehaviour
     private void GenerateChunkObstacle()
     {
         int RandomN = Random.Range(0, _listChunk.Count);
-        if(_spacingBool == false)
-        {
-            Debug.Log("false");
-            _spacing = _spacing + _listChunk[RandomN]._size;
-        }
-        _spacingBool = false;
+        _spacing = _spacing + _listChunk[RandomN]._size;
         Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
-        if(_listChunk[RandomN]._size.z > 10)
-        {
-            _spacingPlus = _listChunk[RandomN]._size.z;
-            _spacing.z = _spacing.z + _spacingPlus;  
-            _spacingPlus = 0;
-            _spacingBool = true;
-        }
-        _numberSpawnChunk++;
+        _spacing = _spacing + _listChunk[RandomN]._size;
     }
     private GameObject GenerateChunkPause()
     {
         int RandomN = Random.Range(0, _listChunkPause.Count);
-        if(_spacingBool == false)
-        {
-            _spacing = _spacing + _listChunk[RandomN]._size;
-        }
-        _spacingBool = false;
+        _spacing = _spacing + _listChunkPause[RandomN]._size;
         GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
-
-        Debug.Log(_pointStart.transform.position + "Start"  + chunk.name);
-        if(_listChunk[RandomN]._size.z > 10)
-        {
-            _spacingPlus = _listChunk[RandomN]._size.z;
-            _spacing.z = _spacing.z + _spacingPlus;  
-            _spacingPlus = 0;
-            _spacingBool = true;
-        }
-        _numberSpawnChunk++;
+        _spacing = _spacing + _listChunkPause[RandomN]._size;
         return chunk;
     }
     public void Generate()

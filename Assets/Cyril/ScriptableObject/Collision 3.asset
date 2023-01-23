@@ -15,4 +15,4 @@ MonoBehaviour:
   _visual: {fileID: 2462711406857357145, guid: 6b090dfe6b4a7694096268e6791328ef, type: 3}
   _pointEntry: {fileID: 0}
   _pointExit: {fileID: 0}
-  _size: {x: 0, y: 0, z: 10}
+  _size: {x: 0, y: 0, z: 5}

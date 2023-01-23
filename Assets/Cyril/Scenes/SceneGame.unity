@@ -160,14 +160,15 @@ MonoBehaviour:
   _listChunkPause:
   - {fileID: 11400000, guid: 12e85fd5dc5a1af479a42143faf9ce75, type: 2}
   - {fileID: 11400000, guid: abb9a949d3ef46d4abe2b66d0517f6a8, type: 2}
-  _listSpawnChunk: []
   _pointStart: {fileID: 1365255009}
   _spacing: {x: 0, y: 0, z: 0}
+  _spacingPlus: 0
   _chunkFinish: {fileID: 0}
   _numberSpawnChunk: 0
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
   _newSeed: 0
+  _spacingBool: 0
   _mySeed: 34583
   _seed: 0
 --- !u!4 &144706968
