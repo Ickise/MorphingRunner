@@ -43,7 +43,6 @@ public class ChunkGeneration : MonoBehaviour
         {       
             GenerateChunkObstacle();
             _chunkFinish = GenerateChunkPause();
-
         }
         MovePoint();
         _numberSpawnChunk = 0;
