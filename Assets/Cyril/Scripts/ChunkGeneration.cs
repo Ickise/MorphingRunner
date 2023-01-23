@@ -8,11 +8,13 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private List<ChunkData> _listChunkPause;
     [SerializeField] private GameObject _pointStart;
     [SerializeField] private Vector3 _spacing;
+    [SerializeField] private float _spacingPlus;
     [SerializeField] private GameObject _chunkFinish;
     [SerializeField] private int _numberSpawnChunk;
     [SerializeField] private int _numberOfSpawnChunkObs = 10;
     [SerializeField] private bool _movePoint;
     [SerializeField] private bool _newSeed;
+    [SerializeField] private bool _spacingBool;
     [SerializeField] private int _mySeed;
     [SerializeField] private int _seed;
     private void Awake() 
@@ -26,13 +28,40 @@ public class ChunkGeneration : MonoBehaviour
     private void GenerateChunkObstacle()
     {
         int RandomN = Random.Range(0, _listChunk.Count);
-        Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + (_spacing * _numberSpawnChunk), Quaternion.identity);
+        if(_spacingBool == false)
+        {
+            Debug.Log("false");
+            _spacing = _spacing + _listChunk[RandomN]._size;
+        }
+        _spacingBool = false;
+        Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
+        if(_listChunk[RandomN]._size.z > 10)
+        {
+            _spacingPlus = _listChunk[RandomN]._size.z;
+            _spacing.z = _spacing.z + _spacingPlus;  
+            _spacingPlus = 0;
+            _spacingBool = true;
+        }
         _numberSpawnChunk++;
     }
     private GameObject GenerateChunkPause()
     {
         int RandomN = Random.Range(0, _listChunkPause.Count);
-        GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + (_spacing * _numberSpawnChunk), Quaternion.identity);
+        if(_spacingBool == false)
+        {
+            _spacing = _spacing + _listChunk[RandomN]._size;
+        }
+        _spacingBool = false;
+        GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
+
+        Debug.Log(_pointStart.transform.position + "Start"  + chunk.name);
+        if(_listChunk[RandomN]._size.z > 10)
+        {
+            _spacingPlus = _listChunk[RandomN]._size.z;
+            _spacing.z = _spacing.z + _spacingPlus;  
+            _spacingPlus = 0;
+            _spacingBool = true;
+        }
         _numberSpawnChunk++;
         return chunk;
     }

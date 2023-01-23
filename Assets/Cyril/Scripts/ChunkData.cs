@@ -8,5 +8,5 @@ public class ChunkData : ScriptableObject
    public GameObject _visual;
    public GameObject _pointEntry;
    public GameObject _pointExit;
-   public Vector2 _size = new Vector2(10f,10f);
+   public Vector3 _size = new Vector3(0f,0f,0f);
 }
