@@ -1,8 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DNAToCollect : MonoBehaviour
 {
     Scoring scoring;
+
+    [SerializeField] DNA[] listDNA = new DNA[3];
+    [SerializeField] int[] listSpecialDNA = new int[3];
 
     void Start()
     {
@@ -11,10 +15,17 @@ public class DNAToCollect : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("DNA"))
         {
-            scoring.score++;
-            Destroy(gameObject);
+            for (int i = 0; i < listDNA.Length; i++)
+            {
+                if (other.name == listDNA[i].dnaName + "(Clone)")
+                {
+                    listSpecialDNA[i]++;
+                    scoring.score++;
+                    Destroy(other.gameObject);
+                }
+            }
         }
     }
 }

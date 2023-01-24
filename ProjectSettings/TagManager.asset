@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Scoring
+  - DNA
   layers:
   - Default
   - TransparentFX
