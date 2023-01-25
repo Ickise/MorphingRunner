@@ -5,14 +5,13 @@ public class DNAToCollect : MonoBehaviour
 {
     Scoring scoring;
 
-
     [SerializeField] DNA[] listDNA = new DNA[3];
 
     [SerializeField] int[] listSpecialDNA = new int[3];
+    [SerializeField] int numberOfDNAToTransform = 10;
 
     [SerializeField] Button[] buttonList = new Button[3];
 
-    [SerializeField] int numberOfDNAToTransform = 10;
     [SerializeField] string stringButton;
     
     bool canTransform;
@@ -32,7 +31,7 @@ public class DNAToCollect : MonoBehaviour
 
                 if (canTransform && buttonList[i].name == stringButton)
                 {
-                    listSpecialDNA[i] = listSpecialDNA[i] - 10;
+                    listSpecialDNA[i] = listSpecialDNA[i] - numberOfDNAToTransform;
                     canTransform = false;
                 }
             }

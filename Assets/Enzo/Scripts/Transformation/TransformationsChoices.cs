@@ -46,6 +46,7 @@ public class TransformationsChoices : MonoBehaviour
     public void ChangeMesh(int meshIndex)
     {
         playerMesh.GetComponent<MeshFilter>().mesh = meshList[meshIndex];
+        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[meshIndex];
         ReturnInRealTime();
     }
 
