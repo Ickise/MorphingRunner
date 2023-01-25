@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _listChunk:
-  - {fileID: 11400000, guid: 2cbb72879f2a4264996f6eab050b5bf8, type: 2}
-  - {fileID: 11400000, guid: d9677242f376a014d97b75bfd2f0911a, type: 2}
+  - {fileID: 11400000, guid: 551d15f54f9bbf04ca6f8bfb16f7fc57, type: 2}
+  - {fileID: 11400000, guid: 306a41306cfc59149b74012521aab69c, type: 2}
   - {fileID: 11400000, guid: 5c6afa187dabfe44c93441e3c05a9eeb, type: 2}
   - {fileID: 11400000, guid: 7c2ecf199078efa45b6b3f43fd850e10, type: 2}
   _listChunkPause:
@@ -167,8 +167,8 @@ MonoBehaviour:
   _numberSpawnChunk: 0
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
-  _newSeed: 0
-  _mySeed: 34583
+  _newSeed: 1
+  _mySeed: 0
   _seed: 0
 --- !u!4 &144706968
 Transform:
