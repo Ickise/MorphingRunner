@@ -12,6 +12,11 @@ public class DNAToCollect : MonoBehaviour
 
     [SerializeField] Button[] buttonList = new Button[3];
 
+    [SerializeField] int numberOfDNAToTransform = 10;
+    [SerializeField] string stringButton;
+    
+    bool canTransform;
+
     void Start()
     {
         scoring = GameObject.FindWithTag("Scoring").GetComponent<Scoring>();
@@ -19,17 +24,29 @@ public class DNAToCollect : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < listDNA.Length; i++)
+        for (int i = 0; i < listSpecialDNA.Length; i++)
         {
-            if (listSpecialDNA[i] >= 10)
+            if (listSpecialDNA[i] >= numberOfDNAToTransform)
             {
                 buttonList[i].interactable = true;
+
+                if (canTransform && buttonList[i].name == stringButton)
+                {
+                    listSpecialDNA[i] = listSpecialDNA[i] - 10;
+                    canTransform = false;
+                }
             }
-            else
+            else if (listSpecialDNA[i] <= numberOfDNAToTransform && !canTransform)
             {
                 buttonList[i].interactable = false;
             }
         }
+    }
+
+    public void CanTransform(string _stringButton)
+    {
+        canTransform = true;
+        stringButton = _stringButton;
     }
 
     void OnTriggerEnter(Collider other)
