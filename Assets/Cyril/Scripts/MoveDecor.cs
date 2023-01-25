@@ -8,6 +8,10 @@ public class MoveDecor : MonoBehaviour
     
     void FixedUpdate()
     {
-        transform.position = transform.position + (new Vector3(0,0,-1) * Time.deltaTime * _speed);        
+        transform.position = transform.position + (new Vector3(0,0,-1) * Time.deltaTime * _speed);
+        if(transform.position.z < -100)
+        {
+            Destroy(this.gameObject,0);
+        }     
     }
 }

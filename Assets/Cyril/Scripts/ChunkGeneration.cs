@@ -14,7 +14,6 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private int _numberOfSpawnChunkObs = 10;
     [SerializeField] private bool _movePoint;
     [SerializeField] private bool _newSeed;
-    [SerializeField] private bool _spacingBool;
     [SerializeField] private int _mySeed;
     [SerializeField] private int _seed;
     private void Awake() 
@@ -24,6 +23,13 @@ public class ChunkGeneration : MonoBehaviour
     void Start()
     {
         Generate();
+    }
+    private void Update() 
+    {
+        if(_pointStart.transform.position.z < 150) 
+        {
+            Generate();        
+        }       
     }
     private void GenerateChunkObstacle()
     {
