@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0f423b880517d45921043a671ec10b, type: 3}
   m_Name: Collision level 1
   m_EditorClassIdentifier: 
-  _visual: {fileID: 6182446128811452843, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+  _visual: {fileID: 299800569784374698, guid: 5bd8b08c7db330a499b92bc52c1d41fb, type: 3}
   _pointEntry: {fileID: 0}
   _pointExit: {fileID: 0}
   _size: {x: 0, y: 0, z: 35}
