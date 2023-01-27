@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    public int score;
+    public uint score;
 
     public float timer;
 
-    public float timeToGainScore = 2f;
+    public float timeToGainScore = 1f;
 
     [SerializeField] Text scoreText;
 

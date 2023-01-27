@@ -4,17 +4,38 @@ using UnityEngine;
 
 public class TRexTransformation : MonoBehaviour
 {
-    bool isTransform;
+    bool isTransform = false;
+
+    Scoring scoring;
+
+    [SerializeField] uint scoreToLoose = 2;
+
+    void Start()
+    {
+        scoring = GameObject.FindWithTag("Scoring").GetComponent<Scoring>();
+    }
+
+    void Update()
+    {
+        scoring.timer += Time.deltaTime;
+
+        if (scoring.timer >= scoring.timeToGainScore && isTransform)
+        {
+            scoring.score -= scoreToLoose;
+            scoring.timer = 0f;
+        }
+    }
 
     public void TRexTransfo()
     {
         isTransform = true;
+    }
 
-        if(isTransform)
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Collider") && isTransform)
         {
-            // voir dans le script de cyril pour désactiver son life et le réactiver, voir pour que je compare tag avec les 
-            // obstacles et leur mettre le tag Collider pour les casser et les détruire. Mettre le bool en true puis en false
-            // une fois qu"on change de pouvoir pour éviter d'avoir tout et jongler avec les bool. 
+            Destroy(other.gameObject);
         }
     }
 }

@@ -499,6 +499,18 @@ MonoBehaviour:
           m_StringArgument: T-RexButton
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 998223892}
+        m_TargetAssemblyTypeName: TRexTransformation, Assembly-CSharp
+        m_MethodName: TRexTransfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &537193616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,6 +1240,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &998223882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998223880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9cbd59963dce04dad8986ad6ccd444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transformationActive: 0
 --- !u!114 &998223883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
@@ -1239,6 +1264,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2ea7e84ae727a4c8195d2693b075c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &998223884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998223880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6f582245953474a8904208c6502b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathEcrant: {fileID: 1260824411}
+  _scriptHumanTransformation: {fileID: 998223882}
+--- !u!114 &998223892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998223880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756cc5f59732c4449bf61c8e227cc247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToLoose: 2
 --- !u!1 &1010616723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,6 +2540,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 448521559}
+    - target: {fileID: 4752480639571468906, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: timeToGainScore
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400937, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_Enabled
       value: 1
