@@ -42,7 +42,6 @@ public class ChunkGeneration : MonoBehaviour
     {
         int RandomN = Random.Range(0, _listChunkPause.Count);
         _spacing = _spacing + _listChunkPause[RandomN]._size;
-        Debug.Log(_pointStart.transform.position + _spacing + "vector 3");
         GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
         _spacing = _spacing + _listChunkPause[RandomN]._size;
         return chunk;
@@ -55,8 +54,8 @@ public class ChunkGeneration : MonoBehaviour
             GenerateChunkObstacle();
             _chunkFinish = GenerateChunkPause();
         }
+        _spacing = Vector3.zero;
         MovePoint();
-
         _movePoint = false;
     }
     private void MovePoint()
