@@ -22,8 +22,6 @@ public class HumanTransformation : MonoBehaviour
         animatorCops1.SetBool("Back",true);
         animatorCops2.SetBool("Back",true);
         Debug.Log(animatorCops2.GetBool("Back"));
-        // animatorCops1.SetBool("Back",false);
-        // animatorCops1.SetBool("Back",false);
     }
     private IEnumerator Waitfor()
     {

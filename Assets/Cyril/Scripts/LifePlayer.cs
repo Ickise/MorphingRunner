@@ -19,11 +19,11 @@ public class LifePlayer : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
-     if (other.gameObject.CompareTag("CheckPoint") && _scriptHumanTransformation.GetTransformationActive())
-     {
-        _scriptHumanTransformation.Passe(other.gameObject);    
-     }        
+        if (other.gameObject.CompareTag("CheckPoint") && _scriptHumanTransformation.GetTransformationActive())
+        {
+            _scriptHumanTransformation.Passe(other.gameObject);
+        }
     }
 }
