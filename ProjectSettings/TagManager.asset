@@ -7,11 +7,12 @@ TagManager:
   - Scoring
   - Collider
   - CheckPoint
+  - Sol
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - "D\xE9ccors"
   - Water
   - UI
   - 
