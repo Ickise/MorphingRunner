@@ -318,8 +318,8 @@ MonoBehaviour:
   boneShape: 1
   drawBones: 1
   drawTripods: 0
-  boneSize: 1
-  tripodSize: 1
+  boneSize: 1.93
+  tripodSize: 0.01
   boneColor: {r: 0, g: 0, b: 1, a: 0.5}
   m_Transforms:
   - {fileID: 237463251}
@@ -416,20 +416,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _refLeg: {fileID: 993821275}
   _targetLeg: {fileID: 136023466}
-  _rigidbodyPlayer: {fileID: 435726550}
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
   _sphereRadius: 0.01
   _maxDistanceShphereCast: 1
   _flaotAnticipation: 0.1
-  _Contact: 0
   _Once: 0
-  _Back: 0
-  _time: 0
-  _PointOfHit: {x: 0, y: 0, z: 0}
-  "_D\xE9placement": {x: 0, y: 0, z: 1}
-  _timeCouroutine: 3
+  _Jambe: 1
+  _VectorCorection: {x: -15, y: 0, z: 0}
+  _scriptPointMove: {fileID: 877106453}
+  lerpSpeed: 0.5
 --- !u!4 &414227292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6101595204904663121, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
@@ -662,6 +659,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1085806063}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &624603853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624603854}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &624603854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624603853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8273339, y: 5.004397, z: -5.1542645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &648779724 stripped
 Transform:
@@ -932,7 +959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877106451}
   m_LocalRotation: {x: -5.4925113e-13, y: 0.0000078989315, z: 5.785603e-14, w: 1}
-  m_LocalPosition: {x: 0.26, y: 0.553, z: 0.0405}
+  m_LocalPosition: {x: 0.189, y: 0.553, z: 0.0405}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 435726548}
@@ -952,20 +979,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _refLeg: {fileID: 1500345434}
   _targetLeg: {fileID: 810527404}
-  _rigidbodyPlayer: {fileID: 435726550}
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
   _sphereRadius: 0.01
   _maxDistanceShphereCast: 1
   _flaotAnticipation: 0.1
-  _Contact: 0
   _Once: 0
-  _Back: 0
-  _time: 0
-  _PointOfHit: {x: 0, y: 0, z: 0}
-  "_D\xE9placement": {x: 0, y: 0, z: 0}
-  _timeCouroutine: 1
+  _Jambe: 1
+  _VectorCorection: {x: 20, y: 0, z: 0}
+  _scriptPointMove: {fileID: 353240071}
+  lerpSpeed: 0.5
 --- !u!1001 &880181890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1639,7 +1663,7 @@ PrefabInstance:
       objectReference: {fileID: 1968111576}
     - target: {fileID: 4752480639810400938, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_LocalPosition.x
