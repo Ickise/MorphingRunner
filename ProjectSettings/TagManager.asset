@@ -6,12 +6,13 @@ TagManager:
   tags:
   - Scoring
   - Collider
-  - DNA
+  - CheckPoint
+  - Sol
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - "D\xE9ccors"
   - Water
   - UI
   - 
