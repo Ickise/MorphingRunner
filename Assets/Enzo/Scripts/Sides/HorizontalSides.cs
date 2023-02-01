@@ -22,7 +22,7 @@ public class HorizontalSides : MonoBehaviour
 
     void Start()
     {
-
+        horizontalSide = HorizontalSide.Mid;
         playerCharacterController = GetComponent<CharacterController>();
     }
 
