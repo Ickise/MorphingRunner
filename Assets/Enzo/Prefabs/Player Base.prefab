@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 4752480639810400939}
   - component: {fileID: 4752480639810400936}
   - component: {fileID: 4752480639810400942}
+  - component: {fileID: 6279812513609289388}
   - component: {fileID: 4752480639810400938}
   - component: {fileID: 4752480639810400937}
   m_Layer: 0
@@ -340,6 +341,23 @@ MonoBehaviour:
   yPosition: 0
   yValue: 3
   speedToMove: 10
+--- !u!114 &6279812513609289388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752480639810400919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2ea7e84ae727a4c8195d2693b075c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listDNA:
+  - {fileID: 11400000, guid: c1f552861aab07144b9ad3b2b9179e20, type: 2}
+  - {fileID: 11400000, guid: 2484a12eb07333e418b7cedba2778af8, type: 2}
+  - {fileID: 11400000, guid: 2ecfdcf2d9bc0d04f905bebf9b23aa3c, type: 2}
+  listSpecialDNA: 000000000000000000000000
 --- !u!136 &4752480639810400938
 CapsuleCollider:
   m_ObjectHideFlags: 0

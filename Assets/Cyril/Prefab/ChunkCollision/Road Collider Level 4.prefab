@@ -42,6 +42,14 @@ Transform:
   - {fileID: 702567332409601772}
   - {fileID: 8677913212402822112}
   - {fileID: 9197548923148480100}
+  - {fileID: 223189521022966779}
+  - {fileID: 917534078564809642}
+  - {fileID: 8450917936569711686}
+  - {fileID: 8688484379064455268}
+  - {fileID: 5024580536167670921}
+  - {fileID: 1828053576580046468}
+  - {fileID: 1795202703119769207}
+  - {fileID: 2698940580202749825}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -388,6 +396,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
   m_PrefabInstance: {fileID: 1364663700796342994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1480008219133017235
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &8450917936569711686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 1480008219133017235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1810649043792696156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449,6 +519,130 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
   m_PrefabInstance: {fileID: 1810649043792696156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1827907529993670833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &8688484379064455268 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 1827907529993670833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2627674274797691996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &5024580536167670921 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 2627674274797691996}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2817222812958564266
 PrefabInstance:
@@ -698,6 +892,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
   m_PrefabInstance: {fileID: 3594518748884262971}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4952036117424447316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &2698940580202749825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 4952036117424447316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5717195485012728112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -822,6 +1078,130 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4864554898977947698, guid: 14071bf874c52df47ac07642e587b03e, type: 3}
   m_PrefabInstance: {fileID: 6598289455287854801}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7121694160088455982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.52431
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &223189521022966779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 7121694160088455982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7887499317656271743
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &917534078564809642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 7887499317656271743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8151368931599485391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -884,6 +1264,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4864554898977947698, guid: 14071bf874c52df47ac07642e587b03e, type: 3}
   m_PrefabInstance: {fileID: 8151368931599485391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8688349396306075217
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.52431
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &1828053576580046468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 8688349396306075217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8713390187741553295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,4 +1387,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
   m_PrefabInstance: {fileID: 8713390187741553295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8729222839177338530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3059225974606395806}
+    m_Modifications:
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Name
+      value: truck train tank 1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+--- !u!4 &1795202703119769207 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7047494278005784789, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+  m_PrefabInstance: {fileID: 8729222839177338530}
   m_PrefabAsset: {fileID: 0}
