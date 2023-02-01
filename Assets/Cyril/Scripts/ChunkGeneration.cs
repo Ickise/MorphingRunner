@@ -11,7 +11,7 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private float _spacingPlus;
     [SerializeField] private GameObject _chunkFinish;
     [SerializeField] private int _numberSpawnChunk;
-    [SerializeField] private int _numberOfSpawnChunkObs = 10;
+    [SerializeField] private int _numberOfSpawnChunkObs = 1;
     [SerializeField] private bool _movePoint;
     [SerializeField] private bool _newSeed;
     [SerializeField] private bool _rotateWord;

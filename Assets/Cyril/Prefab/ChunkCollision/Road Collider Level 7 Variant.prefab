@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: truck train
       objectReference: {fileID: 0}
+    - target: {fileID: 3843574081704136933, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9081977583357563805, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -112,6 +116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: truck train wagon 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
 --- !u!1001 &1627599667099292133
@@ -168,6 +176,10 @@ PrefabInstance:
     - target: {fileID: 9043769186464360717, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
       propertyPath: m_Name
       value: train platform 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043769186464360717, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
@@ -238,6 +250,10 @@ PrefabInstance:
     - target: {fileID: 3892899917401157249, guid: fc01268e2e023044289fb7e092463d7c, type: 3}
       propertyPath: m_Name
       value: Corridor Classique (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892899917401157249, guid: fc01268e2e023044289fb7e092463d7c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8935240482200227664, guid: fc01268e2e023044289fb7e092463d7c, type: 3}
       propertyPath: m_RootOrder
@@ -353,6 +369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConcreteBarrier_08_v2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7871786410074445390, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7871786410074445391, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -409,6 +429,10 @@ PrefabInstance:
     - target: {fileID: 3843574081704136933, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
       propertyPath: m_Name
       value: truck train (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843574081704136933, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9081977583357563805, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
       propertyPath: m_RootOrder
@@ -523,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 7871786410074445390, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
       propertyPath: m_Name
       value: ConcreteBarrier_08_v2 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871786410074445390, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7871786410074445391, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
       propertyPath: m_RootOrder
@@ -752,6 +780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: truck train (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3843574081704136933, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9081977583357563805, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -852,6 +884,10 @@ PrefabInstance:
     - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
       propertyPath: m_Name
       value: truck train wagon 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
