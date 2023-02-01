@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &144706967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
   _newSeed: 1
+  _rotateWord: 1
   _mySeed: 0
   _seed: 0
 --- !u!4 &144706968
@@ -333,6 +334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _listChunk:
   - {fileID: 11400000, guid: aeaf9c4dd7d176d4e8958cd198b8cf66, type: 2}
+  - {fileID: 11400000, guid: a07b48a37fc5d8a44a89d4bef7dc0388, type: 2}
+  - {fileID: 11400000, guid: ca1c8cee3bf71a6439d9142be92e1d87, type: 2}
   _listChunkPause:
   - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
   - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
@@ -344,6 +347,7 @@ MonoBehaviour:
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
   _newSeed: 1
+  _rotateWord: 0
   _mySeed: 0
   _seed: 0
 --- !u!4 &194430963 stripped
@@ -1735,7 +1739,7 @@ PrefabInstance:
       objectReference: {fileID: 1968111576}
     - target: {fileID: 4752480639810400938, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2128,7 +2132,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &1436875881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 864437686675224783, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
@@ -2587,6 +2591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _listChunk:
   - {fileID: 11400000, guid: aeaf9c4dd7d176d4e8958cd198b8cf66, type: 2}
+  - {fileID: 11400000, guid: a07b48a37fc5d8a44a89d4bef7dc0388, type: 2}
+  - {fileID: 11400000, guid: ca1c8cee3bf71a6439d9142be92e1d87, type: 2}
   _listChunkPause:
   - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
   - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
@@ -2598,6 +2604,7 @@ MonoBehaviour:
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
   _newSeed: 1
+  _rotateWord: 0
   _mySeed: 0
   _seed: 0
 --- !u!4 &2029983731
