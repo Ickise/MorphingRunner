@@ -11,9 +11,10 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private float _spacingPlus;
     [SerializeField] private GameObject _chunkFinish;
     [SerializeField] private int _numberSpawnChunk;
-    [SerializeField] private int _numberOfSpawnChunkObs = 10;
+    [SerializeField] private int _numberOfSpawnChunkObs = 1;
     [SerializeField] private bool _movePoint;
     [SerializeField] private bool _newSeed;
+    [SerializeField] private bool _rotateWord;
     [SerializeField] private int _mySeed;
     [SerializeField] private int _seed;
     private void Awake() 
@@ -31,18 +32,24 @@ public class ChunkGeneration : MonoBehaviour
             Generate();        
         }       
     }
+    private Quaternion Rotation(ChunkData _chunkData)
+    {
+        if(_rotateWord) return Quaternion.identity; 
+        else return _chunkData._visual.transform.rotation;
+        
+    }
     private void GenerateChunkObstacle()
     {
         int RandomN = Random.Range(0, _listChunk.Count);
         _spacing = _spacing + _listChunk[RandomN]._size;
-        Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
+        Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + _spacing, Rotation(_listChunk[RandomN]));
         _spacing = _spacing + _listChunk[RandomN]._size;
     }
     private GameObject GenerateChunkPause()
     {
         int RandomN = Random.Range(0, _listChunkPause.Count);
         _spacing = _spacing + _listChunkPause[RandomN]._size;
-        GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + _spacing, Quaternion.identity);
+        GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + _spacing, Rotation(_listChunkPause[RandomN]));
         _spacing = _spacing + _listChunkPause[RandomN]._size;
         return chunk;
     }

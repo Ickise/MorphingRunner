@@ -14,17 +14,17 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.21176471, g: 0.22745098, b: 0.25882354, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 100
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &144706967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,9 +269,10 @@ MonoBehaviour:
   _spacingPlus: 0
   _chunkFinish: {fileID: 0}
   _numberSpawnChunk: 0
-  _numberOfSpawnChunkObs: 10
+  _numberOfSpawnChunkObs: 1
   _movePoint: 0
   _newSeed: 1
+  _rotateWord: 1
   _mySeed: 0
   _seed: 0
 --- !u!4 &144706968
@@ -333,6 +334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _listChunk:
   - {fileID: 11400000, guid: aeaf9c4dd7d176d4e8958cd198b8cf66, type: 2}
+  - {fileID: 11400000, guid: a07b48a37fc5d8a44a89d4bef7dc0388, type: 2}
+  - {fileID: 11400000, guid: ca1c8cee3bf71a6439d9142be92e1d87, type: 2}
   _listChunkPause:
   - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
   - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
@@ -344,6 +347,7 @@ MonoBehaviour:
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
   _newSeed: 1
+  _rotateWord: 0
   _mySeed: 0
   _seed: 0
 --- !u!4 &194430963 stripped
@@ -803,8 +807,8 @@ Camera:
   m_GameObject: {fileID: 650481425}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.21176471, g: 0.22745098, b: 0.25882354, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -818,7 +822,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1385,7 +1389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1021683955642367770, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
       propertyPath: m_Layer
@@ -2128,7 +2132,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &1436875881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 864437686675224783, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
@@ -2354,7 +2358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1841186649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2587,6 +2591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _listChunk:
   - {fileID: 11400000, guid: aeaf9c4dd7d176d4e8958cd198b8cf66, type: 2}
+  - {fileID: 11400000, guid: a07b48a37fc5d8a44a89d4bef7dc0388, type: 2}
+  - {fileID: 11400000, guid: ca1c8cee3bf71a6439d9142be92e1d87, type: 2}
   _listChunkPause:
   - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
   - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
@@ -2598,6 +2604,7 @@ MonoBehaviour:
   _numberOfSpawnChunkObs: 10
   _movePoint: 0
   _newSeed: 1
+  _rotateWord: 0
   _mySeed: 0
   _seed: 0
 --- !u!4 &2029983731

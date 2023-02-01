@@ -6,10 +6,10 @@ public class MoveDecor : MonoBehaviour
 {
     [SerializeField] private int _speed;
     
-    void FixedUpdate()
+    void Update()
     {
         transform.position = transform.position + (new Vector3(0,0,-1) * Time.deltaTime * _speed);
-        if(transform.position.z < -100)
+        if(transform.position.z < -30)
         {
             Destroy(this.gameObject,0);
         }     
