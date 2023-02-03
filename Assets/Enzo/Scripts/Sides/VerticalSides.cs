@@ -11,9 +11,7 @@ public class VerticalSides : MonoBehaviour
     public float yPosition;
     public float yValue;
     public float speedToMove;
-
     float smoothY;
-
     bool swipeUp;
     bool swipeDown;
 

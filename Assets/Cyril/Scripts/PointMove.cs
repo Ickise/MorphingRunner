@@ -15,13 +15,16 @@ public class PointMove : MonoBehaviour
     [SerializeField] private bool _Once = false;
     public bool _Jambe = false;
     private float _time;
+    private float time;
     private Vector3 _PointOfHit = Vector3.zero;
     private Vector3 Déplacement = Vector3.zero;
     private Vector3 _basePosition = Vector3.zero;
     private Vector3 _newPosition = Vector3.zero;
+    private Vector3 _VectorUp = Vector3.zero;
     [SerializeField] private Vector3 _VectorCorection = Vector3.zero;
     [SerializeField] private PointMove _scriptPointMove;
     [SerializeField] private float lerpSpeed;
+    [SerializeField] private AnimationCurve _animationcurveUp;
     private void Update()
     {
         if (_Once == false)
@@ -33,10 +36,9 @@ public class PointMove : MonoBehaviour
         Vector3 RefPos = (_refLeg.position + _VectorCorection + Déplacement) * _flaotAnticipation;
         if (Physics.SphereCast(RefPos, _sphereRadius, -transform.up, out _hit, _maxDistanceShphereCast, _layerMask))
         {
-            Debug.Log(_hit.point);
+            //Debug.Log(_hit.point);
             _Contact = true;
-            _PointOfHit = _hit.point;
-
+            _PointOfHit = _hit.point + _VectorUp;
         }
         if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f)
         {
@@ -60,7 +62,10 @@ public class PointMove : MonoBehaviour
             float elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)
             {
-                Déplacement = Vector3.Lerp(_basePosition, _newPosition, elapsedTime / lerpSpeed);
+                
+                Déplacement = Vector3.Lerp(_basePosition , _newPosition, elapsedTime / lerpSpeed);
+                _VectorUp = _animationcurveUp.Evaluate(elapsedTime / lerpSpeed) * new Vector3(0,3,0);
+                Debug.Log(Déplacement + "Déplacement");
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
