@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 [System.Serializable]
 public enum HorizontalSide { Left, Mid, Right }
 
@@ -25,7 +25,7 @@ public class HorizontalSides : MonoBehaviour
 
         playerCharacterController = GetComponent<CharacterController>();
     }
-
+    
     void Update()
     {
         swipeLeft = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow);

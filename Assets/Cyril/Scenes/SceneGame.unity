@@ -269,7 +269,7 @@ MonoBehaviour:
   _spacingPlus: 0
   _chunkFinish: {fileID: 0}
   _numberSpawnChunk: 0
-  _numberOfSpawnChunkObs: 1
+  _numberOfSpawnChunkObs: 2
   _movePoint: 0
   _newSeed: 1
   _rotateWord: 1
@@ -344,7 +344,7 @@ MonoBehaviour:
   _spacingPlus: 0
   _chunkFinish: {fileID: 0}
   _numberSpawnChunk: 0
-  _numberOfSpawnChunkObs: 10
+  _numberOfSpawnChunkObs: 4
   _movePoint: 0
   _newSeed: 1
   _rotateWord: 0
@@ -2601,7 +2601,7 @@ MonoBehaviour:
   _spacingPlus: 0
   _chunkFinish: {fileID: 0}
   _numberSpawnChunk: 0
-  _numberOfSpawnChunkObs: 10
+  _numberOfSpawnChunkObs: 4
   _movePoint: 0
   _newSeed: 1
   _rotateWord: 0
