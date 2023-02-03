@@ -8,6 +8,9 @@ TagManager:
   - Collider
   - CheckPoint
   - Sol
+  - DNA
+  - Down
+  - Up
   layers:
   - Default
   - TransparentFX

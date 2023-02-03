@@ -8,10 +8,7 @@ public class HumanTransformation : MonoBehaviour
     {
         return _transformationActive;
     }
-    public void Transformation()
-    {
-
-    }
+  
     public void Passe(GameObject _gameobjectTrigger)
     {
         Debug.Log("ActiveAnimation");
@@ -22,9 +19,5 @@ public class HumanTransformation : MonoBehaviour
         animatorCops1.SetBool("Back",true);
         animatorCops2.SetBool("Back",true);
         Debug.Log(animatorCops2.GetBool("Back"));
-    }
-    private IEnumerator Waitfor()
-    {
-        yield return new WaitForSeconds(5);
     }
 }
