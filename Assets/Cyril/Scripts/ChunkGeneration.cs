@@ -66,6 +66,7 @@ public class ChunkGeneration : MonoBehaviour
         _movePoint = true;
         for (int i = 0; i < _numberOfSpawnChunkObs; i++)
         {
+            GenerateChunkPause();
             GenerateChunkObstacle();
             _chunkFinish = GenerateChunkPause();
         }
@@ -96,7 +97,7 @@ public class ChunkGeneration : MonoBehaviour
         _time = _time + Time.deltaTime;
         if (_time > _timeMin)
         {
-            _speed = _speed + Time.deltaTime / 2;
+            _speed = _speed + 0.001f;
         }
     }
 }
