@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &144706967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,7 +492,40 @@ MonoBehaviour:
   _Jambe: 1
   _VectorCorection: {x: -15, y: 0, z: 0}
   _scriptPointMove: {fileID: 877106453}
-  lerpSpeed: 0.5
+  lerpSpeed: 2
+  _animationcurveUp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0028038025
+      value: -0.0015487671
+      inSlope: 0.9781492
+      outSlope: 0.9781492
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5016103
+      value: 0.49184346
+      inSlope: -0.000703156
+      outSlope: -0.000703156
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.002704
+      value: 0.0009943247
+      inSlope: -0.9795555
+      outSlope: -0.9795555
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &394469012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1557,40 @@ MonoBehaviour:
   _Jambe: 1
   _VectorCorection: {x: 20, y: 0, z: 0}
   _scriptPointMove: {fileID: 353240071}
-  lerpSpeed: 0.5
+  lerpSpeed: 2
+  _animationcurveUp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0028038025
+      value: -0.0015487671
+      inSlope: 0.9781492
+      outSlope: 0.9781492
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5016103
+      value: 0.49184346
+      inSlope: -0.000703156
+      outSlope: -0.000703156
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.002704
+      value: 0.0009943247
+      inSlope: -0.9795555
+      outSlope: -0.9795555
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &880181890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1712,7 +1778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.58
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1848,7 +1914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1021683955642367770, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
       propertyPath: m_Layer
@@ -2632,7 +2698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1377899636
 Transform:
   m_ObjectHideFlags: 0
@@ -2927,7 +2993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1841186649
 MeshCollider:
   m_ObjectHideFlags: 0
