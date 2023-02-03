@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveDecor : MonoBehaviour
 {
-    [SerializeField] private int _speed;
+   [SerializeField] private float _speed = 0;
     
     void Update()
     {
@@ -13,5 +13,15 @@ public class MoveDecor : MonoBehaviour
         {
             Destroy(this.gameObject,0);
         }     
+    }
+    public void SetSpeedAdd(float _speedAdd)
+    {
+        _speed =_speed + _speedAdd;
+        Debug.Log(_speed + "Chunk");
+    }
+    public void SetSpeed(float speed)
+    {
+        _speed = speed;
+        Debug.Log(speed + "Point");
     }
 }

@@ -17,7 +17,10 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private bool _rotateWord;
     [SerializeField] private int _mySeed;
     [SerializeField] private int _seed;
-    private void Awake() 
+    [SerializeField] private float _speed = 10;
+    [SerializeField] private float _time;
+    private float _timeMin = 60;
+    private void Awake()
     {
         GenertaionSeed();
     }
@@ -25,24 +28,27 @@ public class ChunkGeneration : MonoBehaviour
     {
         Generate();
     }
-    private void Update() 
+    private void Update()
     {
-        if(_pointStart.transform.position.z < 150) 
+        if (_pointStart.transform.position.z < 150)
         {
-            Generate();        
-        }       
+            Generate();
+        }
+        Speed();
     }
     private Quaternion Rotation(ChunkData _chunkData)
     {
-        if(_rotateWord) return Quaternion.identity; 
+        if (_rotateWord) return Quaternion.identity;
         else return _chunkData._visual.transform.rotation;
-        
+
     }
     private void GenerateChunkObstacle()
     {
         int RandomN = Random.Range(0, _listChunk.Count);
         _spacing = _spacing + _listChunk[RandomN]._size;
-        Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + _spacing, Rotation(_listChunk[RandomN]));
+        GameObject Chunk = Instantiate(_listChunk[RandomN]._visual, _pointStart.transform.position + _spacing, Rotation(_listChunk[RandomN]));
+        MoveDecor moveDecor = Chunk.GetComponent<MoveDecor>();
+        moveDecor.SetSpeedAdd(_speed);
         _spacing = _spacing + _listChunk[RandomN]._size;
     }
     private GameObject GenerateChunkPause()
@@ -50,6 +56,8 @@ public class ChunkGeneration : MonoBehaviour
         int RandomN = Random.Range(0, _listChunkPause.Count);
         _spacing = _spacing + _listChunkPause[RandomN]._size;
         GameObject chunk = Instantiate(_listChunkPause[RandomN]._visual, _pointStart.transform.position + _spacing, Rotation(_listChunkPause[RandomN]));
+        MoveDecor moveDecor = chunk.GetComponent<MoveDecor>();
+        moveDecor.SetSpeedAdd(_speed);
         _spacing = _spacing + _listChunkPause[RandomN]._size;
         return chunk;
     }
@@ -57,7 +65,7 @@ public class ChunkGeneration : MonoBehaviour
     {
         _movePoint = true;
         for (int i = 0; i < _numberOfSpawnChunkObs; i++)
-        {       
+        {
             GenerateChunkObstacle();
             _chunkFinish = GenerateChunkPause();
         }
@@ -67,18 +75,28 @@ public class ChunkGeneration : MonoBehaviour
     }
     private void MovePoint()
     {
-        _pointStart.transform.position = _chunkFinish.transform.position + _spacing; 
+        _pointStart.transform.position = _chunkFinish.transform.position + _spacing;
+        MoveDecor moveDecor = _pointStart.GetComponent<MoveDecor>();
+        moveDecor.SetSpeed(_speed);
     }
     private void GenertaionSeed()
     {
-        if(_newSeed == true)
+        if (_newSeed == true)
         {
-            _seed = Random.Range(int.MinValue,int.MaxValue);
+            _seed = Random.Range(int.MinValue, int.MaxValue);
         }
         else
         {
             _seed = _mySeed;
         }
         Random.InitState(_seed);
+    }
+    private void Speed()
+    {
+        _time = _time + Time.deltaTime;
+        if (_time > _timeMin)
+        {
+            _speed = _speed + Time.deltaTime / 2;
+        }
     }
 }
