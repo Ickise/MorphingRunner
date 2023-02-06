@@ -223,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   timer: 0
-  timeToGainScore: 2
+  timeToGainScore: 1
   scoreText: {fileID: 0}
 --- !u!1 &4752480639810400919
 GameObject:
@@ -241,6 +241,9 @@ GameObject:
   - component: {fileID: 6279812513609289388}
   - component: {fileID: 4752480639810400938}
   - component: {fileID: 4752480639810400937}
+  - component: {fileID: 3503288912168147539}
+  - component: {fileID: 3172287763248435569}
+  - component: {fileID: 4141190017471058387}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -357,7 +360,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1f552861aab07144b9ad3b2b9179e20, type: 2}
   - {fileID: 11400000, guid: 2484a12eb07333e418b7cedba2778af8, type: 2}
   - {fileID: 11400000, guid: 2ecfdcf2d9bc0d04f905bebf9b23aa3c, type: 2}
-  listSpecialDNA: 000000000000000000000000
+  listSpecialDNA: 0a0000000a0000000a000000
+  numberOfDNAToTransform: 10
+  buttonList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stringButton: 
 --- !u!136 &4752480639810400938
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -390,6 +399,47 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!64 &3503288912168147539
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752480639810400919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3172287763248435569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752480639810400919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6f582245953474a8904208c6502b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathEcrant: {fileID: 0}
+  _scriptHumanTransformation: {fileID: 0}
+--- !u!114 &4141190017471058387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752480639810400919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756cc5f59732c4449bf61c8e227cc247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToLoose: 2
 --- !u!1 &4752480640171185850
 GameObject:
   m_ObjectHideFlags: 0

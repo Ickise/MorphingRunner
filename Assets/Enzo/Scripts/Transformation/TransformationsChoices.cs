@@ -6,14 +6,16 @@ public class TransformationsChoices : MonoBehaviour
     [SerializeField] GameObject transformationChoices;
     [SerializeField] GameObject playerMesh;
     [SerializeField] GameObject trexTransformation;
+    [SerializeField] GameObject _deathEcran;
+
 
     [SerializeField] Mesh[] meshList = new Mesh[3];
 
     [SerializeField] private bool _transformationActive;
 
     bool slowMotionActive = false;
-    bool isTrex;
-    bool isHuman;
+    public bool isTrex;
+    public bool isHuman;
 
     void Start()
     {
@@ -44,7 +46,7 @@ public class TransformationsChoices : MonoBehaviour
 
         while (slowMotionActive)
         {
-            yield return null;
+            yield return null; // modifier ici pour qu'après un certain temps ça redevient normal
         }
     }
 
@@ -64,32 +66,44 @@ public class TransformationsChoices : MonoBehaviour
 
     public void ChangeIntoTRex()
     {
-        ReturnInRealTime();
-        Instantiate(trexTransformation, playerMesh.transform.position, Quaternion.identity);
-        Destroy(playerMesh.gameObject);
-        isTrex = true;
+        isTrex = true; 
         isHuman = false;
+        playerMesh.GetComponent<MeshFilter>().mesh = meshList[0];
+        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[0];
+        ReturnInRealTime();
+        // Instantiate(trexTransformation, playerMesh.transform.position, Quaternion.identity);
+        //Destroy(playerMesh.gameObject);
     }
 
     public void ChangeIntoHuman()
     {
-        ReturnInRealTime();
-        playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
-        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
         isHuman = true;
         isTrex = false;
+        playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
+        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
+        ReturnInRealTime();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("CheckPoint") && isHuman)
+        {
+            Passe(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Collider") && !isTrex)
+        {
+            _deathEcran.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     public void Passe(GameObject _gameobjectTrigger)
     {
-        if (isHuman)
-        {
-            Transform cops1 = _gameobjectTrigger.transform.parent.GetChild(4);
-            Transform cops2 = _gameobjectTrigger.transform.parent.GetChild(5);
-            Animator animatorCops1 = cops1.GetComponent<Animator>();
-            Animator animatorCops2 = cops2.GetComponent<Animator>();
-            animatorCops1.SetBool("Back", true);
-            animatorCops2.SetBool("Back", true);
-        }
+        Transform cops1 = _gameobjectTrigger.transform.parent.GetChild(4);
+        Transform cops2 = _gameobjectTrigger.transform.parent.GetChild(5);
+        Animator animatorCops1 = cops1.GetComponent<Animator>();
+        Animator animatorCops2 = cops2.GetComponent<Animator>();
+        animatorCops1.SetBool("Back", true);
+        animatorCops2.SetBool("Back", true);
     }
 }
