@@ -2392,6 +2392,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1819262930}
+    - target: {fileID: 4752480639810400936, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: xPosition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400938, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2402,7 +2406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2422,7 +2426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: yValue
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: yPosition
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4752480640171185850, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_IsActive
@@ -2902,22 +2910,6 @@ MonoBehaviour:
   _transformationActive: 0
   isTrex: 0
   isHuman: 0
---- !u!54 &1434098422
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434098413}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 1
 --- !u!4 &1436875881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 864437686675224783, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
@@ -3344,7 +3336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1841186649
 MeshCollider:
   m_ObjectHideFlags: 0

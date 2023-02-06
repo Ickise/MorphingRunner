@@ -46,7 +46,10 @@ public class TransformationsChoices : MonoBehaviour
 
         while (slowMotionActive)
         {
-            yield return null; // modifier ici pour qu'après un certain temps ça redevient normal
+            yield return new WaitForSeconds(1.5f);
+            slowMotionActive = false;
+            Time.timeScale = 1f;
+            transformationChoices.SetActive(false);
         }
     }
 
@@ -66,13 +69,11 @@ public class TransformationsChoices : MonoBehaviour
 
     public void ChangeIntoTRex()
     {
-        isTrex = true; 
+        isTrex = true;
         isHuman = false;
         playerMesh.GetComponent<MeshFilter>().mesh = meshList[0];
         playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[0];
         ReturnInRealTime();
-        // Instantiate(trexTransformation, playerMesh.transform.position, Quaternion.identity);
-        //Destroy(playerMesh.gameObject);
     }
 
     public void ChangeIntoHuman()
