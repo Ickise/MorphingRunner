@@ -2418,6 +2418,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1819262930}
+    - target: {fileID: 4752480639810400936, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: xPosition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400938, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2428,7 +2432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2448,7 +2452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: yValue
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: yPosition
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4752480640171185850, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_IsActive
