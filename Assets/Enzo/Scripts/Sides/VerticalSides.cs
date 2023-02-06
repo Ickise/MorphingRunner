@@ -5,23 +5,25 @@ public enum VerticalSide { Up, Mid, Down }
 
 public class VerticalSides : MonoBehaviour
 {
-    HorizontalSide horizontalSide;
-    public static VerticalSide verticalSide = VerticalSide.Mid;
-
+    [Header("Set up")]
     public float yPosition;
     public float yValue;
     public float speedToMove;
+
+    [Header("Data")]
     float smoothY;
     bool swipeUp;
     bool swipeDown;
 
     Vector3 position;
 
+    public static VerticalSide verticalSide = VerticalSide.Mid;
+
     CharacterController playerCharacterController;
 
     void Start()
     {
-        verticalSide =VerticalSide.Mid;
+        verticalSide = VerticalSide.Mid;
         playerCharacterController = GetComponent<CharacterController>();
     }
 

@@ -3,19 +3,21 @@ using UnityEngine;
 
 public class TransformationsChoices : MonoBehaviour
 {
+    [Header("Set up")]
     [SerializeField] GameObject transformationChoices;
     [SerializeField] GameObject playerMesh;
     [SerializeField] GameObject trexTransformation;
     [SerializeField] GameObject _deathEcran;
-
-
+    
     [SerializeField] Mesh[] meshList = new Mesh[3];
+
+    [Header("Data")]
 
     [SerializeField] private bool _transformationActive;
 
     bool slowMotionActive = false;
-    public bool isTrex;
-    public bool isHuman;
+    bool isTrex;
+    bool isHuman;
 
     void Start()
     {

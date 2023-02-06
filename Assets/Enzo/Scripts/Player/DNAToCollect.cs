@@ -1,10 +1,9 @@
-    using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DNAToCollect : MonoBehaviour
 {
-    Scoring scoring;
-
+    [Header("Set up")]
     [SerializeField] DNA[] listDNA = new DNA[3];
 
     [SerializeField] int[] listSpecialDNA = new int[3];
@@ -12,8 +11,13 @@ public class DNAToCollect : MonoBehaviour
 
     [SerializeField] Button[] buttonList = new Button[3];
 
+    [SerializeField] Text[] numberOfSpecialDNA = new Text[2];
+
+    [Header("Data")]
     [SerializeField] string stringButton;
-    
+
+    Scoring scoring;
+
     bool canTransform;
 
     void Start()
@@ -23,6 +27,9 @@ public class DNAToCollect : MonoBehaviour
 
     void Update()
     {
+        numberOfSpecialDNA[0].text = "" + listSpecialDNA[0];
+        numberOfSpecialDNA[1].text = "" + listSpecialDNA[1];
+
         for (int i = 0; i < listSpecialDNA.Length; i++)
         {
             if (listSpecialDNA[i] >= numberOfDNAToTransform)
@@ -54,7 +61,7 @@ public class DNAToCollect : MonoBehaviour
         {
             for (int i = 0; i < listDNA.Length; i++)
             {
-                if (other.name == listDNA[i].dnaName + "(Clone)")
+                if (other.name == listDNA[i].dnaName)
                 {
                     listSpecialDNA[i]++;
                     scoring.score++;

@@ -4,19 +4,22 @@ using UnityEngine.EventSystems;
 public enum HorizontalSide { Left, Mid, Right }
 
 public class HorizontalSides : MonoBehaviour
-{
-    public static HorizontalSide horizontalSide = HorizontalSide.Mid;
+{    
+    [Header("Set up")]
 
     public float xPosition;
     public float xValue;
     public float speedDodge;
 
+    [Header("Data")]
     float smoothX;
 
     bool swipeLeft;
     bool swipeRight;
 
     Vector3 position;
+
+    public static HorizontalSide horizontalSide = HorizontalSide.Mid;
 
     CharacterController playerCharacterController;
 
@@ -25,7 +28,7 @@ public class HorizontalSides : MonoBehaviour
         horizontalSide = HorizontalSide.Mid;
         playerCharacterController = GetComponent<CharacterController>();
     }
-    
+
     void Update()
     {
         swipeLeft = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow);

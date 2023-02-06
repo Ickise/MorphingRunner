@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class TRexTransformation : MonoBehaviour
 {
+    [Header("Set up")]
+    [SerializeField] uint scoreToLoose = 2;
+
+    [Header("Data")]
     bool isTransform = false;
 
     Scoring scoring;
-
-    [SerializeField] uint scoreToLoose = 2;
 
     void Start()
     {
