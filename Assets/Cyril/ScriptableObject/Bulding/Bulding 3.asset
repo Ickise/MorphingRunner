@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0f423b880517d45921043a671ec10b, type: 3}
   m_Name: Bulding 3
   m_EditorClassIdentifier: 
-  _visual: {fileID: 745504741715700458, guid: 03e0db22bb3520c4dbe8ca8e88bc8841, type: 3}
+  _visual: {fileID: 8603085848068113137, guid: 286d10498e02faf4583bc1c7b5be1a9b, type: 3}
   _pointEntry: {fileID: 0}
   _pointExit: {fileID: 0}
   _size: {x: 0, y: 0, z: 4}
