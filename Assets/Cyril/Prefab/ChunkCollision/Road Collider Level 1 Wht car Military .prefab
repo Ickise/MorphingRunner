@@ -88,6 +88,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human DNA
       objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Radius
+      value: 0.2248674
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0000005066395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Center.z
+      value: 0.000002503395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395561858298416910, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b9c7d34612642598d9a82dd8b01e89, type: 2}
+    - target: {fileID: 8535548700890321231, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300006, guid: 4568c0d01b7fb471ca349f46e97057d9, type: 3}
     - target: {fileID: 8600491032805234841, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -734,6 +758,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human DNA
       objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Radius
+      value: 0.2248674
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0000005066395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Center.z
+      value: 0.000002503395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037768481054554485, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395561858298416910, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b9c7d34612642598d9a82dd8b01e89, type: 2}
+    - target: {fileID: 8535548700890321231, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300006, guid: 4568c0d01b7fb471ca349f46e97057d9, type: 3}
     - target: {fileID: 8600491032805234841, guid: dd5c21acb6a64af4aaf791458764a139, type: 3}
       propertyPath: m_RootOrder
       value: 22
