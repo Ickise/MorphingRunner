@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6214560400688004040}
   - component: {fileID: 7303873861827828641}
   - component: {fileID: 88477474999871626}
-  - component: {fileID: -7888653622278829226}
+  - component: {fileID: 6990326809961633770}
   m_Layer: 0
   m_Name: train platform 1
   m_TagString: Collider
@@ -83,17 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-7888653622278829226
-MeshCollider:
+--- !u!65 &6990326809961633770
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9043769186464360717}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8720489359845903026, guid: 3ce6dc12df562104e9886af358ae28f7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.021991141, y: 0.10557638, z: 0.019088436}
+  m_Center: {x: -0.00000040013788, y: -0.002196094, z: 0.00542804}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4770382421565071700}
   - component: {fileID: 3535118159355800958}
   - component: {fileID: 7752662411851609545}
-  - component: {fileID: 4518775827433206022}
+  - component: {fileID: 2003168570181381317}
   m_Layer: 0
   m_Name: truck train wagon 1
   m_TagString: Collider
@@ -83,17 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4518775827433206022
-MeshCollider:
+--- !u!65 &2003168570181381317
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7184302387250372886}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4653320415987969102, guid: 3ce6dc12df562104e9886af358ae28f7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.023006743, y: 0.105576366, z: 0.026900023}
+  m_Center: {x: -2.1098417e-10, y: -0.0022543797, z: 0.009333834}

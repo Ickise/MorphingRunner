@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7047494278005784789}
   - component: {fileID: 6221594145286247}
   - component: {fileID: 260846915085832635}
-  - component: {fileID: -8534351354710774242}
+  - component: {fileID: 8472304307057448703}
   m_Layer: 0
   m_Name: truck train tank 1
   m_TagString: Collider
@@ -83,17 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-8534351354710774242
-MeshCollider:
+--- !u!65 &8472304307057448703
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2659410697395186326}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4228416853153480543, guid: 3ce6dc12df562104e9886af358ae28f7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.021991141, y: 0.105576366, z: 0.03122789}
+  m_Center: {x: -0.0000002433524, y: -0.0021960938, z: 0.011497768}
