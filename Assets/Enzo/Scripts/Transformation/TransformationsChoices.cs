@@ -8,7 +8,9 @@ public class TransformationsChoices : MonoBehaviour
     [SerializeField] GameObject playerMesh;
     [SerializeField] GameObject trexTransformation;
     [SerializeField] GameObject _deathEcran;
-    
+
+    [SerializeField] int scoreToLoose = 2;
+
     [SerializeField] Mesh[] meshList = new Mesh[3];
 
     [Header("Data")]
@@ -16,16 +18,32 @@ public class TransformationsChoices : MonoBehaviour
     [SerializeField] private bool _transformationActive;
 
     bool slowMotionActive = false;
-    bool isTrex;
-    bool isHuman;
+    public bool isTrex;
+    public bool isHuman;
+    public bool isMorph;
 
-    void Start()
+    public static TransformationsChoices transformationsChoices;
+
+    private void Awake()
     {
+        transformationsChoices = this;
         transformationChoices.SetActive(false);
     }
 
     void Update()
     {
+        Scoring.scoring.timer += Time.deltaTime;
+
+        if (Scoring.scoring.timer >= Scoring.scoring.timeToGainScore && isTrex && Scoring.scoring.score > 0)
+        {
+            Scoring.scoring.score -= scoreToLoose;
+            Scoring.scoring.timer = 0f;
+        }
+        else if (Scoring.scoring.score <= 0)
+        {
+            Scoring.scoring.score = 0;
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!slowMotionActive)
@@ -73,6 +91,7 @@ public class TransformationsChoices : MonoBehaviour
     {
         isTrex = true;
         isHuman = false;
+        isMorph = false;
         playerMesh.GetComponent<MeshFilter>().mesh = meshList[0];
         playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[0];
         ReturnInRealTime();
@@ -81,6 +100,17 @@ public class TransformationsChoices : MonoBehaviour
     public void ChangeIntoHuman()
     {
         isHuman = true;
+        isTrex = false;
+        isMorph = false;
+        playerMesh.GetComponent<MeshFilter>().mesh = meshList[1];
+        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[1];
+        ReturnInRealTime();
+    }
+
+    public void ChangeIntoMorph()
+    {
+        isMorph = true;
+        isHuman = false;
         isTrex = false;
         playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
         playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
@@ -97,6 +127,10 @@ public class TransformationsChoices : MonoBehaviour
         {
             _deathEcran.SetActive(true);
             Time.timeScale = 0f;
+        }
+        if (other.gameObject.CompareTag("Collider") && isTrex)
+        {
+            Destroy(other);
         }
     }
 

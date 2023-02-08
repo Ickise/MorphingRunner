@@ -16,14 +16,7 @@ public class DNAToCollect : MonoBehaviour
     [Header("Data")]
     [SerializeField] string stringButton;
 
-    Scoring scoring;
-
     bool canTransform;
-
-    void Start()
-    {
-        scoring = GameObject.FindWithTag("Scoring").GetComponent<Scoring>();
-    }
 
     void Update()
     {
@@ -64,7 +57,7 @@ public class DNAToCollect : MonoBehaviour
                 if (other.name == listDNA[i].dnaName)
                 {
                     listSpecialDNA[i]++;
-                    scoring.score++;
+                    Scoring.scoring.score++;
                     Destroy(other.gameObject);
                 }
             }
