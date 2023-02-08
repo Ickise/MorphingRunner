@@ -9,6 +9,7 @@ public class VerticalSides : MonoBehaviour
     public float yPosition;
     public float yValue;
     public float speedToMove;
+    public CameraManager cameraManager;
 
     [Header("Data")]
     float smoothY;
@@ -71,11 +72,15 @@ public class VerticalSides : MonoBehaviour
         {
             yPosition = -yValue;
             verticalSide = VerticalSide.Down;
+            cameraManager._lerpBoolReverse = true;
+            cameraManager._lerpBool = true;
         }
         if (other.CompareTag("Up") && verticalSide == VerticalSide.Down)
         {
             yPosition = 0;
             verticalSide = VerticalSide.Mid;
+            cameraManager._lerpBoolReverse = false;
+            cameraManager._lerpBool = true;
         }
     }
 }

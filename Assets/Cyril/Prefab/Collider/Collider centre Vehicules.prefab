@@ -38,6 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 133888171325727124}
     m_Modifications:
+    - target: {fileID: 4071924285279012082, guid: 12feea589d833e34d91dd8425a735aa9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4921310405057123613, guid: 12feea589d833e34d91dd8425a735aa9, type: 3}
       propertyPath: m_Name
       value: uploads_files_800328_Patria_AMV
