@@ -117,9 +117,17 @@ PrefabInstance:
       value: truck train wagon 1
       objectReference: {fileID: 0}
     - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7752662411851609545, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
 --- !u!1001 &1627599667099292133
@@ -129,6 +137,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4037067157441415995}
     m_Modifications:
+    - target: {fileID: 88477474999871626, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 6214560400688004040, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -173,9 +185,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6990326809961633770, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.09190678
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990326809961633770, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Size.z
+      value: 0.011952835
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990326809961633770, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000004005432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990326809961633770, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0046384796
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990326809961633770, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0018602367
+      objectReference: {fileID: 0}
     - target: {fileID: 9043769186464360717, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
       propertyPath: m_Name
       value: train platform 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043769186464360717, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9043769186464360717, guid: 5b2c82d741f36ce46a5c41c41a04b1a4, type: 3}
       propertyPath: m_IsActive
@@ -1011,6 +1047,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4037067157441415995}
     m_Modifications:
+    - target: {fileID: 2003168570181381317, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Size.y
+      value: 0.092856705
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003168570181381317, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Size.z
+      value: 0.018698258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003168570181381317, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Center.x
+      value: 7.0070165e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003168570181381317, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Center.y
+      value: -0.008614256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003168570181381317, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0052328953
+      objectReference: {fileID: 0}
     - target: {fileID: 4770382421565071700, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1060,9 +1116,17 @@ PrefabInstance:
       value: truck train wagon 1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184302387250372886, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7752662411851609545, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947a7820f4831174f8cdff9cfd473995, type: 3}
 --- !u!1001 &8739351205483925566

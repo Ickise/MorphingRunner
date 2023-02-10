@@ -112,9 +112,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1899181744913192171}
     m_Modifications:
+    - target: {fileID: 260846915085832635, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
       propertyPath: m_Name
       value: truck train tank 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2659410697395186326, guid: b79ab3e85e13de74884ebe20f360b54d, type: 3}
       propertyPath: m_IsActive
@@ -506,9 +514,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6002128687706761798, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
       propertyPath: m_Name
       value: train platform 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
       propertyPath: m_IsActive
@@ -567,9 +583,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6002128687706761798, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
       propertyPath: m_Name
       value: train platform 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
       propertyPath: m_IsActive
@@ -897,6 +921,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7999435994251383914, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -3809945072200597350, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
       propertyPath: m_Name
       value: 'Road Good Fracturation 1 '

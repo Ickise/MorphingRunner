@@ -251,9 +251,17 @@ PrefabInstance:
       value: truck train (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3843574081704136933, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843574081704136933, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8132381953495328686, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 9081977583357563805, guid: 4278654e91ce12441b46ffc436a1655e, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -972,6 +980,10 @@ PrefabInstance:
       value: truck train wagon 2
       objectReference: {fileID: 0}
     - target: {fileID: 3408946267182024254, guid: 881b990d111a3d74fb26897ba11e6d86, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408946267182024254, guid: 881b990d111a3d74fb26897ba11e6d86, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1019,6 +1031,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367493024615905730, guid: 881b990d111a3d74fb26897ba11e6d86, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b990d111a3d74fb26897ba11e6d86, type: 3}
 --- !u!1001 &6532716275586242054
@@ -1145,9 +1161,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6002128687706761798, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
       propertyPath: m_Name
       value: train platform 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7600333541235551716, guid: 1bebd524231e5ee41b89df15d05247b4, type: 3}
       propertyPath: m_IsActive

@@ -11,6 +11,7 @@ TagManager:
   - DNA
   - Down
   - Up
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - "D\xE9ccors"
   - Water
   - UI
-  - 
+  - Walls
   - 
   - 
   - 
