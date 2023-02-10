@@ -268,7 +268,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3277de85431a9c4b9d47992d453eb85, type: 2}
   _listChunkPause:
   - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
-  - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
   _pointStart: {fileID: 1365255009}
   _spacing: {x: 0, y: 0, z: 0}
   _spacingPlus: 0
@@ -343,9 +342,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aeaf9c4dd7d176d4e8958cd198b8cf66, type: 2}
   - {fileID: 11400000, guid: a07b48a37fc5d8a44a89d4bef7dc0388, type: 2}
   - {fileID: 11400000, guid: ca1c8cee3bf71a6439d9142be92e1d87, type: 2}
+  - {fileID: 11400000, guid: 505d49de9da859449a715bd1cc0a45c9, type: 2}
   _listChunkPause:
-  - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
-  - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
+  - {fileID: 11400000, guid: be2e4443b297a124ebd82824967b46d4, type: 2}
   _pointStart: {fileID: 1187309310}
   _spacing: {x: 0, y: 0, z: 0}
   _spacingPlus: 0
@@ -3214,7 +3213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1960805593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3289,9 +3288,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aeaf9c4dd7d176d4e8958cd198b8cf66, type: 2}
   - {fileID: 11400000, guid: a07b48a37fc5d8a44a89d4bef7dc0388, type: 2}
   - {fileID: 11400000, guid: ca1c8cee3bf71a6439d9142be92e1d87, type: 2}
+  - {fileID: 11400000, guid: 505d49de9da859449a715bd1cc0a45c9, type: 2}
   _listChunkPause:
-  - {fileID: 11400000, guid: aa8dbe2dc1239c9469d1c35028903395, type: 2}
-  - {fileID: 11400000, guid: 06ffb9ce59998c444995129e28c958f6, type: 2}
+  - {fileID: 11400000, guid: be2e4443b297a124ebd82824967b46d4, type: 2}
   _pointStart: {fileID: 412178131}
   _spacing: {x: 0, y: 0, z: 0}
   _spacingPlus: 0
