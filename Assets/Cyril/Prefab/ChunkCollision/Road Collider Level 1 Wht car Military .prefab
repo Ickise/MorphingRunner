@@ -33,6 +33,32 @@ Transform:
   m_Father: {fileID: 1612020135722891242}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4822971742539969194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147381989784479527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019731063, y: 0.019999998, z: 0.021849103}
+  m_Center: {x: 0.02255687, y: 0, z: 0.00092455355}
+--- !u!65 &2524252356358798970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997624673009398975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.099999994, y: 0.099999994, z: 0.002}
+  m_Center: {x: -0.008233959, y: -0.026182737, z: 0.00015865226}
 --- !u!1 &7209158009353125240
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +987,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road Collider Level 1 Wht car Military '
       objectReference: {fileID: 0}
+    - target: {fileID: 8742719441420633333, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
+    - target: {fileID: 8742719441420633333, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
 --- !u!4 &1612020135722891242 stripped
@@ -1230,12 +1264,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7999435994251383914, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
+    - target: {fileID: -7999435994251383914, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
+    - target: {fileID: -3809945072200597350, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
+    - target: {fileID: -3809945072200597350, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
       propertyPath: m_Name
       value: 'Road Good Fracturation 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378922297957006227, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452180765263046667, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+--- !u!1 &8147381989784479527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1378922297957006227, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+  m_PrefabInstance: {fileID: 7076204253233241268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2997624673009398975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5452180765263046667, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+  m_PrefabInstance: {fileID: 7076204253233241268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7149198878665545596
 PrefabInstance:
   m_ObjectHideFlags: 0

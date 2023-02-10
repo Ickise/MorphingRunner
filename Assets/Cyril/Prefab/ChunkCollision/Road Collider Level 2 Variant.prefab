@@ -44,6 +44,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8849378, y: 1.9874412, z: 5.2479}
   m_Center: {x: -0.029643059, y: 0.4937206, z: -1.0646429}
+--- !u!65 &6450456066979574075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419786750898807268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019731063, y: 0.019999998, z: 0.021849103}
+  m_Center: {x: 0.022556867, y: 0, z: 0.00092455355}
+--- !u!65 &6605314932323637842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4499240880721769084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.099999994, y: 0.099999994, z: 0.002}
+  m_Center: {x: -0.008233962, y: -0.026182737, z: 0.00015865226}
 --- !u!1001 &971921669784626108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -721,6 +747,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road Collider Level 2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8742719441420633333, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
+    - target: {fileID: 8742719441420633333, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
 --- !u!4 &1899181744913192171 stripped
@@ -928,13 +962,39 @@ PrefabInstance:
     - target: {fileID: -3809945072200597350, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
+    - target: {fileID: -3809945072200597350, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 63318eacb7479a5428cac7f63654898e, type: 2}
     - target: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
       propertyPath: m_Name
       value: 'Road Good Fracturation 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378922297957006227, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452180765263046667, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+--- !u!1 &7419786750898807268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1378922297957006227, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+  m_PrefabInstance: {fileID: 8492252032612080247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4499240880721769084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5452180765263046667, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+  m_PrefabInstance: {fileID: 8492252032612080247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8762642251497414955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -37,6 +37,19 @@ Transform:
   m_Father: {fileID: 7608815327673538564}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6744915592307700400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839730684347035455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4455584083696037411
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +146,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.008118, y: 2.6635609, z: 4.73849}
   m_Center: {x: -0.24384618, y: 0.8317802, z: 0.34744692}
+--- !u!65 &8775314177426686054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022146694149420916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6064602105208636947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5162287570000884176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.2, z: 10}
+  m_Center: {x: -1.53, y: 0, z: 0}
+--- !u!65 &4249937216705970130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167636343561040941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1173387336487899303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -320,8 +372,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &2839730684347035455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 3146232538100732526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3180404108091225477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -514,8 +575,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &5022146694149420916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 5292668677003446821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5690842815997537742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -584,8 +654,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road Good Fracturation 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378922297957006227, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452180765263046667, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+--- !u!1 &5162287570000884176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
+  m_PrefabInstance: {fileID: 5432828653515574401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5543915323949935466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45afd261b4d61434f8d973c58f74c3b6, type: 3}
@@ -778,8 +865,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &9167636343561040941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 8356593482418588028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8390817443875581591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
