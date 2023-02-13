@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &6205363413324376821
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865527124295937451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &5021500766962791647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339434776176154132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &396662920913600871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050584689416589454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2265346272972669073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831540281136918303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6182446128811452843
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5168554839041674219}
   - component: {fileID: -3527124015690271850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'Road Collider Level 1 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +103,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0
+--- !u!65 &415186188906740716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085461230510990624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2517745751697309099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358614229449723382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &400927288913216450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660200577056922744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.020000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1522998259290657018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,12 +193,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: Road  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &1865527124295937451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 1522998259290657018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1344464837567297297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -164,12 +272,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: Road  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &3339434776176154132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 2493138138556132165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2671723718213930158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -226,12 +351,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: 'Road '
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &5050584689416589454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 5392534806640651743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5574498288415246900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -288,12 +430,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: Road  (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &5831540281136918303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 6641862963101766222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6603994841938163109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -350,12 +509,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: Road  (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &7085461230510990624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 7968544096726145137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7574858716166012826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -412,12 +588,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: Road  (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &8660200577056922744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 8425776798965522729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8315023863413737154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
@@ -474,12 +667,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3a08a007ddd8be459e629aae5cf146f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
       propertyPath: m_Name
       value: Road  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+--- !u!1 &8358614229449723382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
+  m_PrefabInstance: {fileID: 9168953405298536615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8697598734123407180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac2ad62f9fdd8d24a8216260f42cf656, type: 3}
