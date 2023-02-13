@@ -77,7 +77,7 @@ public class VerticalSides : MonoBehaviour
         }
         if (other.CompareTag("Up") && verticalSide == VerticalSide.Down)
         {
-            yPosition = yValue;
+            yPosition = yValue - 2;
             verticalSide = VerticalSide.Mid;
             cameraManager._lerpBoolReverse = false;
             cameraManager._lerpBool = true;
