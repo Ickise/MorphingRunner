@@ -608,6 +608,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6427951962387654657, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6087066713866091366, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3786771525638315969, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
       propertyPath: m_Name
       value: "Plaque d\xE9gout "
@@ -718,15 +730,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.81
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.133244
+      value: -10.13
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalRotation.w
@@ -933,11 +945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.81
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1232,6 +1244,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8650154316124529388, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6427951962387654657, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6087066713866091366, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3786771525638315969, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
       propertyPath: m_Name
       value: "Plaque d\xE9gout  (1)"
@@ -1437,6 +1465,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6427951962387654657, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6087066713866091366, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3786771525638315969, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7745378f9788ba441a1b99dfe716e64a, type: 3}
