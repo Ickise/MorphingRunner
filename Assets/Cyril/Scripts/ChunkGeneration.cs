@@ -15,6 +15,7 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private bool _movePoint;
     [SerializeField] private bool _newSeed;
     [SerializeField] private bool _rotateWord;
+    [SerializeField] private bool _once = true;
     [SerializeField] private int _mySeed;
     [SerializeField] private int _seed;
     [SerializeField] private float _speed = 10;
@@ -66,7 +67,11 @@ public class ChunkGeneration : MonoBehaviour
         _movePoint = true;
         for (int i = 0; i < _numberOfSpawnChunkObs; i++)
         {
-            GenerateChunkPause();
+            if(_once == true)
+            {
+                GenerateChunkPause();
+                _once = false;
+            }
             GenerateChunkObstacle();
             _chunkFinish = GenerateChunkPause();
         }
