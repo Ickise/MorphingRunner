@@ -41,7 +41,7 @@ public class PointMove : MonoBehaviour
         }
         if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f)
         {
-            _targetLeg.position = _PointOfHit;
+            _targetLeg.position = _PointOfHit + new Vector3(0,-0.5f,0);
         }
         if (_time > 1.5f)
         {
@@ -52,8 +52,8 @@ public class PointMove : MonoBehaviour
     {
         if (_Once == false && _Jambe)
         {
-            _basePosition = transform.position + new Vector3(0, 0, -40);
-            _newPosition = new Vector3(transform.position.x, transform.position.y, -8);
+            _basePosition = transform.position + new Vector3(0, 0, -50);
+            _newPosition = new Vector3(transform.position.x, transform.position.y, -40);
             _Once = true;
         }
         while (_Jambe)
@@ -64,7 +64,6 @@ public class PointMove : MonoBehaviour
                 
                 Déplacement = Vector3.Lerp(_basePosition , _newPosition, elapsedTime / lerpSpeed);
                 _VectorUp = _animationcurveUp.Evaluate(elapsedTime / lerpSpeed) * new Vector3(0,5,0);
-                //Debug.Log(Déplacement + "Déplacement");
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
