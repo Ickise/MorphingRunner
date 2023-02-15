@@ -1676,7 +1676,7 @@ MonoBehaviour:
   scoreToLoose: 2
   meshList:
   - {fileID: -6320457817531067941, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
-  - {fileID: -2486027455535081845, guid: d38fc9b79f129384393a749bf10126ee, type: 3}
+  - {fileID: -3870736169222715132, guid: ed30957aed170254d80216e6242a8680, type: 3}
   - {fileID: 4403503948874205534, guid: 8d303cde8dbb82e43b9c13514da74624, type: 3}
   _transformationActive: 0
   isTrex: 0
