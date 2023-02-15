@@ -459,18 +459,14 @@ PrefabInstance:
     - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1170671569}
+      objectReference: {fileID: 1434098413}
     - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeIntoMorph
       objectReference: {fileID: 0}
     - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CanTransform
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: MorphButton
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6452566515302831012, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1280,6 +1276,18 @@ PrefabInstance:
       propertyPath: cameraManager
       value: 
       objectReference: {fileID: 650481431}
+    - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 1434098417}
+    - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: playerMeshCollider
+      value: 
+      objectReference: {fileID: 1434098415}
+    - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: playerMeshRenderer
+      value: 
+      objectReference: {fileID: 1434098420}
     - target: {fileID: 4752480640171185850, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1723,6 +1731,21 @@ MonoBehaviour:
   isTrex: 0
   isHuman: 0
   isMorph: 0
+--- !u!64 &1434098415 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3503288912168147539, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+  m_PrefabInstance: {fileID: 1170671568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1434098417 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 4752480639810400938, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+  m_PrefabInstance: {fileID: 1170671568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1434098420 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4752480639810400939, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+  m_PrefabInstance: {fileID: 1170671568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1434098422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4752480639810400941, guid: 507b8b57208ff954099a6354014d102a, type: 3}

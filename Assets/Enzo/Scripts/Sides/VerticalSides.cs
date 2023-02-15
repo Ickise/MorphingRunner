@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
@@ -6,9 +7,17 @@ public enum VerticalSide { Up, Mid, Down }
 public class VerticalSides : MonoBehaviour
 {
     [Header("Set up")]
-    public float yPosition;
-    public float yValue;
-    public float speedToMove;
+    [SerializeField] float yPosition;
+    [SerializeField] float yValue;
+    [SerializeField] float speedToMove;
+    [SerializeField] float invincibilityTime = 2f;
+    [SerializeField] float timeToBecomeNormal = 0.2f;
+
+    [SerializeField] MeshCollider playerMeshCollider;
+    [SerializeField] Collider playerCollider;
+    [SerializeField] MeshRenderer playerMeshRenderer;
+
+
     public CameraManager cameraManager;
 
     [Header("Data")]
@@ -74,6 +83,7 @@ public class VerticalSides : MonoBehaviour
             verticalSide = VerticalSide.Down;
             cameraManager._lerpBoolReverse = true;
             cameraManager._lerpBool = true;
+            // StartCoroutine(Invincible());
         }
         if (other.CompareTag("Up") && verticalSide == VerticalSide.Down && !TransformationsChoices.transformationsChoices.isTrex)
         {
@@ -81,6 +91,25 @@ public class VerticalSides : MonoBehaviour
             verticalSide = VerticalSide.Mid;
             cameraManager._lerpBoolReverse = false;
             cameraManager._lerpBool = true;
+            // StartCoroutine(Invincible());
         }
     }
+
+    // IEnumerator Invincible()
+    // {
+    //     playerMeshCollider.enabled = false;
+    //     playerCharacterController.enabled = false;
+    //     playerCollider.enabled = false;
+
+    //     for (float i = 0; i < invincibilityTime; i += timeToBecomeNormal)
+    //     {
+    //         playerMeshRenderer.enabled = !playerMeshRenderer.enabled;
+    //         yield return new WaitForSeconds(timeToBecomeNormal);
+    //     }
+
+    //     playerMeshRenderer.enabled = true;
+    //     playerMeshCollider.enabled = true;
+    //     playerCharacterController.enabled = true;
+    //     playerCollider.enabled = true;
+    // }
 }
