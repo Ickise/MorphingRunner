@@ -1453,7 +1453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4372313156940084701, guid: f07d4c487bb07314ca2b388aac770eb5, type: 3}
       propertyPath: m_Name
-      value: T-RexDNA
+      value: T-Rex DNA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07d4c487bb07314ca2b388aac770eb5, type: 3}
