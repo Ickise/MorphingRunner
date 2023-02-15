@@ -2015,6 +2015,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1260824411}
     - target: {fileID: 459235866674182915, guid: 2318c42b36979d94eb9c35a6656b6544, type: 3}
+      propertyPath: meshList.Array.data[1]
+      value: 
+      objectReference: {fileID: 976205900156245174, guid: 79ad38dd499a5924ca23dbabcd8ab44c, type: 3}
+    - target: {fileID: 459235866674182915, guid: 2318c42b36979d94eb9c35a6656b6544, type: 3}
       propertyPath: meshList.Array.data[2]
       value: 
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
