@@ -8,15 +8,12 @@ public class TransformationsChoices : MonoBehaviour
     [SerializeField] GameObject playerMesh;
     [SerializeField] GameObject trexTransformation;
     [SerializeField] GameObject _deathEcran;
-    [SerializeField] HumanTransformation _humanTransformation;
 
     [SerializeField] int scoreToLoose = 2;
 
     [SerializeField] Mesh[] meshList = new Mesh[3];
 
     [Header("Data")]
-
-    [SerializeField] private bool _transformationActive;
 
     bool slowMotionActive = false;
     public bool isTrex;

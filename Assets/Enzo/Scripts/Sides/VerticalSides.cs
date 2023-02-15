@@ -68,14 +68,14 @@ public class VerticalSides : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Down") && verticalSide == VerticalSide.Mid)
+        if (other.CompareTag("Down") && verticalSide == VerticalSide.Mid && !TransformationsChoices.transformationsChoices.isTrex)
         {
             yPosition = -yValue;
             verticalSide = VerticalSide.Down;
             cameraManager._lerpBoolReverse = true;
             cameraManager._lerpBool = true;
         }
-        if (other.CompareTag("Up") && verticalSide == VerticalSide.Down)
+        if (other.CompareTag("Up") && verticalSide == VerticalSide.Down && !TransformationsChoices.transformationsChoices.isTrex)
         {
             yPosition = yValue - 3;
             verticalSide = VerticalSide.Mid;

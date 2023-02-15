@@ -440,6 +440,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransformationCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533730, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Name
+      value: MorphButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533730, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1434098414}
+    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1170671569}
+    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeIntoMorph
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CanTransform
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: MorphButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6452566515302831012, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -508,6 +540,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &223678022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6452566514525533740, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+  m_PrefabInstance: {fileID: 223678019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &323176881 stripped
@@ -1283,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: buttonList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: listDNA.Array.data[1]
@@ -1300,7 +1343,7 @@ PrefabInstance:
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: buttonList.Array.data[2]
       value: 
-      objectReference: {fileID: 323176881}
+      objectReference: {fileID: 223678022}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: listSpecialDNA.Array.size
       value: 2
@@ -1672,13 +1715,11 @@ MonoBehaviour:
   playerMesh: {fileID: 1434098413}
   trexTransformation: {fileID: 5581805770514834187, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
   _deathEcran: {fileID: 1602021639}
-  _humanTransformation: {fileID: 1434098423}
   scoreToLoose: 2
   meshList:
   - {fileID: -6320457817531067941, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
-  - {fileID: -3870736169222715132, guid: ed30957aed170254d80216e6242a8680, type: 3}
-  - {fileID: 4403503948874205534, guid: 8d303cde8dbb82e43b9c13514da74624, type: 3}
-  _transformationActive: 0
+  - {fileID: 976205900156245174, guid: f4f35060e8c6f58428bed7df6922c054, type: 3}
+  - {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   isTrex: 0
   isHuman: 0
   isMorph: 0
