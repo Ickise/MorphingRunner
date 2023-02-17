@@ -115,6 +115,30 @@ PrefabInstance:
       propertyPath: _speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 396662920913600871, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400927288913216450, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415186188906740716, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265346272972669073, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517745751697309099, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021500766962791647, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5168554839041674219, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -162,6 +186,10 @@ PrefabInstance:
     - target: {fileID: 6182446128811452843, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
       propertyPath: m_Name
       value: Road Collider Level 3 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205363413324376821, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b1b05547910944b8b51629953c4b58, type: 3}

@@ -11,7 +11,7 @@ public class MoveDecor : MonoBehaviour
         transform.position = transform.position + (new Vector3(0,0,-1) * Time.deltaTime * _speed);
         if(transform.position.z < -40)
         {
-            Destroy(this.gameObject,0);
+            //Destroy(this.gameObject,0);
         }     
     }
     public void SetSpeedAdd(float _speedAdd)

@@ -94,7 +94,7 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isMorph = false;
 
-        Instantiate(trexTransformation, playerMesh.transform.position + new Vector3(0, 0, -6), Quaternion.identity, playerMesh.transform);
+        Instantiate(trexTransformation, playerMesh.transform.position + new Vector3(0, -1, -6), Quaternion.identity, playerMesh.transform);
         playerMesh.GetComponent<MeshRenderer>().enabled = false;
         // playerMesh.GetComponent<MeshFilter>().mesh = meshList[0];
         // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[0];
