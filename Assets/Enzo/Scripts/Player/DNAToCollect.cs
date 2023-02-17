@@ -13,6 +13,8 @@ public class DNAToCollect : MonoBehaviour
 
     [SerializeField] Text[] numberOfSpecialDNA = new Text[2];
 
+    [SerializeField] int scoreToGain = 10;
+    
     [Header("Data")]
     [SerializeField] string stringButton;
 
@@ -57,7 +59,7 @@ public class DNAToCollect : MonoBehaviour
                 if (other.name == listDNA[i].dnaName)
                 {
                     listSpecialDNA[i]++;
-                    Scoring.scoring.score++;
+                    Scoring.scoring.score += scoreToGain;
                     Destroy(other.gameObject);
                 }
             }

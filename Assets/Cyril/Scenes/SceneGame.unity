@@ -144,7 +144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &144706967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,6 +1728,7 @@ MonoBehaviour:
   - {fileID: -6320457817531067941, guid: 21557e08b50eb584d9e35dfb4b0e05ff, type: 3}
   - {fileID: 976205900156245174, guid: f4f35060e8c6f58428bed7df6922c054, type: 3}
   - {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  playerCollider: {fileID: 0}
   isTrex: 0
   isHuman: 0
   isMorph: 0
@@ -2051,7 +2052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1841186649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2330,7 +2331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581805770514834187, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8331265896335366332, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,6 +13,8 @@ public class TransformationsChoices : MonoBehaviour
 
     [SerializeField] Mesh[] meshList = new Mesh[3];
 
+    [SerializeField] Collider playerCollider;
+
     [Header("Data")]
 
     bool slowMotionActive = false;
@@ -87,33 +89,42 @@ public class TransformationsChoices : MonoBehaviour
 
     public void ChangeIntoTRex()
     {
+        playerCollider.enabled = false;
         isTrex = true;
         isHuman = false;
         isMorph = false;
-        Instantiate(trexTransformation,playerMesh.transform.position + new Vector3(0,0,-6),Quaternion.identity,playerMesh.transform);
+
+        Instantiate(trexTransformation, playerMesh.transform.position + new Vector3(0, 0, -6), Quaternion.identity, playerMesh.transform);
         playerMesh.GetComponent<MeshRenderer>().enabled = false;
         // playerMesh.GetComponent<MeshFilter>().mesh = meshList[0];
         // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[0];
+
         ReturnInRealTime();
     }
 
     public void ChangeIntoHuman()
     {
+        playerCollider.enabled = false;
         isHuman = true;
         isTrex = false;
         isMorph = false;
+
         playerMesh.GetComponent<MeshFilter>().mesh = meshList[1];
         playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[1];
+
         ReturnInRealTime();
     }
 
     public void ChangeIntoMorph()
     {
+        playerCollider.enabled = true;
         isMorph = true;
         isHuman = false;
         isTrex = false;
+
         playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
         playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
+
         ReturnInRealTime();
     }
 
