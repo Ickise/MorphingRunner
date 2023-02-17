@@ -2176,6 +2176,10 @@ PrefabInstance:
       propertyPath: _animationcurveUp.m_Curve.Array.data[2].outSlope
       value: -0.6087512
       objectReference: {fileID: 0}
+    - target: {fileID: 579814572, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.96
+      objectReference: {fileID: 0}
     - target: {fileID: 877106453, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
       propertyPath: _VectorCorection.x
       value: 6
@@ -2211,6 +2215,10 @@ PrefabInstance:
     - target: {fileID: 877106453, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
       propertyPath: _animationcurveUp.m_Curve.Array.data[2].outSlope
       value: -0.6063726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913955827, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: 886158064484126033, guid: e908b71aec8d91649b241685bfeb3c22, type: 3}
       propertyPath: m_LocalPosition.x
