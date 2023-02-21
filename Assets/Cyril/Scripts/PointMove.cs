@@ -16,6 +16,7 @@ public class PointMove : MonoBehaviour
     public bool _Jambe = false;
     private float _time;
     private Vector3 _PointOfHit = Vector3.zero;
+    [SerializeField] private Vector3 _PointOfHitAdd = Vector3.zero;
     private Vector3 Déplacement = Vector3.zero;
     private Vector3 _basePosition = Vector3.zero;
     private Vector3 _newPosition = Vector3.zero;
@@ -35,13 +36,12 @@ public class PointMove : MonoBehaviour
         Vector3 RefPos = (_refLeg.position + _VectorCorection + Déplacement) * _flaotAnticipation;
         if (Physics.SphereCast(RefPos, _sphereRadius, -transform.up, out _hit, _maxDistanceShphereCast, _layerMask))
         {
-            Debug.Log(_hit.point + "point" + gameObject.name);
             _Contact = true;
             _PointOfHit = _hit.point + _VectorUp;
         }
         if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f)
         {
-            _targetLeg.position = _PointOfHit + new Vector3(0,-0.5f,0);
+            _targetLeg.position = _PointOfHit + _PointOfHitAdd;
         }
         if (_time > 1.5f)
         {
