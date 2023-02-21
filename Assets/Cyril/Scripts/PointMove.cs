@@ -67,7 +67,7 @@ public class PointMove : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
             _scriptPointMove._Jambe = true;
             elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)
@@ -76,7 +76,7 @@ public class PointMove : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
             _Jambe = false;
             _Once = false;
         }
