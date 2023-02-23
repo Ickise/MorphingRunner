@@ -27,10 +27,8 @@ public class CameraManager : MonoBehaviour
         {
             transform.position = Vector3.Lerp(Base,Down, elapsedTime / _lerpSpeed);
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime + "TimeS");
             yield return null;
         }
-       // _onceV2 = true;
         yield return new WaitForSeconds(1);
     }
     public IEnumerator LerpCam(Vector3 Base , Vector3 Down)

@@ -6,7 +6,6 @@ public class TransformationsChoices : MonoBehaviour
     [Header("Set up")]
     [SerializeField] GameObject transformationChoices;
     [SerializeField] GameObject playerMesh;
-    [SerializeField] GameObject trexTransformation;
     [SerializeField] GameObject _deathEcran;
 
     [SerializeField] int scoreToLoose = 2;
@@ -14,6 +13,7 @@ public class TransformationsChoices : MonoBehaviour
     [SerializeField] GameObject[] meshList; 
 
     [SerializeField] Collider playerCollider;
+    [SerializeField] CameraManager _cameraManager;
 
     [Header("Data")]
 
@@ -87,10 +87,11 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isMorph = false;
 
-        GameObject Inst = Instantiate(trexTransformation, playerMesh.transform.position + new Vector3(0, -1, -6), Quaternion.identity, playerMesh.transform);
+        GameObject Inst = Instantiate(meshList[2], playerMesh.transform.position + new Vector3(0, -1, -6), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
-
+        _cameraManager._lerpBool = true;
+        _cameraManager._lerpBoolTRex = true;
         ReturnInRealTime();
     }
 
@@ -115,7 +116,7 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isTrex = false;
 
-        GameObject Inst = Instantiate(meshList[1], playerMesh.transform.position + new Vector3(0, -1, 6), Quaternion.identity, playerMesh.transform.parent.transform);
+        GameObject Inst = Instantiate(meshList[1], playerMesh.transform.position + new Vector3(0, 0, 0), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
 

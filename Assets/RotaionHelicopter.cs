@@ -22,7 +22,6 @@ public class RotaionHelicopter : MonoBehaviour
     {
         while (_Jambe)
         {
-            Debug.Log("Jambe");
             float elapsedTime = 0f;
             _Once = false;
             while (elapsedTime < lerpSpeed)
