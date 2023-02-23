@@ -4,7 +4,7 @@ public class PointMove : MonoBehaviour
 {
     [Header("Important")]
     [SerializeField] private Transform _refLeg;
-    [SerializeField] private Transform _targetLeg;
+    public Transform _targetLeg;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private float _sphereRadius;
     [SerializeField] private float _maxDistanceShphereCast;
@@ -12,7 +12,7 @@ public class PointMove : MonoBehaviour
 
     [Header("Donnée")]
     private bool _Contact = false;
-    [SerializeField] private bool _Once = false;
+    [SerializeField] private bool _Once = true;
     public bool _Jambe = false;
     private float _time;
     private Vector3 _PointOfHit = Vector3.zero;
@@ -72,6 +72,7 @@ public class PointMove : MonoBehaviour
             elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)
             {
+                _scriptPointMove._Jambe = true;
                 Déplacement = Vector3.Lerp(_newPosition, _basePosition, elapsedTime / lerpSpeed);
                 elapsedTime += Time.deltaTime;
                 yield return null;
@@ -79,6 +80,7 @@ public class PointMove : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             _Jambe = false;
             _Once = false;
+            Debug.Log(_scriptPointMove._Jambe);
         }
     }
     private void OnDrawGizmos()

@@ -5,7 +5,7 @@ public class TransformationsChoices : MonoBehaviour
 {
     [Header("Set up")]
     [SerializeField] GameObject transformationChoices;
-    [SerializeField] GameObject playerMesh;
+    public GameObject playerMesh;
     [SerializeField] GameObject _deathEcran;
 
     [SerializeField] int scoreToLoose = 2;
@@ -87,12 +87,19 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isMorph = false;
 
-        GameObject Inst = Instantiate(meshList[2], playerMesh.transform.position + new Vector3(0, -1, -6), Quaternion.identity, playerMesh.transform.parent.transform);
+        GameObject Inst = Instantiate(meshList[2], playerMesh.transform.position + new Vector3(0, 0.1f, -6), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
         _cameraManager._lerpBool = true;
         _cameraManager._lerpBoolTRex = true;
         ReturnInRealTime();
+        StartCoroutine(TRexMove());
+    }
+    IEnumerator TRexMove()
+    {
+        yield return new WaitForSeconds(1f);
+        PointMove pointMove = playerMesh.transform.GetChild(3).GetComponent<PointMove>();
+        pointMove._Jambe = true;
     }
 
     public void ChangeIntoHuman()
