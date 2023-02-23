@@ -11,7 +11,7 @@ public class TransformationsChoices : MonoBehaviour
 
     [SerializeField] int scoreToLoose = 2;
 
-    [SerializeField] Mesh[] meshList = new Mesh[3];
+    [SerializeField] GameObject[] meshList; 
 
     [SerializeField] Collider playerCollider;
 
@@ -109,8 +109,11 @@ public class TransformationsChoices : MonoBehaviour
         isTrex = false;
         isMorph = false;
 
-        playerMesh.GetComponent<MeshFilter>().mesh = meshList[1];
-        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[1];
+        GameObject Inst = Instantiate(meshList[0], playerMesh.transform.position + new Vector3(0, 0, 3), Quaternion.identity, playerMesh.transform.parent.transform);
+        Destroy(playerMesh,0);
+        playerMesh = Inst;
+        // playerMesh.GetComponent<MeshFilter>().mesh = meshList[1];
+        // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[1];
 
         ReturnInRealTime();
     }
@@ -122,8 +125,9 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isTrex = false;
 
-        playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
-        playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
+        Instantiate(meshList[1], playerMesh.transform.position + new Vector3(0, -1, 6), Quaternion.identity, playerMesh.transform.parent.transform);
+        // playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
+        // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
 
         ReturnInRealTime();
     }
