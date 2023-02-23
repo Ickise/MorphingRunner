@@ -73,13 +73,6 @@ public class TransformationsChoices : MonoBehaviour
         }
     }
 
-    // public void ChangeMesh(int meshIndex)
-    // {
-    //     playerMesh.GetComponent<MeshFilter>().mesh = meshList[meshIndex];
-    //     playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[meshIndex];
-    //     ReturnInRealTime();
-    // }
-
     void ReturnInRealTime()
     {
         Time.timeScale = 1;
@@ -94,10 +87,9 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isMorph = false;
 
-        Instantiate(trexTransformation, playerMesh.transform.position + new Vector3(0, -1, -6), Quaternion.identity, playerMesh.transform);
-        playerMesh.GetComponent<MeshRenderer>().enabled = false;
-        // playerMesh.GetComponent<MeshFilter>().mesh = meshList[0];
-        // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[0];
+        GameObject Inst = Instantiate(trexTransformation, playerMesh.transform.position + new Vector3(0, -1, -6), Quaternion.identity, playerMesh.transform);
+        Destroy(playerMesh,0);
+        playerMesh = Inst;
 
         ReturnInRealTime();
     }
@@ -109,11 +101,9 @@ public class TransformationsChoices : MonoBehaviour
         isTrex = false;
         isMorph = false;
 
-        GameObject Inst = Instantiate(meshList[0], playerMesh.transform.position + new Vector3(0, 0, 3), Quaternion.identity, playerMesh.transform.parent.transform);
+        GameObject Inst = Instantiate(meshList[0], playerMesh.transform.position + new Vector3(0, 0, 1), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
-        // playerMesh.GetComponent<MeshFilter>().mesh = meshList[1];
-        // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[1];
 
         ReturnInRealTime();
     }
@@ -125,9 +115,9 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isTrex = false;
 
-        Instantiate(meshList[1], playerMesh.transform.position + new Vector3(0, -1, 6), Quaternion.identity, playerMesh.transform.parent.transform);
-        // playerMesh.GetComponent<MeshFilter>().mesh = meshList[2];
-        // playerMesh.GetComponent<MeshCollider>().sharedMesh = meshList[2];
+        GameObject Inst = Instantiate(meshList[1], playerMesh.transform.position + new Vector3(0, -1, 6), Quaternion.identity, playerMesh.transform.parent.transform);
+        Destroy(playerMesh,0);
+        playerMesh = Inst;
 
         ReturnInRealTime();
     }

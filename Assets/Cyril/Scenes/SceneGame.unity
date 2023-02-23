@@ -1837,6 +1837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1428181771}
+  - component: {fileID: 1428181770}
   m_Layer: 0
   m_Name: "H\xE9licopter"
   m_TagString: Untagged
@@ -1844,6 +1845,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1428181770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428181769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efc8221877d7b04aab8869754f18eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpSpeed: 3
+  _vectorBase: {x: 5, y: -10, z: 0}
+  _vectorBase2: {x: -5, y: 10, z: 0}
+  Rotate: {x: 0, y: 0, z: 0}
+  _Jambe: 1
+  _Once: 1
 --- !u!4 &1428181771
 Transform:
   m_ObjectHideFlags: 0
