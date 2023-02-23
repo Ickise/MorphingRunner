@@ -1264,6 +1264,10 @@ PrefabInstance:
       propertyPath: xPosition
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4752480639810400936, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: _transformationChoices
+      value: 
+      objectReference: {fileID: 1434098414}
     - target: {fileID: 4752480639810400937, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_Enabled
       value: 1

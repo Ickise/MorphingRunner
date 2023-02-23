@@ -9,6 +9,7 @@ public class PointMove : MonoBehaviour
     [SerializeField] private float _sphereRadius;
     [SerializeField] private float _maxDistanceShphereCast;
     [SerializeField] private float _flaotAnticipation;
+    [SerializeField] private HorizontalSides _horizontalSides;
 
     [Header("Donnée")]
     private bool _Contact = false;
@@ -25,6 +26,7 @@ public class PointMove : MonoBehaviour
     [SerializeField] private PointMove _scriptPointMove;
     [SerializeField] private float lerpSpeed;
     [SerializeField] private AnimationCurve _animationcurveUp;
+    [SerializeField] private float X;
     private void Update()
     {
         if (_Once == false)
@@ -41,12 +43,28 @@ public class PointMove : MonoBehaviour
         }
         if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f)
         {
-            _targetLeg.position = _PointOfHit + _PointOfHitAdd;
+            _targetLeg.position = _PointOfHit + _PointOfHitAdd + new Vector3(X,0,0);
         }
         if (_time > 1.5f)
         {
             _time = 0;
         }
+        Hoziontal();
+    }
+    private void Hoziontal()
+    {
+        if(HorizontalSides.horizontalSide == HorizontalSide.Left)
+        {
+            X = -2.5f;
+        }   
+        if(HorizontalSides.horizontalSide == HorizontalSide.Mid)
+        {
+            X = 0;
+        } 
+        if(HorizontalSides.horizontalSide == HorizontalSide.Right)
+        {
+            X = 2.5f;
+        }  
     }
     private IEnumerator LerpLoopCoroutine()
     {

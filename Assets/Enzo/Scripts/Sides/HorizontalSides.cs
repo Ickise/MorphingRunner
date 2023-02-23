@@ -1,29 +1,23 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 [System.Serializable]
 public enum HorizontalSide { Left, Mid, Right }
 
 public class HorizontalSides : MonoBehaviour
-{    
+{
     [Header("Set up")]
-
     public float xPosition;
     public float xValue;
     public float speedDodge;
-    [SerializeField] TransformationsChoices _transformationChoices;
-
+    
     [Header("Data")]
     float smoothX;
-
     bool swipeLeft;
     bool swipeRight;
-
     Vector3 position;
-
     public static HorizontalSide horizontalSide = HorizontalSide.Mid;
-
     CharacterController playerCharacterController;
-
     void Start()
     {
         horizontalSide = HorizontalSide.Mid;
@@ -39,7 +33,7 @@ public class HorizontalSides : MonoBehaviour
         {
             if (horizontalSide == HorizontalSide.Mid)
             {
-                xPosition = -xValue;
+                xPosition = -xValue;    
                 horizontalSide = HorizontalSide.Left;
             }
             else if (horizontalSide == HorizontalSide.Right)
@@ -66,12 +60,5 @@ public class HorizontalSides : MonoBehaviour
         smoothX = Mathf.Lerp(smoothX, xPosition, Time.deltaTime * speedDodge);
 
         playerCharacterController.Move(((smoothX - transform.position.x) * Vector3.right));
-        
-        if(_transformationChoices.isTrex == true)
-        {
-           PointMove pointMove1 = _transformationChoices.playerMesh.transform.GetChild(3).GetComponent<PointMove>();
-           PointMove pointMove2 = _transformationChoices.playerMesh.transform.GetChild(4).GetComponent<PointMove>();
-           //pointMove1._targetLeg.position = new Vector3(0,)
-        }
     }
 }
