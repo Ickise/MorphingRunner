@@ -21,7 +21,7 @@ public class TRexExplosion : MonoBehaviour
     }
     private IEnumerator WaitFor(Collider col)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
         col.isTrigger = false;
         ObstacleRigidbody.useGravity = true;
         ObstacleRigidbody.mass = 1500;

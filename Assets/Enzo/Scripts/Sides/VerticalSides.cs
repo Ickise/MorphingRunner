@@ -43,11 +43,13 @@ public class VerticalSides : MonoBehaviour
             verticalSide = VerticalSide.Down;
             cameraManager._lerpBoolReverse = true;
             cameraManager._lerpBool = true;
+            cameraManager._lerpBoolUp = false;
         }
         if (other.CompareTag("Up") && verticalSide == VerticalSide.Down && !TransformationsChoices.transformationsChoices.isTrex)
         {
             yPosition = yValue - 3;
             verticalSide = VerticalSide.Mid;
+            cameraManager._lerpBoolUp = true;
             cameraManager._lerpBoolReverse = false;
             cameraManager._lerpBool = true;   
         }

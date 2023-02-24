@@ -87,11 +87,12 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = false;
         isMorph = false;
 
-        GameObject Inst = Instantiate(meshList[2], playerMesh.transform.position + new Vector3(0, 0.1f, -6), Quaternion.identity, playerMesh.transform.parent.transform);
+        GameObject Inst = Instantiate(meshList[2], new Vector3(playerMesh.transform.position.x, 0.1f, -6), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
         _cameraManager._lerpBool = true;
         _cameraManager._lerpBoolTRex = true;
+        _cameraManager._lerpBoolTRexReverse = false;
         ReturnInRealTime();
         StartCoroutine(TRexMove());
     }
@@ -108,11 +109,11 @@ public class TransformationsChoices : MonoBehaviour
         isHuman = true;
         isTrex = false;
         isMorph = false;
-
-        GameObject Inst = Instantiate(meshList[0], playerMesh.transform.position + new Vector3(0, 0, 1), Quaternion.identity, playerMesh.transform.parent.transform);
+        GameObject Inst = Instantiate(meshList[0], new Vector3(playerMesh.transform.position.x, 0, 1), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
-
+        _cameraManager._lerpBoolTRex = false;
+        _cameraManager._lerpBoolTRexReverse = true;
         ReturnInRealTime();
     }
 
@@ -122,11 +123,11 @@ public class TransformationsChoices : MonoBehaviour
         isMorph = true;
         isHuman = false;
         isTrex = false;
-
-        GameObject Inst = Instantiate(meshList[1], playerMesh.transform.position + new Vector3(0, 0, 0), Quaternion.identity, playerMesh.transform.parent.transform);
+        GameObject Inst = Instantiate(meshList[1],new Vector3(playerMesh.transform.position.x, 0, 0), Quaternion.identity, playerMesh.transform.parent.transform);
         Destroy(playerMesh,0);
         playerMesh = Inst;
-
+        _cameraManager._lerpBoolTRex = false;
+        _cameraManager._lerpBoolTRexReverse = true;
         ReturnInRealTime();
     }
 
