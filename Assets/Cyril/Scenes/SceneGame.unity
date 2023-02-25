@@ -303,10 +303,10 @@ MonoBehaviour:
   _numberSpawnChunk: 0
   _numberOfSpawnChunkObs: 2
   _movePoint: 0
-  _newSeed: 1
+  _newSeed: 0
   _rotateWord: 1
   _once: 1
-  _mySeed: 0
+  _mySeed: -320471398
   _seed: 0
   _speed: 10
   _time: 0
@@ -1447,6 +1447,10 @@ PrefabInstance:
     - target: {fileID: 5806720569718183968, guid: 6aabe47b075374544a751c7385186f76, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806720569718183968, guid: 6aabe47b075374544a751c7385186f76, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5806720569718183971, guid: 6aabe47b075374544a751c7385186f76, type: 3}
       propertyPath: m_RootOrder
