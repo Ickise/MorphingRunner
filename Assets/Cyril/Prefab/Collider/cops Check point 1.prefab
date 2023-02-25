@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 197163057016768442, guid: 7fbc96e29211ef64a9d3ccb61cb486f7, type: 3}
       propertyPath: m_TagString
-      value: CheckPoint
+      value: Collider
       objectReference: {fileID: 0}
     - target: {fileID: 197163057016768442, guid: 7fbc96e29211ef64a9d3ccb61cb486f7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -655,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 197163057016768442, guid: 7fbc96e29211ef64a9d3ccb61cb486f7, type: 3}
       propertyPath: m_TagString
-      value: CheckPoint
+      value: Collider
       objectReference: {fileID: 0}
     - target: {fileID: 197163057016768442, guid: 7fbc96e29211ef64a9d3ccb61cb486f7, type: 3}
       propertyPath: m_StaticEditorFlags

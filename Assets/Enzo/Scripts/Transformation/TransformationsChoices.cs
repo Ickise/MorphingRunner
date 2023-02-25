@@ -142,6 +142,11 @@ public class TransformationsChoices : MonoBehaviour
             _deathEcran.SetActive(true);
             Time.timeScale = 0f;
         }
+        // if (other.gameObject.CompareTag("CheckPoint") && !isTrex)
+        // {
+        //     _deathEcran.SetActive(true);
+        //     Time.timeScale = 0f;
+        // }
         if (other.gameObject.CompareTag("Collider") && other.gameObject.CompareTag("CheckPoint") && isTrex)
         {
             Destroy(other);
