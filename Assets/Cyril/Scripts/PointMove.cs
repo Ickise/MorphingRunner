@@ -26,9 +26,15 @@ public class PointMove : MonoBehaviour
     [SerializeField] private PointMove _scriptPointMove;
     [SerializeField] private float lerpSpeed;
     [SerializeField] private AnimationCurve _animationcurveUp;
+     [SerializeField] private CameraShake _cameraShake;
     [SerializeField] private float X;
     private void Update()
     {
+        if(_cameraShake == null)
+        {
+            GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+            _cameraShake = Camera.GetComponent<CameraShake>();
+        }
         if (_Once == false)
         {
             StartCoroutine(LerpLoopCoroutine());
@@ -86,6 +92,7 @@ public class PointMove : MonoBehaviour
                 yield return null;
             }
             yield return new WaitForSeconds(0.1f);
+            StartCoroutine(_cameraShake.Shake(0.1f,0.1f));
             _scriptPointMove._Jambe = true;
             elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)

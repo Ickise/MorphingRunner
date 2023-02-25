@@ -843,6 +843,7 @@ GameObject:
   - component: {fileID: 650481431}
   - component: {fileID: 650481430}
   - component: {fileID: 650481432}
+  - component: {fileID: 650481433}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -978,6 +979,7 @@ MonoBehaviour:
   _PointBase: {fileID: 1280669222}
   _PointDown: {fileID: 412979279}
   _PointTrex: {fileID: 2084412675}
+  _cameraShake: {fileID: 650481433}
   _lerpSpeed: 2
   _lerpBoolReverse: 0
   _lerpBoolUp: 0
@@ -1080,6 +1082,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &650481433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650481425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf4738f57cb3b44daf9f7604a310bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &677619842
 GameObject:
   m_ObjectHideFlags: 0

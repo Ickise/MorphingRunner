@@ -6,6 +6,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Transform _PointBase;
     [SerializeField] private Transform _PointDown;
     [SerializeField] private Transform _PointTrex;
+    [SerializeField] private CameraShake _cameraShake;
     [SerializeField] private float _lerpSpeed;
     public bool _lerpBoolReverse = true;
     public bool _lerpBoolUp = false;
@@ -18,8 +19,17 @@ public class CameraManager : MonoBehaviour
     {
         if(_lerpBoolReverse && _once && _lerpBool == true)  StartCoroutine(LerpCamera(_PointBase.position,_PointDown.position));
         if(_lerpBoolUp && _onceV2 && _lerpBool == true) StartCoroutine(LerpCam(_PointDown.position,_PointBase.position));
-        if(_lerpBoolTRex && _once && _lerpBool == true) StartCoroutine(LerpCamera(_PointBase.position,_PointTrex.position));
+        if(_lerpBoolTRex && _once && _lerpBool == true)
+        {
+            StartCoroutine(LerpCamera(_PointBase.position,_PointTrex.position));
+            StartCoroutine(WaitforSeconde());  
+        } 
         if(_lerpBoolTRexReverse && _onceV2 && _lerpBool == true) StartCoroutine(LerpCam(_PointTrex.position,_PointBase.position));
+    }
+    public IEnumerator WaitforSeconde()
+    {
+        yield return new WaitForSeconds(2.5f);
+        //StartCoroutine( _cameraShake.Shake(0.5f,0.1f));  
     }
     public IEnumerator LerpCamera(Vector3 Base , Vector3 Down)
     {
