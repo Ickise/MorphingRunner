@@ -91,6 +91,7 @@ public class TransformationsChoices : MonoBehaviour
         _cameraManager._lerpBoolTRexReverse = false;
         ReturnInRealTime();
         StartCoroutine(TRexMove());
+        StartCoroutine(TRexChrono());
     }
     IEnumerator TRexMove()
     {
@@ -111,6 +112,7 @@ public class TransformationsChoices : MonoBehaviour
         _cameraManager._lerpBoolTRex = false;
         _cameraManager._lerpBoolTRexReverse = true;
         ReturnInRealTime();
+        StartCoroutine(HumanChrono());
     }
 
     public void ChangeIntoMorph()
@@ -163,5 +165,15 @@ public class TransformationsChoices : MonoBehaviour
         Animator animatorCops2 = cops2.GetComponent<Animator>();
         animatorCops1.SetBool("Back", true);
         animatorCops2.SetBool("Back", true);
+    }
+    public IEnumerator TRexChrono()
+    {
+        yield return new WaitForSeconds(30f);
+        ChangeIntoMorph();
+    }
+    public IEnumerator HumanChrono()
+    {
+        yield return new WaitForSeconds(10f);
+        ChangeIntoMorph();
     }
 }
