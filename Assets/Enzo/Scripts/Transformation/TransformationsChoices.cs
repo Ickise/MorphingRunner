@@ -140,10 +140,7 @@ public class TransformationsChoices : MonoBehaviour
         if (!isTrex && other.gameObject.CompareTag("Collider"))
         {
             _deathEcran.SetActive(true);
-            Time.timeScale = 0f;
-
             listToDestroyCollider = GameObject.FindGameObjectsWithTag("Collider");
-
             foreach (var item in listToDestroy)
             {
                 Destroy(item);
