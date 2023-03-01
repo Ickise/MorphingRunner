@@ -399,6 +399,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: Morph
       objectReference: {fileID: 0}
+    - target: {fileID: 6452566514049844901, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514049844901, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 796b95ecae011d64a9f3c7a677cc9ef5, type: 3}
     - target: {fileID: 6452566514049844922, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -482,6 +490,18 @@ PrefabInstance:
     - target: {fileID: 6452566514049844922, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514049844923, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514049844923, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514049844923, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452566514404412778, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_Pivot.x
@@ -599,6 +619,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533741, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533741, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533743, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566514525533743, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce13317a13ca8224ebc509a229320d40, type: 3}
     - target: {fileID: 6452566515302831012, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -651,6 +687,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6452566515302831013, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566515302831013, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566515302831015, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452566515302831015, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5f881c6288a8dc46b5ea6d6720a7a7d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
 --- !u!1 &223678020 stripped
@@ -3132,7 +3184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1960805593
 MonoBehaviour:
   m_ObjectHideFlags: 0
