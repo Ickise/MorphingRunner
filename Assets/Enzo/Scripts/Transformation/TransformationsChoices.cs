@@ -10,6 +10,7 @@ public class TransformationsChoices : MonoBehaviour
 
     [SerializeField] GameObject[] meshList;
     [SerializeField] GameObject[] listToDestroy;
+    [SerializeField] bool invisibility;
     GameObject[] listToDestroyCollider;
 
     [SerializeField] int scoreToWin = 10;
@@ -131,6 +132,7 @@ public class TransformationsChoices : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(invisibility) return;
         if (other.gameObject.CompareTag("CheckPoint") && isHuman)
         {
             Passe(other.gameObject);
@@ -169,11 +171,18 @@ public class TransformationsChoices : MonoBehaviour
     public IEnumerator TRexChrono()
     {
         yield return new WaitForSeconds(30f);
+        invisibility = true;
         ChangeIntoMorph();
+        StartCoroutine(InvisibilityChrono());
     }
     public IEnumerator HumanChrono()
     {
         yield return new WaitForSeconds(10f);
         ChangeIntoMorph();
+    }
+    public IEnumerator InvisibilityChrono()
+    {
+        yield return new WaitForSeconds(3f);
+        invisibility = false;
     }
 }
