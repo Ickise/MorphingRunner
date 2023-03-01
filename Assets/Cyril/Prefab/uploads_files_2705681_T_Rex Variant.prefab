@@ -1761,6 +1761,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _cameraShake: {fileID: 0}
   X: 0
 --- !u!1 &6908725671712297887
 GameObject:
@@ -1862,6 +1863,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _cameraShake: {fileID: 0}
   X: 0
 --- !u!1 &6908725671763471950
 GameObject:
@@ -2055,14 +2057,13 @@ MonoBehaviour:
   - {fileID: 6908725670772374894}
   - {fileID: 6908725670807900273}
   - {fileID: 6908725670375591472}
-  - {fileID: 6908725670221558771}
-  Base: {x: 0.2, y: 0, z: 0.3}
-  NoBase: {x: -0.2, y: 0, z: -0.2}
-  Rotate: {x: 0, y: 0, z: 0}
+  Base: 15
+  NoBase: -15
+  Rotate: 0
   _Jambe: 1
   _Once: 1
   lerpSpeed: 5
-  _div: 20
+  _trexTete: {fileID: 6908725671381494199}
 --- !u!82 &8429794475381512139
 AudioSource:
   m_ObjectHideFlags: 0
