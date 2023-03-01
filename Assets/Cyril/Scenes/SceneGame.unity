@@ -1638,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4752480639104221535, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4752480639571468905, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1792,11 +1796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: listSpecialDNA.Array.data[0]
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: listSpecialDNA.Array.data[1]
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: numberOfSpecialDNA.Array.size
@@ -2202,7 +2206,7 @@ MonoBehaviour:
   transformationChoices: {fileID: 223678020}
   playerMesh: {fileID: 1754061376}
   _deathEcran: {fileID: 1602021639}
-  scoreToLoose: 2
+  scoreToWin: 10
   meshList:
   - {fileID: 2495871464584146722, guid: 53ddf068d4b1aed4f8c94f749a1773c9, type: 3}
   - {fileID: 1531606886675561809, guid: 255536225745cc04b8b3ef28ed00b65a, type: 3}
