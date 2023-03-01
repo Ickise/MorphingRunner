@@ -303,10 +303,10 @@ MonoBehaviour:
   _numberSpawnChunk: 0
   _numberOfSpawnChunkObs: 2
   _movePoint: 0
-  _newSeed: 0
+  _newSeed: 1
   _rotateWord: 1
   _once: 1
-  _mySeed: -320471398
+  _mySeed: 0
   _seed: 0
   _speed: 10
   _time: 0

@@ -14,18 +14,20 @@ public class animationQueu : MonoBehaviour
     [SerializeField] private float _div;
     void Update()
     {
+        // if(_Once) StartCoroutine(Slerp());
+        // for (int i = 0; i < _listQeu.Count; i++)
+        // {
+        //     if(i == 5)
+        //     {
+        //         _listQeu[5].Rotate(-Rotate,Space.World);                
+        //     }
+        //     else
+        //     {
+        //         _listQeu[i].Rotate(Rotate,Space.World);
+        //     }
+        // }
         if(_Once) StartCoroutine(Slerp());
-        for (int i = 0; i < _listQeu.Count; i++)
-        {
-            if(i == 5)
-            {
-                _listQeu[5].Rotate(-Rotate,Space.World);                
-            }
-            else
-            {
-                _listQeu[i].Rotate(Rotate,Space.World);
-            }
-        }
+        
     }
     private IEnumerator Slerp()
     {
