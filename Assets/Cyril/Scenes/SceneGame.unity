@@ -395,6 +395,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6452566513946015129, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
+      propertyPath: m_Text
+      value: Morph
+      objectReference: {fileID: 0}
     - target: {fileID: 6452566514049844922, guid: 6bfb80435d2c8eb4b91b119d27fecc36, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -1314,8 +1318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156.973, y: -228}
-  m_SizeDelta: {x: 313.946, y: 148.802}
+  m_AnchoredPosition: {x: 285.98, y: -228}
+  m_SizeDelta: {x: 571.95, y: 148.802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869816196
 MonoBehaviour:
@@ -1767,6 +1771,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2ecfdcf2d9bc0d04f905bebf9b23aa3c, type: 2}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: numberOfDNAToTransform
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: buttonList.Array.data[0]
       value: 
       objectReference: {fileID: 2076109017}
@@ -1781,6 +1789,14 @@ PrefabInstance:
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: listSpecialDNA.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: listSpecialDNA.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: listSpecialDNA.Array.data[1]
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6279812513609289388, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: numberOfSpecialDNA.Array.size
@@ -2429,6 +2445,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8376730449699432505, guid: ba390c355194b8848b97ccdaf5aadb96, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 571.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8376730449699432505, guid: ba390c355194b8848b97ccdaf5aadb96, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 285.9751
+      objectReference: {fileID: 0}
+    - target: {fileID: 8376730449699432505, guid: ba390c355194b8848b97ccdaf5aadb96, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -74.399994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba390c355194b8848b97ccdaf5aadb96, type: 3}
 --- !u!114 &1819262930 stripped
@@ -2572,8 +2600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156.973, y: -377}
-  m_SizeDelta: {x: 313.946, y: 148.802}
+  m_AnchoredPosition: {x: 285.98, y: -377}
+  m_SizeDelta: {x: 571.95, y: 148.802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887963546
 MonoBehaviour:

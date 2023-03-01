@@ -885,7 +885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7871786410074445391, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.6049957
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 7871786410074445391, guid: 705bc6eeef2bfa041801a266868371ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2020,9 +2020,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1612020135722891242}
     m_Modifications:
+    - target: {fileID: 4508846166633309568, guid: d3f04c60da4591b42a38e483a9adfd42, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8945371254317187594, guid: d3f04c60da4591b42a38e483a9adfd42, type: 3}
       propertyPath: m_Name
       value: warning_sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945371254317187594, guid: d3f04c60da4591b42a38e483a9adfd42, type: 3}
+      propertyPath: m_TagString
+      value: Collider
       objectReference: {fileID: 0}
     - target: {fileID: 8945371254317555646, guid: d3f04c60da4591b42a38e483a9adfd42, type: 3}
       propertyPath: m_RootOrder

@@ -12,6 +12,7 @@ public class TRexExplosion : MonoBehaviour
         {
             return;
         }
+        Scoring.scoring.score += 10;
         GameObject Obstacle = other.gameObject;
         ObstacleRigidbody = Obstacle.GetComponent<Rigidbody>();
         ObstacleRigidbody.AddForce(transform.up * 35 + transform.forward * 30,ForceMode.Impulse); // Forward inverser !!!

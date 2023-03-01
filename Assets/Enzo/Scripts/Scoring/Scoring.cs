@@ -22,7 +22,7 @@ public class Scoring : MonoBehaviour
         timer += Time.deltaTime;
         scoreText.text = "" + score;
 
-        if (timer >= timeToGainScore && !TransformationsChoices.transformationsChoices.isTrex)
+        if (timer >= timeToGainScore)
         {
             score++;
             timer = 0f;

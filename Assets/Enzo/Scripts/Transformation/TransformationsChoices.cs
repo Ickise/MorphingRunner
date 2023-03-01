@@ -8,9 +8,9 @@ public class TransformationsChoices : MonoBehaviour
     public GameObject playerMesh;
     [SerializeField] GameObject _deathEcran;
 
-    [SerializeField] int scoreToLoose = 2;
+    [SerializeField] int scoreToWin = 10;
 
-    [SerializeField] GameObject[] meshList; 
+    [SerializeField] GameObject[] meshList;
 
     [SerializeField] Collider playerCollider;
     [SerializeField] CameraManager _cameraManager;
@@ -32,18 +32,6 @@ public class TransformationsChoices : MonoBehaviour
 
     void Update()
     {
-        Scoring.scoring.timer += Time.deltaTime;
-
-        if (Scoring.scoring.timer >= Scoring.scoring.timeToGainScore && isTrex && Scoring.scoring.score > 0)
-        {
-            Scoring.scoring.score -= scoreToLoose;
-            Scoring.scoring.timer = 0f;
-        }
-        else if (Scoring.scoring.score <= 0)
-        {
-            Scoring.scoring.score = 0;
-        }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!slowMotionActive)
@@ -88,7 +76,7 @@ public class TransformationsChoices : MonoBehaviour
         isMorph = false;
 
         GameObject Inst = Instantiate(meshList[2], new Vector3(playerMesh.transform.position.x, 0.1f, -6), Quaternion.identity, playerMesh.transform.parent.transform);
-        Destroy(playerMesh,0);
+        Destroy(playerMesh, 0);
         playerMesh = Inst;
         _cameraManager._lerpBool = true;
         _cameraManager._lerpBoolTRex = true;
@@ -110,7 +98,7 @@ public class TransformationsChoices : MonoBehaviour
         isTrex = false;
         isMorph = false;
         GameObject Inst = Instantiate(meshList[0], new Vector3(playerMesh.transform.position.x, 0, 1), Quaternion.identity, playerMesh.transform.parent.transform);
-        Destroy(playerMesh,0);
+        Destroy(playerMesh, 0);
         playerMesh = Inst;
         _cameraManager._lerpBoolTRex = false;
         _cameraManager._lerpBoolTRexReverse = true;
@@ -123,8 +111,8 @@ public class TransformationsChoices : MonoBehaviour
         isMorph = true;
         isHuman = false;
         isTrex = false;
-        GameObject Inst = Instantiate(meshList[1],new Vector3(playerMesh.transform.position.x, 0, 0), Quaternion.identity, playerMesh.transform.parent.transform);
-        Destroy(playerMesh,0);
+        GameObject Inst = Instantiate(meshList[1], new Vector3(playerMesh.transform.position.x, 0, 0), Quaternion.identity, playerMesh.transform.parent.transform);
+        Destroy(playerMesh, 0);
         playerMesh = Inst;
         _cameraManager._lerpBoolTRex = false;
         _cameraManager._lerpBoolTRexReverse = true;
@@ -142,9 +130,9 @@ public class TransformationsChoices : MonoBehaviour
             _deathEcran.SetActive(true);
             Time.timeScale = 0f;
         }
-        if (other.gameObject.CompareTag("Collider") && other.gameObject.CompareTag("CheckPoint") && isTrex)
+        if (isTrex && other.gameObject.CompareTag("CheckPoint") || other.gameObject.CompareTag("Sign"))
         {
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 

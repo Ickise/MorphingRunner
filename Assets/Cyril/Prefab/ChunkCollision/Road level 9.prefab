@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: warning_sign Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8945371254317187594, guid: d3f04c60da4591b42a38e483a9adfd42, type: 3}
+      propertyPath: m_TagString
+      value: Sign
+      objectReference: {fileID: 0}
     - target: {fileID: 8945371254317555646, guid: d3f04c60da4591b42a38e483a9adfd42, type: 3}
       propertyPath: m_RootOrder
       value: 0

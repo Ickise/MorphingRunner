@@ -12,6 +12,7 @@ TagManager:
   - Down
   - Up
   - Walls
+  - Sign
   layers:
   - Default
   - TransparentFX
