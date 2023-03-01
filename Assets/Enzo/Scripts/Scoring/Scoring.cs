@@ -11,6 +11,7 @@ public class Scoring : MonoBehaviour
     public float timeToGainScore = 1f;
 
     [SerializeField] Text scoreText;
+    [SerializeField] Text scoreTextM;
 
     void Awake()
     {
@@ -21,6 +22,7 @@ public class Scoring : MonoBehaviour
     {
         timer += Time.deltaTime;
         scoreText.text = "" + score;
+        scoreTextM.text = "" + score;
 
         if (timer >= timeToGainScore)
         {
