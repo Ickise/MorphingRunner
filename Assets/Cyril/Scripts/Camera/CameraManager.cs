@@ -52,7 +52,6 @@ public class CameraManager : MonoBehaviour
         {
             transform.position = Vector3.Lerp(Base,Down, elapsedTime / _lerpSpeed);
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime + "Time");
             yield return null;
         }
         _once = true;

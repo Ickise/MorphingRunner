@@ -17,7 +17,6 @@ public class animationQueu : MonoBehaviour
         if(_Once) StartCoroutine(Slerp());
         for (int i = 0; i < _listQeu.Count; i++)
         {
-            Debug.Log(Rotate + "" + _listQeu[i]);
             if(i == 5)
             {
                 _listQeu[5].Rotate(-Rotate,Space.World);                
@@ -32,7 +31,6 @@ public class animationQueu : MonoBehaviour
     {
         while (_Jambe)
         {
-            Debug.Log("Jambe");
             float elapsedTime = 0f;
             _Once = false;
             while (elapsedTime < lerpSpeed)

@@ -28,11 +28,13 @@ public class TransformationsChoices : MonoBehaviour
     {
         transformationsChoices = this;
         transformationChoices.SetActive(false);
+
+        isMorph = true;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && VerticalSides.verticalSide != VerticalSide.Down)
         {
             if (!slowMotionActive)
             {
@@ -48,6 +50,10 @@ public class TransformationsChoices : MonoBehaviour
 
     IEnumerator SlowMotion()
     {
+        if(VerticalSides.verticalSide == VerticalSide.Up)
+        {
+            yield return new WaitUntil(() => transform.position.y >= 3);
+        }
         slowMotionActive = true;
         Time.timeScale = 0.5f;
         transformationChoices.SetActive(true);
@@ -125,12 +131,12 @@ public class TransformationsChoices : MonoBehaviour
         {
             Passe(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Collider") && !isTrex)
+        if (!isTrex && other.gameObject.CompareTag("Collider"))
         {
             _deathEcran.SetActive(true);
             Time.timeScale = 0f;
         }
-        if (isTrex && other.gameObject.CompareTag("CheckPoint") || other.gameObject.CompareTag("Sign"))
+        if (isTrex && other.gameObject.CompareTag("CheckPoint"))
         {
             Destroy(other.gameObject);
         }

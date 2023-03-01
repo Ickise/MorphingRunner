@@ -39,7 +39,6 @@ public class PointMove : MonoBehaviour
         {
             StartCoroutine(LerpLoopCoroutine());
         }
-        Debug.Log("Fixed");
         RaycastHit _hit;
         Vector3 RefPos = (_refLeg.position + _VectorCorection + Déplacement) * _flaotAnticipation;
         if (Physics.SphereCast(RefPos, _sphereRadius, -transform.up, out _hit, _maxDistanceShphereCast, _layerMask))
@@ -105,7 +104,6 @@ public class PointMove : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             _Jambe = false;
             _Once = false;
-            Debug.Log(_scriptPointMove._Jambe);
         }
     }
     private void OnDrawGizmos()

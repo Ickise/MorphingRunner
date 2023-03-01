@@ -20,10 +20,10 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private int _seed;
     [SerializeField] private float _speed = 10;
     [SerializeField] private float _time;
-    private float _timeMin = 60;
+    private float _timeMin = 10;
     private void Awake()
     {
-        GenertaionSeed();
+        GenerationSeed();
     }
     void Start()
     {
@@ -36,6 +36,7 @@ public class ChunkGeneration : MonoBehaviour
             Generate();
         }
         Speed();
+        Debug.Log(_speed);
     }
     private Quaternion Rotation(ChunkData _chunkData)
     {
@@ -67,7 +68,7 @@ public class ChunkGeneration : MonoBehaviour
         _movePoint = true;
         for (int i = 0; i < _numberOfSpawnChunkObs; i++)
         {
-            if(_once == true)
+            if (_once == true)
             {
                 GenerateChunkPause();
                 _once = false;
@@ -85,7 +86,7 @@ public class ChunkGeneration : MonoBehaviour
         MoveDecor moveDecor = _pointStart.GetComponent<MoveDecor>();
         moveDecor.SetSpeed(_speed);
     }
-    private void GenertaionSeed()
+    private void GenerationSeed()
     {
         if (_newSeed == true)
         {
@@ -95,14 +96,17 @@ public class ChunkGeneration : MonoBehaviour
         {
             _seed = _mySeed;
         }
+
         Random.InitState(_seed);
     }
     private void Speed()
     {
         _time = _time + Time.deltaTime;
-        if (_time > _timeMin)
+
+        if (_speed < 20 && _time >= _timeMin)
         {
-            _speed = _speed + 0.001f;
+            _speed += 1;
+            _time = 0;
         }
     }
 }

@@ -242,7 +242,6 @@ GameObject:
   - component: {fileID: 4752480639810400938}
   - component: {fileID: 4752480639810400937}
   - component: {fileID: 3503288912168147539}
-  - component: {fileID: 3172287763248435569}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -344,11 +343,6 @@ MonoBehaviour:
   yPosition: 0
   yValue: 3
   speedToMove: 10
-  invincibilityTime: 2
-  timeToBecomeNormal: 0.2
-  playerMeshCollider: {fileID: 0}
-  playerCollider: {fileID: 0}
-  playerMeshRenderer: {fileID: 0}
   cameraManager: {fileID: 0}
 --- !u!114 &6279812513609289388
 MonoBehaviour:
@@ -376,6 +370,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   scoreToGain: 10
+  collectDNA: {fileID: 0}
   stringButton: 
 --- !u!136 &4752480639810400938
 CapsuleCollider:
@@ -423,20 +418,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3172287763248435569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752480639810400919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6f582245953474a8904208c6502b34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deathEcrant: {fileID: 0}
-  _scriptHumanTransformation: {fileID: 0}
 --- !u!1 &4752480640171185850
 GameObject:
   m_ObjectHideFlags: 0
