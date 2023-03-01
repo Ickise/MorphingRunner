@@ -42,6 +42,7 @@ public class CameraManager : MonoBehaviour
             yield return null;
         }
         _onceV2 = true;
+        _lerpBoolReverse = false;
         yield return new WaitForSeconds(1);
     }
     public IEnumerator LerpCam(Vector3 Base , Vector3 Down)
@@ -55,5 +56,8 @@ public class CameraManager : MonoBehaviour
             yield return null;
         }
         _once = true;
+        _lerpBoolTRex = false;
+        _lerpBoolTRexReverse = false;
+        _lerpBool = false;
     }
 }
