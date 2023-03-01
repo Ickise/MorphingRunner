@@ -10,7 +10,7 @@ public class TransformationsChoices : MonoBehaviour
 
     [SerializeField] GameObject[] meshList;
     [SerializeField] GameObject[] listToDestroy;
-    [SerializeField] bool invisibility;
+    public bool invisibility;
     GameObject[] listToDestroyCollider;
 
     [SerializeField] int scoreToWin = 10;

@@ -9,6 +9,7 @@ public class VerticalSides : MonoBehaviour
     [SerializeField] float yPosition;
     [SerializeField] float yValue;
     [SerializeField] float speedToMove;
+    [SerializeField] TransformationsChoices _transformationChoices;
 
     public CameraManager cameraManager;
 
@@ -43,6 +44,8 @@ public class VerticalSides : MonoBehaviour
             cameraManager._lerpBoolReverse = true;
             cameraManager._lerpBool = true;
             cameraManager._lerpBoolUp = false;
+            _transformationChoices.invisibility = true;
+            StartCoroutine(_transformationChoices.InvisibilityChrono());
         }
         if (other.CompareTag("Up") && verticalSide == VerticalSide.Down && !TransformationsChoices.transformationsChoices.isTrex)
         {
@@ -50,7 +53,9 @@ public class VerticalSides : MonoBehaviour
             verticalSide = VerticalSide.Mid;
             cameraManager._lerpBoolUp = true;
             cameraManager._lerpBoolReverse = false;
-            cameraManager._lerpBool = true;   
+            cameraManager._lerpBool = true;
+            _transformationChoices.invisibility = true;
+            StartCoroutine(_transformationChoices.InvisibilityChrono());   
         }
     }
 

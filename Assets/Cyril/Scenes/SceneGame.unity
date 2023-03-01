@@ -1995,6 +1995,10 @@ PrefabInstance:
       propertyPath: playerMeshRenderer
       value: 
       objectReference: {fileID: 1434098420}
+    - target: {fileID: 4752480639810400942, guid: 507b8b57208ff954099a6354014d102a, type: 3}
+      propertyPath: _transformationChoices
+      value: 
+      objectReference: {fileID: 1434098414}
     - target: {fileID: 4752480640171185850, guid: 507b8b57208ff954099a6354014d102a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2472,6 +2476,7 @@ MonoBehaviour:
   - {fileID: 1494861299}
   - {fileID: 1508851024}
   - {fileID: 2098028056}
+  invisibility: 0
   scoreToWin: 10
   playerCollider: {fileID: 1434098415}
   _cameraManager: {fileID: 650481431}
