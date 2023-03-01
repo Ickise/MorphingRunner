@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3111186204775988341}
   m_Layer: 0
   m_Name: warning_sign
-  m_TagString: Collider
+  m_TagString: Sign
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2365879550556142993}
   m_Layer: 0
   m_Name: model
-  m_TagString: Collider
+  m_TagString: Sign
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

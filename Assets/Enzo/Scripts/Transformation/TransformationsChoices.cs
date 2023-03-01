@@ -8,9 +8,11 @@ public class TransformationsChoices : MonoBehaviour
     public GameObject playerMesh;
     [SerializeField] GameObject _deathEcran;
 
-    [SerializeField] int scoreToWin = 10;
-
     [SerializeField] GameObject[] meshList;
+    [SerializeField] GameObject[] listToDestroy;
+    GameObject[] listToDestroyCollider;
+
+    [SerializeField] int scoreToWin = 10;
 
     [SerializeField] Collider playerCollider;
     [SerializeField] CameraManager _cameraManager;
@@ -50,7 +52,7 @@ public class TransformationsChoices : MonoBehaviour
 
     IEnumerator SlowMotion()
     {
-        if(VerticalSides.verticalSide == VerticalSide.Up)
+        if (VerticalSides.verticalSide == VerticalSide.Up)
         {
             yield return new WaitUntil(() => transform.position.y >= 3);
         }
@@ -135,6 +137,17 @@ public class TransformationsChoices : MonoBehaviour
         {
             _deathEcran.SetActive(true);
             Time.timeScale = 0f;
+
+            listToDestroyCollider = GameObject.FindGameObjectsWithTag("Collider");
+
+            foreach (var item in listToDestroy)
+            {
+                Destroy(item);
+            }
+            foreach (var item in listToDestroyCollider)
+            {
+                Destroy(item);
+            }
         }
         if (isTrex && other.gameObject.CompareTag("CheckPoint"))
         {

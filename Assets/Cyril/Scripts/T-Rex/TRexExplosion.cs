@@ -8,7 +8,7 @@ public class TRexExplosion : MonoBehaviour
     [SerializeField] Rigidbody ObstacleRigidbody;
     private void OnTriggerEnter(Collider other) 
     {
-        if(!other.CompareTag("Collider"))
+        if(!other.CompareTag("Collider") && !other.CompareTag("Sign"))
         {
             return;
         }
