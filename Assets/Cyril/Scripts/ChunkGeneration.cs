@@ -20,7 +20,7 @@ public class ChunkGeneration : MonoBehaviour
     [SerializeField] private int _seed;
     [SerializeField] private float _speed = 10;
     [SerializeField] private float _time;
-    private float _timeMin = 10;
+    private float _timeMin = 30;
     private void Awake()
     {
         GenerationSeed();
