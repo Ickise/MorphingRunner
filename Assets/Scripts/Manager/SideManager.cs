@@ -12,15 +12,17 @@ public enum HorizontalSide
 public class SideManager : MonoBehaviour
 {
     public static SideManager instance;
-    
-    public event Action<float> OnPositionChanged = delegate {};
-    
+
+    public event Action<float> OnPositionChanged = delegate { };
+
     [SerializeField, Header("Settings")] private float addingXValue = 3f;
 
     [SerializeField, Header("References")] private InputManager inputManager;
     
+    [SerializeField] private PlayerMovement playerMovement;
+
     private HorizontalSide horizontalSide;
-    
+
     private void Awake()
     {
         if (instance == null)
@@ -35,14 +37,14 @@ public class SideManager : MonoBehaviour
 
     private void OnEnable()
     {
-        inputManager.LeftMoveEvent += LeftMove;
-        inputManager.RightMoveEvent += RightMove;
+        inputManager.LeftMoveEvent += () => Move(-1);
+        inputManager.RightMoveEvent += () => Move(1);
     }
 
     private void OnDisable()
     {
-        inputManager.LeftMoveEvent -= LeftMove;
-        inputManager.RightMoveEvent -= RightMove;
+        inputManager.LeftMoveEvent -= () => Move(-1);
+        inputManager.RightMoveEvent -= () => Move(direction: 1);
     }
 
     private void Start()
@@ -50,41 +52,25 @@ public class SideManager : MonoBehaviour
         horizontalSide = HorizontalSide.Mid;
     }
 
-    private void LeftMove()
+    private void Move(int direction)
     {
         float xPosition = 0f;
         switch (horizontalSide)
         {
             case HorizontalSide.Left:
-                xPosition = -addingXValue;
+                if (playerMovement.IsMoving()) return;
+                xPosition = direction == -1 ? -addingXValue : 0;
+                horizontalSide = direction == -1 ? HorizontalSide.Left : HorizontalSide.Mid;
                 break;
             case HorizontalSide.Mid:
-                xPosition = -addingXValue; 
-                horizontalSide = HorizontalSide.Left;
+                if (playerMovement.IsMoving()) return;
+                xPosition = direction == -1 ? -addingXValue : addingXValue;
+                horizontalSide = direction == -1 ? HorizontalSide.Left : HorizontalSide.Right;
                 break;
             case HorizontalSide.Right:
-                xPosition = 0;
-                horizontalSide = HorizontalSide.Mid;
-                break;
-        }
-        OnPositionChanged.Invoke(xPosition);
-    }
-
-    private void RightMove()
-    {
-        float xPosition = 0f;
-        switch (horizontalSide)
-        {
-            case HorizontalSide.Left:
-                xPosition = 0f;
-                horizontalSide = HorizontalSide.Mid;
-                break;
-            case HorizontalSide.Right:
-                xPosition = addingXValue;
-                break;
-            case HorizontalSide.Mid:
-                xPosition = addingXValue; 
-                horizontalSide = HorizontalSide.Right;
+                if (playerMovement.IsMoving()) return;
+                xPosition = direction == -1 ? 0f : addingXValue;
+                horizontalSide = direction == -1 ? HorizontalSide.Mid : HorizontalSide.Right;
                 break;
         }
         OnPositionChanged.Invoke(xPosition);

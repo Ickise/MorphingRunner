@@ -29,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public bool IsMoving()
+    {
+        return isMoving;
+    }
+
     private IEnumerator OnMove(float xPosition)
     {
         isMoving = true;

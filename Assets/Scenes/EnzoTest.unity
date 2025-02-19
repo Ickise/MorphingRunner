@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1137675998}
   - component: {fileID: 1137675999}
   m_Layer: 0
-  m_Name: SidesManager
+  m_Name: SideManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addingXValue: 3
   inputManager: {fileID: 11400000, guid: 365d48b908b0ec4409ed54a2929ed9a0, type: 2}
+  playerMovement: {fileID: 1229066511}
 --- !u!1 &1229066506
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dodgeSpeed: 15
   playerTransform: {fileID: 1229066510}
-  sidesManager: {fileID: 1137675999}
+  sideManager: {fileID: 1137675999}
 --- !u!1 &1480686876
 GameObject:
   m_ObjectHideFlags: 0
