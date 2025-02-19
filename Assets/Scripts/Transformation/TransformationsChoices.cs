@@ -53,10 +53,10 @@ public class TransformationsChoices : MonoBehaviour
 
     IEnumerator SlowMotion()
     {
-        if (VerticalSides.verticalSide == VerticalSide.Up)
+      /*  if (VerticalSides.verticalSide == VerticalSide.Up)
         {
             yield return new WaitUntil(() => transform.position.y >= 3);
-        }
+        }*/
         slowMotionActive = true;
         Time.timeScale = 0.5f;
         transformationChoices.SetActive(true);
