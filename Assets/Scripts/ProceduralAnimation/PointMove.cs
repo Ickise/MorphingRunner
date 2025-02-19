@@ -1,18 +1,16 @@
 using System.Collections;
 using UnityEngine;
+
 public class PointMove : MonoBehaviour
 {
-    [Header("Important")]
-    [SerializeField] private Transform _refLeg;
+    [Header("Important")] [SerializeField] private Transform _refLeg;
     public Transform _targetLeg;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private float _sphereRadius;
     [SerializeField] private float _maxDistanceShphereCast;
     [SerializeField] private float _flaotAnticipation;
-    [SerializeField] private HorizontalSides _horizontalSides;
 
-    [Header("Donnée")]
-    private bool _Contact = false;
+    [Header("Donnée")] private bool _Contact = false;
     [SerializeField] private bool _Once = true;
     public bool _Jambe = false;
     private float _time;
@@ -26,19 +24,22 @@ public class PointMove : MonoBehaviour
     [SerializeField] private PointMove _scriptPointMove;
     [SerializeField] private float lerpSpeed;
     [SerializeField] private AnimationCurve _animationcurveUp;
-     [SerializeField] private CameraShake _cameraShake;
+    [SerializeField] private CameraShake _cameraShake;
     [SerializeField] private float X;
+
     private void Update()
     {
-        if(_cameraShake == null)
+        if (_cameraShake == null)
         {
             GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
             _cameraShake = Camera.GetComponent<CameraShake>();
         }
+
         if (_Once == false)
         {
             StartCoroutine(LerpLoopCoroutine());
         }
+
         RaycastHit _hit;
         Vector3 RefPos = (_refLeg.position + _VectorCorection + Déplacement) * _flaotAnticipation;
         if (Physics.SphereCast(RefPos, _sphereRadius, -transform.up, out _hit, _maxDistanceShphereCast, _layerMask))
@@ -46,31 +47,36 @@ public class PointMove : MonoBehaviour
             _Contact = true;
             _PointOfHit = _hit.point + _VectorUp;
         }
+
         if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f)
         {
-            _targetLeg.position = _PointOfHit + _PointOfHitAdd + new Vector3(X,0,0);
+            _targetLeg.position = _PointOfHit + _PointOfHitAdd + new Vector3(X, 0, 0);
         }
+
         if (_time > 1.5f)
         {
             _time = 0;
         }
-        Hoziontal();
+
+        Horizontal();
     }
-    private void Hoziontal()
+
+    private void Horizontal()
     {
-        if(HorizontalSides.horizontalSide == HorizontalSide.Left)
+        switch (SideManager.instance.GetHorizontalSide())
         {
-            X = -2.5f;
-        }   
-        if(HorizontalSides.horizontalSide == HorizontalSide.Mid)
-        {
-            X = 0;
-        } 
-        if(HorizontalSides.horizontalSide == HorizontalSide.Right)
-        {
-            X = 2.5f;
-        }  
+            case HorizontalSide.Left:
+                X = -2.5f;
+                break;
+            case HorizontalSide.Right:
+                X = 2.5f;
+                break;
+            case HorizontalSide.Mid:
+                X = 0;
+                break;
+        }
     }
+
     private IEnumerator LerpLoopCoroutine()
     {
         if (_Once == false && _Jambe)
@@ -79,19 +85,20 @@ public class PointMove : MonoBehaviour
             _newPosition = new Vector3(transform.position.x, transform.position.y, -40);
             _Once = true;
         }
+
         while (_Jambe)
         {
             float elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)
             {
-                
-                Déplacement = Vector3.Lerp(_basePosition , _newPosition, elapsedTime / lerpSpeed);
-                _VectorUp = _animationcurveUp.Evaluate(elapsedTime / lerpSpeed) * new Vector3(0,5,0);
+                Déplacement = Vector3.Lerp(_basePosition, _newPosition, elapsedTime / lerpSpeed);
+                _VectorUp = _animationcurveUp.Evaluate(elapsedTime / lerpSpeed) * new Vector3(0, 5, 0);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
+
             yield return new WaitForSeconds(0.1f);
-            StartCoroutine(_cameraShake.Shake(0.1f,0.1f));
+            StartCoroutine(_cameraShake.Shake(0.1f, 0.1f));
             _scriptPointMove._Jambe = true;
             elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)
@@ -101,11 +108,13 @@ public class PointMove : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
+
             yield return new WaitForSeconds(0.1f);
             _Jambe = false;
             _Once = false;
         }
     }
+
     private void OnDrawGizmos()
     {
         if (_Contact == true)
@@ -119,4 +128,3 @@ public class PointMove : MonoBehaviour
         }
     }
 }
-

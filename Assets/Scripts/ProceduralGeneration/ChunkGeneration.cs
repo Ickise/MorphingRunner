@@ -36,7 +36,6 @@ public class ChunkGeneration : MonoBehaviour
             Generate();
         }
         Speed();
-        Debug.Log(_speed);
     }
     private Quaternion Rotation(ChunkData _chunkData)
     {

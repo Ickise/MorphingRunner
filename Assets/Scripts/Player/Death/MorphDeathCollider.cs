@@ -6,8 +6,8 @@ public class MorphDeathCollider : MonoBehaviour
 
     void Awake()
     {
-        deathMenu = GameObject.FindGameObjectWithTag("DeathCanvas");
-        deathMenu.SetActive(false);
+     //   deathMenu = GameObject.FindGameObjectWithTag("DeathCanvas");
+      //  deathMenu.SetActive(false);
     }
     void OnTriggerEnter(Collider other)
     {

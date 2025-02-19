@@ -35,7 +35,7 @@ public class TransformationsChoices : MonoBehaviour
         isMorph = true;
     }
 
-    void Update()
+  /*  void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && VerticalSides.verticalSide != VerticalSide.Down)
         {
@@ -49,7 +49,7 @@ public class TransformationsChoices : MonoBehaviour
                 ReturnInRealTime();
             }
         }
-    }
+    }*/
 
     IEnumerator SlowMotion()
     {
