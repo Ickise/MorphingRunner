@@ -656,7 +656,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 359508052178331801, guid: 614643d8ee0333f49a70ba1b81bd417d, type: 3}
       propertyPath: m_Name
-      value: Trottoire
+      value: Trottoir
       objectReference: {fileID: 0}
     - target: {fileID: 4510057109531705083, guid: 614643d8ee0333f49a70ba1b81bd417d, type: 3}
       propertyPath: m_RootOrder
@@ -1146,26 +1146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3527124015690271850, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
-      propertyPath: _speed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 396662920913600871, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400927288913216450, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2517745751697309099, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021500766962791647, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5168554839041674219, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1216,11 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6182446128811452843, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
       propertyPath: m_Name
-      value: Road Collider Level 2 Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205363413324376821, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+      value: Road2 7x1
       objectReference: {fileID: 0}
     - target: {fileID: 8742719441420633333, guid: 90b1b05547910944b8b51629953c4b58, type: 3}
       propertyPath: m_Materials.Array.data[0]

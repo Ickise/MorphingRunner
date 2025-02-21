@@ -1,18 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectsPool : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;
-    [SerializeField] private int poolSize = 10;
+    [SerializeField, Header("Settings")] private int poolSize = 10;
+
+    [SerializeField, Header("References")] private List<GameObject> prefabs;
+
     private Queue<GameObject> poolQueue;
 
     private void Awake()
     {
+        InitializePool();
+    }
+
+    private void InitializePool()
+    {
         poolQueue = new Queue<GameObject>();
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject obj = Instantiate(prefab);
+            GameObject obj = Instantiate(prefabs[Random.Range(0, prefabs.Count)]);
             obj.SetActive(false);
             poolQueue.Enqueue(obj);
         }
@@ -28,7 +35,7 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            GameObject obj = Instantiate(prefab);
+            GameObject obj = Instantiate(prefabs[Random.Range(0, prefabs.Count)]);
             return obj;
         }
     }
