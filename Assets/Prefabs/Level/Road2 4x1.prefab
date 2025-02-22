@@ -504,6 +504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ladder (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0180c8e563c844f8169c78396e7bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0180c8e563c844f8169c78396e7bbe, type: 3}
 --- !u!4 &978379329415324702 stripped
@@ -718,6 +722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ladder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0180c8e563c844f8169c78396e7bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0180c8e563c844f8169c78396e7bbe, type: 3}
 --- !u!4 &1858971546459566315 stripped
@@ -738,7 +746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932191653015050917, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_RootOrder
@@ -858,6 +866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ladder
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0180c8e563c844f8169c78396e7bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0180c8e563c844f8169c78396e7bbe, type: 3}
 --- !u!4 &2944448635117472124 stripped
@@ -954,6 +966,10 @@ PrefabInstance:
     - target: {fileID: 5932191653015050917, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_Name
       value: corridor Good (1) Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932191653015050917, guid: dba49e6cb21dc6346922014caef96084, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6420075110418317343, guid: dba49e6cb21dc6346922014caef96084, type: 3}
       propertyPath: m_RootOrder
