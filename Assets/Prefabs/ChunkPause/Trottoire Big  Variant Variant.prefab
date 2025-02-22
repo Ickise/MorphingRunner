@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trottoire Big  Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4207271012901806283, guid: e6d1530facb3a064584acd4e43dd9155, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6114396475072183326, guid: e6d1530facb3a064584acd4e43dd9155, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

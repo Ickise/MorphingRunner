@@ -7,9 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4829244653936264614, guid: e91295b4a6ffef54e8299fd8f85fe873, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8348990583523158937, guid: e91295b4a6ffef54e8299fd8f85fe873, type: 3}
       propertyPath: m_Name
-      value: Trottoire Big  Variant Variant
+      value: BIG Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348990583523158937, guid: e91295b4a6ffef54e8299fd8f85fe873, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8689205236017590563, guid: e91295b4a6ffef54e8299fd8f85fe873, type: 3}
       propertyPath: m_RootOrder
