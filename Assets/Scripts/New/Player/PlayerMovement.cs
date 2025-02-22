@@ -1,13 +1,12 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField, Header("Settings")] private float dodgeSpeed = 10f;
 
     [SerializeField, Header("References")] private Transform playerTransform;
-    [FormerlySerializedAs("sidesManager")] [SerializeField] private SideManager sideManager;
+    [SerializeField] private SideManager sideManager;
 
     private bool isMoving = false;
 
@@ -38,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isMoving = true;
         Vector3 playerPosition = playerTransform.position;
-        
+
         while (Mathf.Abs(playerPosition.x - xPosition) > 0.1f)
         {
             var xSmoothValue = Mathf.Lerp(playerPosition.x, xPosition, Time.deltaTime * dodgeSpeed);
@@ -49,5 +48,10 @@ public class PlayerMovement : MonoBehaviour
 
         playerTransform.position = Vector3.right * xPosition;
         isMoving = false;
+    }
+    
+    public void SetSpeed(float speed)
+    {
+        dodgeSpeed = speed;
     }
 }

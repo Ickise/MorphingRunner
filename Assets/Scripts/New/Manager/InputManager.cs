@@ -7,6 +7,7 @@ public class InputManager : ScriptableObject, PlayerInputAction.IPlayerActions
 {
    public event Action LeftMoveEvent = delegate {};
    public event Action RightMoveEvent = delegate {};
+   public event Action SlowMotionEvent = delegate {};
    
    private PlayerInputAction inputActions;
 
@@ -31,7 +32,8 @@ public class InputManager : ScriptableObject, PlayerInputAction.IPlayerActions
    
    public void OnSlowMotion(InputAction.CallbackContext context)
    {
-      Debug.Log("SlowMotion");
+      if (!context.performed) return;
+      SlowMotionEvent.Invoke();
    }
 
    public void OnLeftMove(InputAction.CallbackContext context)
