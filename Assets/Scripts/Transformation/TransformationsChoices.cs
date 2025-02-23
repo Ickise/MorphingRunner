@@ -35,9 +35,9 @@ public class TransformationsChoices : MonoBehaviour
         isMorph = true;
     }
 
-  /*  void Update()
+   void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && VerticalSides.verticalSide != VerticalSide.Down)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (!slowMotionActive)
             {
@@ -49,14 +49,10 @@ public class TransformationsChoices : MonoBehaviour
                 ReturnInRealTime();
             }
         }
-    }*/
+    }
 
     IEnumerator SlowMotion()
     {
-      /*  if (VerticalSides.verticalSide == VerticalSide.Up)
-        {
-            yield return new WaitUntil(() => transform.position.y >= 3);
-        }*/
         slowMotionActive = true;
         Time.timeScale = 0.5f;
         transformationChoices.SetActive(true);
