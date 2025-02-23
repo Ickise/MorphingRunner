@@ -28,7 +28,7 @@ public class SlowMotion : MonoBehaviour
 
     public void DeactivateSlowMotion()
     {
-        SetSlowMotion(0.5f, false);
+        SetSlowMotion(1f, false);
         StopAllCoroutines();
     }
 
@@ -41,8 +41,8 @@ public class SlowMotion : MonoBehaviour
 
     private IEnumerator SlowMotionCoroutine()
     {
-        SetSlowMotion(1f, true);
+        SetSlowMotion(0.5f, true);
         yield return new WaitForSecondsRealtime(slowMotionDuration);
-        SetSlowMotion(0.5f, false);
+        SetSlowMotion(1f, false);
     }
 }

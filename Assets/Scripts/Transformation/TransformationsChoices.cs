@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TransformationsChoices : MonoBehaviour
 {
-    [Header("Set up")]
+    [Header("Set up")] // La nomenclature est incorrecte, il faut utiliser [SerializeField] et mettre les variables en private pour éviter de les mettre en public.
     [SerializeField] GameObject transformationChoices;
     public GameObject playerMesh;
     [SerializeField] GameObject _deathEcran;
