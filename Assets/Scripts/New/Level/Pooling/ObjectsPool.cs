@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ObjectsPool : MonoBehaviour
 {
+    // Ce script permet de gérer un pool d'objets.
     [SerializeField, Header("Settings")] private int poolSize = 10;
 
     [SerializeField, Header("References")] private List<GameObject> prefabs;
@@ -11,11 +12,13 @@ public class ObjectsPool : MonoBehaviour
 
     private void Awake()
     {
+        // Je le fais dans l'awake pour être sûr que le pool soit initialisé avant d'être utilisé.
         InitializePool();
     }
 
     private void InitializePool()
     {
+        // J'initialise le pool en créant des objets et en les désactivant.
         poolQueue = new Queue<GameObject>();
         for (int i = 0; i < poolSize; i++)
         {
@@ -27,6 +30,7 @@ public class ObjectsPool : MonoBehaviour
 
     public GameObject GetObject()
     {
+        // Ici, je écupère un objet du pool ou bien j'en crée un nouveau si nécessaire.
         if (poolQueue.Count > 0)
         {
             GameObject obj = poolQueue.Dequeue();
@@ -40,6 +44,7 @@ public class ObjectsPool : MonoBehaviour
         }
     }
 
+    // Cette méthode permet de renvoyer un objet dans le pool après l'avoir désactivé.
     public void ReturnObject(GameObject obj)
     {
         obj.SetActive(false);
