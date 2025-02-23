@@ -60,27 +60,26 @@ public class SideManager : MonoBehaviour
     // Cette méthode permet d'indiquer au joueur sa position et ce qu'il doit faire par conséquence.
     private void Move(int direction)
     {
-        // Je vérifie si le joueur est en mouvement.
-        if (playerMovement.IsMoving()) return;
-
         float xPosition = 0f;
 
         switch (horizontalSide)
         {
             case HorizontalSide.Left:
-                if (direction == -1) return; // Cas où le joueur ne peut pas aller plus à gauche.
-                xPosition = 0;
-                horizontalSide = HorizontalSide.Mid;
+                if (playerMovement.IsMoving()) return; // Je vérifie si le joueur est en mouvement.
+                xPosition = direction == -1 ? -addingXValue : 0; // Implémentation d'un ternaire qui vérifie si le joueur ne peut pas aller plus à gauche.
+                horizontalSide = direction == -1 ? HorizontalSide.Left : HorizontalSide.Mid;
                 break;
 
             case HorizontalSide.Mid:
+                if (playerMovement.IsMoving()) return;
+                xPosition = direction == -1 ? -addingXValue : addingXValue;
                 horizontalSide = direction == -1 ? HorizontalSide.Left : HorizontalSide.Right; // Ternaire pour déterminer la direction.
                 break;
 
             case HorizontalSide.Right:
-                if (direction == 1) return; // Cas où le joueur ne peut pas aller plus à droite.
-                xPosition = 0;
-                horizontalSide = HorizontalSide.Mid;
+                if (playerMovement.IsMoving()) return;
+                xPosition = direction == -1 ? 0f : addingXValue; // Implémentation d'un ternaire qui vérifie si le joueur ne peut pas aller plus à droite.
+                horizontalSide = direction == -1 ? HorizontalSide.Mid : HorizontalSide.Right; 
                 break;
         }
 
