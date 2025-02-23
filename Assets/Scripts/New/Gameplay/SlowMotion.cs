@@ -5,7 +5,7 @@ public class SlowMotion : MonoBehaviour
 {
     [SerializeField, Header("References")] private GameObject transformationCanvas;
     [SerializeField] private InputManager inputManager;
-    
+
     [SerializeField, Header("Settings")] private float slowMotionDuration = 1.5f;
 
     private bool isSlowMotion;
@@ -28,21 +28,21 @@ public class SlowMotion : MonoBehaviour
 
     public void DeactivateSlowMotion()
     {
-        isSlowMotion = false;
-        StopCoroutine(SlowMotionCoroutine());
-        Time.timeScale = 1f;
-        transformationCanvas.SetActive(false);
+        SetSlowMotion(0.5f, false);
+        StopAllCoroutines();
+    }
+
+    private void SetSlowMotion(float timeScale, bool active)
+    {
+        Time.timeScale = timeScale;
+        transformationCanvas.SetActive(active);
+        isSlowMotion = active;
     }
 
     private IEnumerator SlowMotionCoroutine()
     {
-        isSlowMotion = true;
-        Time.timeScale = 0.5f;
-        transformationCanvas.SetActive(true);
-
-        yield return new WaitForSeconds(slowMotionDuration); // on ne peut pas appuyer sur les boutons
-        Time.timeScale = 1f;
-        transformationCanvas.SetActive(false);
-        isSlowMotion = false;
+        SetSlowMotion(1f, true);
+        yield return new WaitForSecondsRealtime(slowMotionDuration);
+        SetSlowMotion(0.5f, false);
     }
 }
