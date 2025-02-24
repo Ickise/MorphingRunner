@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speedIncreaseAmount = 1f;
 
     [SerializeField, Header("References")] private Transform playerTransform;
+    
     [SerializeField] private SideManager sideManager;
 
     private bool isMoving = false;
