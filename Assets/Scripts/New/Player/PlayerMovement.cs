@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Malheureusement, pour que mon personnage se déplace en permanence, il faut que j'utilise une Update.
     private void Update()
     {
-        playerTransform.position += moveDirection * movementSpeed * Time.deltaTime;
+        playerTransform.position += moveDirection * (movementSpeed * Time.deltaTime);
     }
 
     private void MoveToPosition(float newPosition)
