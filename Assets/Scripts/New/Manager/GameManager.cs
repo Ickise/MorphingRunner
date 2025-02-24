@@ -14,4 +14,9 @@ public class GameManager : MonoBehaviour
    {
       inputManager.DisablePlayerInputs();
    }
+
+   public void GameOver()
+   {
+      Time.timeScale = 0f;
+   }
 }
