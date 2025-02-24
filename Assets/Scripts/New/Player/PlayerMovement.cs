@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         // Je peux améliorer cette partie en enlevant le while.
         while (Mathf.Abs(playerTransform.position.x - xPosition) > 0.01f)
         {
-            // Le fait de mettre un MoveTowers permet de déplacer le joueur de manière fluide et constante peu importe les FPS. 
+            // Le fait de mettre un MoveTowards permet de déplacer le joueur de manière fluide et constante peu importe les FPS. 
             playerTransform.position = Vector3.MoveTowards(
                 playerTransform.position,
                 new Vector3(xPosition, startPosition.y, startPosition.z),
