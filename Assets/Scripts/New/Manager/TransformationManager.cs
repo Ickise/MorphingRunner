@@ -23,7 +23,7 @@ public class TransformationManager : MonoBehaviour
     private void SetCharacter<T>() where T : Character
     {
         currentCharacter = characters[typeof(T)];
-        playerMovement.SetSpeed(currentCharacter.Speed);
+        playerMovement.SetDodgeSpeed(currentCharacter.Speed);
     }
 
     // J'ai centralisé la gestion des transformations via une classe Character dont hérité les classes TRexCharacter, AlienCharacter et HumanCharacter.

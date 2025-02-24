@@ -937,7 +937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000580489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1229066510}
@@ -957,7 +957,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeSpeed: 15
-  playerTransform: {fileID: 1229066510}
+  movementSpeed: 5
+  speedIncreaseInterval: 10
+  speedIncreaseAmount: 1
+  playerTransform: {fileID: 2000580490}
   sideManager: {fileID: 1137675999}
 --- !u!1 &2138689676
 GameObject:

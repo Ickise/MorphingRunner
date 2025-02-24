@@ -5,22 +5,37 @@ public class PlayerMovement : MonoBehaviour
 {
     // Ce script permet de remplacer MoveDecor pour que cette fois c'est réellement le joueur qui se déplace.
     [SerializeField, Header("Settings")] private float dodgeSpeed = 10f;
-
+    [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float speedIncreaseInterval = 10f;
+    [SerializeField] private float speedIncreaseAmount = 1f;
+    
     [SerializeField, Header("References")] private Transform playerTransform;
     [SerializeField] private SideManager sideManager;
 
     private bool isMoving = false;
+    private Vector3 moveDirection = Vector3.forward;
 
     private void OnEnable()
     {
         // Abonnement à l'événement de déplacement du SideManager.
         sideManager.OnPositionChanged += MoveToPosition;
+        StartCoroutine(IncreaseSpeedOverTime());
     }
 
     private void OnDisable()
     {
         // Désabonnement à l'événement de déplacement du SideManager. Cela permet d'éviter les références nulles lors de la destruction de l'objet.
         sideManager.OnPositionChanged -= MoveToPosition;
+        StopAllCoroutines();
+    }
+    
+    // Malheureusement, pour que mon personnage se déplace en permanence, il faut que j'utilise une Update.
+    private void Update()
+    {
+        if (!isMoving)
+        {
+            playerTransform.position += moveDirection * movementSpeed * Time.deltaTime;
+        }
     }
 
     private void MoveToPosition(float newPosition)
@@ -61,8 +76,19 @@ public class PlayerMovement : MonoBehaviour
         isMoving = false;
     }
     
-    public void SetSpeed(float speed)
+    // Cela permet de modifier la vitesse de dodge selon la transformation.
+    public void SetDodgeSpeed(float speed)
     {
         dodgeSpeed = speed;
+    }
+    
+    // La coroutine permet d'augmenter la speed toutes les X secondes. 
+    private IEnumerator IncreaseSpeedOverTime()
+    {
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(speedIncreaseInterval);
+            movementSpeed += speedIncreaseAmount;
+        }
     }
 }
