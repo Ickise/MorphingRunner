@@ -7,7 +7,7 @@ public class SlowMotion : MonoBehaviour
     [SerializeField, Header("References")] private GameObject transformationCanvas;
     [SerializeField] private InputManager inputManager;
 
-    [SerializeField, Header("Settings")] private float slowMotionDuration = 1.5f;
+    [SerializeField, Header("Settings")] private float slowMotionDuration = 2f;
 
     private bool isSlowMotion;
 

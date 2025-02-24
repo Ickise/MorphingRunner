@@ -647,9 +647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chunkSize: 70
-  spawnInterval: 2
-  deactivateTime: 5
+  initialChunkCount: 3
   objectsPool: {fileID: 1427145850}
+  playerTransform: {fileID: 2000580490}
 --- !u!114 &1427145850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,4 +1260,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transformationCanvas: {fileID: 1640430243}
   inputManager: {fileID: 11400000, guid: 365d48b908b0ec4409ed54a2929ed9a0, type: 2}
-  slowMotionDuration: 1.5
+  slowMotionDuration: 2
