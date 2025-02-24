@@ -6,6 +6,7 @@ public class DNAType : MonoBehaviour
     // Il est très court et quasiment optionnel, mais cela me permet de respecter le single responsability.
     public enum DnaType
     {
+        AlienDNA,
         TRexDNA,
         HumanDNA,
     }

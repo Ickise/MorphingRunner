@@ -15,6 +15,7 @@ public class PlayerCollision : MonoBehaviour
         DNAType dnaType = other.GetComponent<DNAType>();
         if (dnaType != null)
         {
+            Debug.Log("DNA Collect");
             dnaManager.AddDNA(dnaType.GetDNAType());
             //EDestroy(other.gameObject);
         }
