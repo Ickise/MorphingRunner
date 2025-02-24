@@ -3,10 +3,13 @@ using UnityEngine.UI;
 
 public class DNAToCollect : MonoBehaviour
 {
-    [Header("Set up")]
+    // Ce script gérer le stock de l'ADN sans aucune distinction. Il met également à jour l'UI.  
+    // Lorsque le joueur récupérer de l'ADN, il pouvait l'utiliser pour devenir un TRex ou bien un humain.
+    [Header("Set up")] // Il y a un effort de nomenclature, mais cela reste parfois abstrait. 
     [SerializeField] DNA[] listDNA = new DNA[3];
 
-    [SerializeField] int[] listSpecialDNA = new int[3];
+    [SerializeField] int[] listSpecialDNA = new int[3]; // Cette variable est inutile, je peux tout simplement utiliser un int que j'incrémente ou décrémente
+    // et un enum pour savoir le type d'ADN que je possède. 
     [SerializeField] int numberOfDNAToTransform = 10;
 
     [SerializeField] Button[] buttonList = new Button[3];
@@ -24,9 +27,13 @@ public class DNAToCollect : MonoBehaviour
 
     void Update()
     {
+        // J'utilise une Update pour mettre à jour en permanence de l'UI au lieu d'utiliser un event... cela serait beaucoup plus optimisé.
+        // De plus, je mélange l'UI avec les collisions et la logique de gestion du stock. 
         numberOfSpecialDNA[0].text = "" + listSpecialDNA[0];
         numberOfSpecialDNA[1].text = "" + listSpecialDNA[1];
 
+        // Pourquoi utiliser une boucle for ici ? Surtout dans une Update. Je n'ai pas besoin d'appeler en permanence cette boucle et je n'ai même pas besoin
+        // d'avoir une boucle. En utilisant un event que j'invoke ou même une fonction, je peux très bien actualiser tout ce dont j'ai besoin. 
         for (int i = 0; i < listSpecialDNA.Length; i++)
         {
             if (listSpecialDNA[i] >= numberOfDNAToTransform)
@@ -54,8 +61,11 @@ public class DNAToCollect : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // J'utilise un CompareTag, ce que je pourrai optimiser via une autre façon de faire. 
         if (other.CompareTag("DNA"))
         {
+            // L'utilisation d'une boucle for et beaucoup trop gourmande, cela n'apporte rien. 
+            // Je peux juste utiliser un event pour optimiser tout ça et l'invoke lors de la collision ou même une fonction. 
             for (int i = 0; i < listDNA.Length; i++)
             {
                 if (other.name == listDNA[i].dnaName)

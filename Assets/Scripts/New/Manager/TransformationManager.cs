@@ -10,6 +10,8 @@ public class TransformationManager : MonoBehaviour
 
     private Character currentCharacter;
 
+    private DNAManager dnaManager;
+
     // Stocke toutes les transformations en mémoire pour éviter de recréer les objets à chaque fois. Je pourrais tout simplement ajouter d'autres transformations si besoin.
     private Dictionary<Type, Character> characters = new Dictionary<Type, Character>
     {
@@ -26,17 +28,28 @@ public class TransformationManager : MonoBehaviour
         playerMovement.SetDodgeSpeed(currentCharacter.Speed);
     }
 
+    private void Start()
+    {
+        dnaManager = DNAManager.instance;
+    }
+
     // J'ai centralisé la gestion des transformations via une classe Character dont hérité les classes TRexCharacter, AlienCharacter et HumanCharacter.
     // Cela permettra de rajouter facilement d'autres transformations.
-    
+
     //Cette méthode permet d'évite de recréer les objets inutilement à chaque transformation pour économiser de la mémoire.
 
-    public void TRexTransformation() => TransformInto<TRexCharacter>();
+    public void TRexTransformation() => TransformInto<TRexCharacter>(DNAType.DnaType.TRexDNA);
     public void AlienTransformation() => TransformInto<AlienCharacter>();
-    public void HumanTransformation() => TransformInto<HumanCharacter>();
+    public void HumanTransformation() => TransformInto<HumanCharacter>(DNAType.DnaType.HumanDNA);
 
-    private void TransformInto<T>() where T : Character
+    private void TransformInto<T>(DNAType.DnaType? dnaType = null) where T : Character
     {
+        if (dnaManager.ConsumeDNA(dnaType, 5))
+        {
+            slowMotion.DeactivateSlowMotion();
+            return;
+        }
+
         Debug.Log(typeof(T).Name);
         SetCharacter<T>();
         slowMotion.DeactivateSlowMotion();
