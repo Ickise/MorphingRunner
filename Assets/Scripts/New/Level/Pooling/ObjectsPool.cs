@@ -43,11 +43,4 @@ public class ObjectsPool : MonoBehaviour
             return obj;
         }
     }
-
-    // Cette méthode permet de renvoyer un objet dans le pool après l'avoir désactivé.
-    public void ReturnObject(GameObject obj)
-    {
-        obj.SetActive(false);
-        poolQueue.Enqueue(obj);
-    }
 }
