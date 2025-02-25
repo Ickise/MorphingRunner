@@ -3,26 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Scoring
-  - Collider
-  - CheckPoint
-  - Sol
-  - DNA
-  - Down
-  - Up
-  - Walls
-  - Sign
-  - DeathCanvas
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - "D\xE9ccors"
+  - 
   - Water
   - UI
-  - Walls
-  - UiDNA
+  - 
+  - 
   - 
   - 
   - 
