@@ -212,22 +212,6 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 64
   m_CollisionDetection: 0
---- !u!54 &5933774092423405101
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8097894938387340819}
-  serializedVersion: 2
-  m_Mass: 2
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 2
-  m_Constraints: 64
-  m_CollisionDetection: 0
 --- !u!1 &8439373139403187220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,11 +2552,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2856384892784447261, guid: 721ed90b4a1a01542bb91eb1e5048428, type: 3}
   m_PrefabInstance: {fileID: 1127388288283953195}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8097894938387340819 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9206704705178900024, guid: 721ed90b4a1a01542bb91eb1e5048428, type: 3}
-  m_PrefabInstance: {fileID: 1127388288283953195}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1364663700796342994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3916,14 +3895,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14071bf874c52df47ac07642e587b03e, type: 3}
---- !u!4 &1734883821521004259 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4864554898977947698, guid: 14071bf874c52df47ac07642e587b03e, type: 3}
-  m_PrefabInstance: {fileID: 6598289455287854801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7193989018812448937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4055486694143813240, guid: 14071bf874c52df47ac07642e587b03e, type: 3}
+  m_PrefabInstance: {fileID: 6598289455287854801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1734883821521004259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4864554898977947698, guid: 14071bf874c52df47ac07642e587b03e, type: 3}
   m_PrefabInstance: {fileID: 6598289455287854801}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7075630822467917941
