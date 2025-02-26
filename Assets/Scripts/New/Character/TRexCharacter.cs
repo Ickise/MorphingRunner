@@ -1,6 +1,6 @@
 public class TRexCharacter : Character
 {
-    public override float Speed => 5f;
+    public override float DodgeSpeed => 10f;
 
     public override void SpecialAbility()
     {

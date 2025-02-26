@@ -8,6 +8,10 @@ public class TransformationManager : MonoBehaviour
     [SerializeField, Header("References")] private PlayerMovement playerMovement;
     [SerializeField] private SlowMotion slowMotion;
 
+    [SerializeField] private GameObject humanObject;
+    [SerializeField] private GameObject alienObject;
+    [SerializeField] private GameObject tRexObject;
+    
     private Character currentCharacter;
 
     private DNAManager dnaManager;
@@ -19,18 +23,31 @@ public class TransformationManager : MonoBehaviour
         { typeof(AlienCharacter), new AlienCharacter() },
         { typeof(HumanCharacter), new HumanCharacter() }
     };
+    
+    private List<GameObject> allCharacterObjects;
+    
+    private void Start()
+    {
+        dnaManager = DNAManager.instance;
+        
+        characters[typeof(HumanCharacter)].SetCharacterObject(humanObject);
+        characters[typeof(AlienCharacter)].SetCharacterObject(alienObject);
+        characters[typeof(TRexCharacter)].SetCharacterObject(tRexObject);
+        
+        allCharacterObjects = new List<GameObject> { humanObject, alienObject, tRexObject };
+        
+        currentCharacter = characters[typeof(AlienCharacter)];
+        currentCharacter.ChangeSkin(allCharacterObjects);
+    }
 
     // J'utilise une méthode pour définir le personnage actuel. Je pourrais la modifier pour rajouter le changement d'autres paramètres tel que le mesh, etc...
     // Définit le personnage actuel en utilisant le dictionnaire
     private void SetCharacter<T>() where T : Character
     {
         currentCharacter = characters[typeof(T)];
-        playerMovement.SetDodgeSpeed(currentCharacter.Speed);
-    }
-
-    private void Start()
-    {
-        dnaManager = DNAManager.instance;
+        playerMovement.SetDodgeSpeed(currentCharacter.DodgeSpeed);
+        
+        currentCharacter.ChangeSkin(allCharacterObjects);
     }
 
     // J'ai centralisé la gestion des transformations via une classe Character dont hérité les classes TRexCharacter, AlienCharacter et HumanCharacter.
@@ -53,5 +70,10 @@ public class TransformationManager : MonoBehaviour
 
         SetCharacter<T>();
         slowMotion.DeactivateSlowMotion();
+    }
+
+    public Character GetCurrentCharacter()
+    {
+        return currentCharacter;
     }
 }
