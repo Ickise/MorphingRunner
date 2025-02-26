@@ -36,7 +36,7 @@ public class TransformationManager : MonoBehaviour
         
         allCharacterObjects = new List<GameObject> { humanObject, alienObject, tRexObject };
         
-        currentCharacter = characters[typeof(AlienCharacter)];
+        SetCharacter<AlienCharacter>();
         currentCharacter.ChangeSkin(allCharacterObjects);
     }
 

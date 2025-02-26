@@ -5,6 +5,7 @@ public class PlayerCollision : MonoBehaviour
     // Script très court mais qui permet de respecter le Single Responsability Principle.
 
     [SerializeField, Header("Settings")] private LayerMask isObstacleLayer;
+    [SerializeField] private TransformationManager transformationManager;
 
     private DNAManager dnaManager;
 
@@ -31,7 +32,7 @@ public class PlayerCollision : MonoBehaviour
     {
         // Ici je détecte les objets qui ont uniquement le layer IsObstacle pour lancer le GameOver.
         // Je pense que c'est la manière la plus optimisée pour ne pas utiliser de CompareTag ou ne pas avoir juste un script Obstacle sur tous les objets.
-        if (((1 << other.gameObject.layer) & isObstacleLayer) != 0)
+        if (((1 << other.gameObject.layer) & isObstacleLayer) != 0 && !(transformationManager.GetCurrentCharacter() is TRexCharacter))
         {
             gameManager.GameOver();
             return;

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -41,7 +40,7 @@ public class SlowMotion : MonoBehaviour
         SetSlowMotion(1f, false);
         StopAllCoroutines(); // Cela évite que plusieurs instances de la coroutine tournent en parallèle.
     }
-    
+
     // J'ai créé une méthode pour éviter de répéter le code. Je set le slow motion et j'active/désactive le canvas.
     private void SetSlowMotion(float timeScale, bool active)
     {
@@ -52,9 +51,16 @@ public class SlowMotion : MonoBehaviour
 
     private IEnumerator SlowMotionCoroutine()
     {
-        if (gameManager.GameIsOver()) yield break;
         SetSlowMotion(0.5f, true);
-        yield return new WaitForSecondsRealtime(slowMotionDuration); // WaitForSecondsRealtime ne dépend pas du timeScale. Cela permet de ne pas ralentir le temps d'attente.
+        yield return
+            new WaitForSecondsRealtime(
+                slowMotionDuration); // WaitForSecondsRealtime ne dépend pas du timeScale. Cela permet de ne pas ralentir le temps d'attente.
+        if (gameManager.GameIsOver())
+        {
+            transformationCanvas.SetActive(false);
+            yield break;
+        }
+
         SetSlowMotion(1f, false);
     }
 }
