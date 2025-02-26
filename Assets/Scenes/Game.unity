@@ -2523,7 +2523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chunkSize: 70
-  initialChunkCount: 3
+  totalChunks: 10
+  activeChunkCount: 3
   objectsPool: {fileID: 1407038503}
   playerTransform: {fileID: 894101079}
 --- !u!1 &1499801726

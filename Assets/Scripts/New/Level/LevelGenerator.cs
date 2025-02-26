@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -7,45 +8,48 @@ public class LevelGenerator : MonoBehaviour
     // Ce n'est pas réellement de la génération procédurale, mais plutôt de la réutilisation de chunks déjà créés.
     // Cela fera l'affaire pour cet exercice d'optimisation, mais il faudra peut être revoir le système pour de la génération procédurale réelle.
     [SerializeField, Header("Settings")] private float chunkSize = 70f;
-    [SerializeField] private int initialChunkCount = 3;
+    [SerializeField] private int totalChunks = 10;
+    [SerializeField] private int activeChunkCount = 3;
 
     [SerializeField, Header("References")] private ObjectsPool objectsPool;
     [SerializeField] private Transform playerTransform;
 
+    // J'ai besoin de deux Queue pour avoir les actifs et inactifs. Cela va me permettre de fair apparaitre et disparaitre les chunks.
     private Queue<GameObject> activeChunks = new Queue<GameObject>();
-    private Vector3 nextSpawnPosition;
+    private Queue<GameObject> inactiveChunks = new Queue<GameObject>();
 
     private void Start()
     {
-       InitializeChunks(); 
+        InitializeChunks();
     }
 
     private void InitializeChunks()
     {
-        // J'initialise tous les chunks
-        for (int i = 0; i < initialChunkCount; i++)
+        Vector3 spawnPosition = Vector3.zero;
+        
+        for (int i = 0; i < totalChunks; i++)
         {
-            SpawnChunk();
+            GameObject chunk = objectsPool.GetObject();
+            chunk.transform.position = spawnPosition;
+            if (i < activeChunkCount)
+            {
+                chunk.SetActive(true);
+                activeChunks.Enqueue(chunk);
+                spawnPosition += new Vector3(0f, 0f, chunkSize);
+            }
+            else
+            {
+                chunk.SetActive(false);
+                inactiveChunks.Enqueue(chunk);
+            }
         }
-    }
-
-    // Ici, j'initialise un chunk en le créant, en le positionnant et en démarrant son processus de désactivation après un délai. 
-    private void SpawnChunk()
-    {
-        // Ceci me permet de récupérer un chunk depuis le pool.
-        GameObject chunk = objectsPool.GetObject(); 
-        // Je le positionne à l'endroit où je veux le faire apparaître.
-        chunk.transform.position = nextSpawnPosition; 
-        // Je mets à jour la position de spawn pour le prochain chunk.
-        nextSpawnPosition += new Vector3(0f, 0f, chunkSize); 
-        activeChunks.Enqueue(chunk);
     }
 
     // Je suis un peu obligé d'utiliser une Update, je pense que le mieux serait de faire une UpdateManager et une interface IUpdate.
     // En faisant cela, j'aurai une seule Update et tous les scripts ayant l'interface se lancerait dans l'Update.
     private void Update()
     {
-        if (activeChunks.Count <= 0) return;
+        if (activeChunks.Count == 0 || inactiveChunks.Count == 0) return;
         GameObject firstChunk = activeChunks.Peek();
 
         // Si le joueur a dépassé le premier chunk + chunkSize alors je recycle le chunk.
@@ -57,12 +61,18 @@ public class LevelGenerator : MonoBehaviour
 
     private void RecycleChunk()
     {
-        // Je retire l'ancien chunk.
-        GameObject chunk = activeChunks.Dequeue(); 
-        // Je le déplace à la nouvelle position.
-        chunk.transform.position = nextSpawnPosition; 
-        nextSpawnPosition += new Vector3(0f, 0f, chunkSize);
-        // Enfin, je le remets dans la file.
-        activeChunks.Enqueue(chunk);
+        GameObject oldChunk = activeChunks.Dequeue();
+        oldChunk.SetActive(false);
+        inactiveChunks.Enqueue(oldChunk);
+
+        // J'active et place le chunk inactif au bout de la file.
+        if (inactiveChunks.Count > 0)
+        {
+            GameObject newChunk = inactiveChunks.Dequeue();
+            Vector3 lastChunkPosition = activeChunks.Peek().transform.position;
+            newChunk.transform.position = lastChunkPosition + new Vector3(0f, 0f, chunkSize);
+            newChunk.SetActive(true);
+            activeChunks.Enqueue(newChunk);
+        }
     }
 }
