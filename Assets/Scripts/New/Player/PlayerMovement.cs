@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private SideManager sideManager;
 
-    private bool isMoving = false;
+    private bool isMoving;
     private Vector3 moveDirection = Vector3.forward;
 
     private void OnEnable()

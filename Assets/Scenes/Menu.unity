@@ -398,7 +398,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093326}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudio, Assembly-CSharp
         m_MethodName: DefaultVolume
         m_Mode: 1
@@ -410,7 +410,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -422,7 +422,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -434,7 +434,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -446,7 +446,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -458,7 +458,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093328}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGraphic, Assembly-CSharp
         m_MethodName: SliderBrigness
         m_Mode: 0
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -1162,7 +1162,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -1174,7 +1174,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -1186,7 +1186,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -1198,7 +1198,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -1973,7 +1973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -1985,7 +1985,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -1997,7 +1997,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -2009,7 +2009,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -2021,7 +2021,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -2197,210 +2197,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402747488}
   m_CullTransparentMesh: 1
---- !u!1 &434093321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 434093323}
-  - component: {fileID: 434093322}
-  - component: {fileID: 434093324}
-  - component: {fileID: 434093325}
-  - component: {fileID: 434093326}
-  - component: {fileID: 434093327}
-  - component: {fileID: 434093328}
-  - component: {fileID: 434093329}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &434093322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f22941bf193bad40a768484ae22c5e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvasGroupMenuBasique: {fileID: 1428036038}
-  _canvasGroupMenuPlay: {fileID: 1823072325}
-  _canvasMenuPlay: {fileID: 1823072324}
-  _canvasMenuBasique: {fileID: 1428036037}
-  _Alpha: 1
-  _MenuPress: 0
-  _playPress: 0
---- !u!4 &434093323
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1067.6006, y: 284.41486, z: -291.3068}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &434093324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a920543d3091f7449397d70366bb714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &434093325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa494759df48c614ba65941a32998b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvasGroupMenuBasique: {fileID: 1428036038}
-  _canvasGroupMenuOption: {fileID: 155460889}
-  _canvasMenuOption: {fileID: 155460888}
-  _canvasMenuBasique: {fileID: 1428036037}
-  _Alpha: 1
-  _MenuPress: 0
-  _playPress: 0
---- !u!114 &434093326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c83f1a27f2489843bfb7114ae1144e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _textVolumeValue: {fileID: 200041096}
-  _volumeSlider: {fileID: 1268738647}
---- !u!114 &434093327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b8d926e5962b043b6d70b6398dafe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sensitivityTextValue: {fileID: 628726461}
-  _sliderSensitivity: {fileID: 571117833}
-  _sensitivityValue: 0
-  _defaultSensitivityValue: 4
-  _InvertY: {fileID: 2049031369}
---- !u!114 &434093328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 677149f76bbc5324b92e5ad115635770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _brignessSlider: {fileID: 104523045}
-  _brignessValue: {fileID: 444473630}
-  _defaultBrigness: 1
-  _dropdownResolution: {fileID: 1820870309}
-  _dropdownQuality: {fileID: 923632820}
-  _toggleFullScrean: {fileID: 1447863809}
---- !u!114 &434093329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434093321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801b6c2104399bf47b2b4b05ec7c4f20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _On: 0
-  _active: 0
-  _canvasgroup: {fileID: 0}
-  _panel: {fileID: 0}
-  _Alpha: 0
-  _AlphaBis: 0
-  _animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _animationCurveBIS:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _canvasgroupBIS: {fileID: 0}
-  _PanelBis: {fileID: 0}
 --- !u!1 &435182826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,7 +3073,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093325}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonOption, Assembly-CSharp
         m_MethodName: Option
         m_Mode: 1
@@ -3952,7 +3748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &571117831
 GameObject:
@@ -4044,7 +3840,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093327}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGameplay, Assembly-CSharp
         m_MethodName: SliderSensitivity
         m_Mode: 0
@@ -5031,7 +4827,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093326}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudio, Assembly-CSharp
         m_MethodName: DefaultVolume
         m_Mode: 1
@@ -5043,7 +4839,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -5055,7 +4851,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -5067,7 +4863,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -5079,7 +4875,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -5091,7 +4887,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -5224,7 +5020,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093326}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudio, Assembly-CSharp
         m_MethodName: DefaultVolume
         m_Mode: 1
@@ -5573,7 +5369,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -6553,7 +6349,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -6948,7 +6744,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093328}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGraphic, Assembly-CSharp
         m_MethodName: SetQuality
         m_Mode: 0
@@ -7505,7 +7301,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093326}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudio, Assembly-CSharp
         m_MethodName: DefaultVolume
         m_Mode: 1
@@ -7517,7 +7313,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -7529,7 +7325,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -7541,7 +7337,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -7553,7 +7349,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -7565,7 +7361,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -7972,7 +7768,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093326}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudio, Assembly-CSharp
         m_MethodName: SliderVolume
         m_Mode: 0
@@ -8067,16 +7863,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
-        m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1428036043}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: TryAgain
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SceneGame
+          m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1277392240
@@ -8200,7 +7996,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093326}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudio, Assembly-CSharp
         m_MethodName: VolumeApply
         m_Mode: 1
@@ -8212,7 +8008,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -8224,7 +8020,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -8236,7 +8032,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -8248,7 +8044,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -8260,7 +8056,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -9157,7 +8953,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1428036037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf8f1ca8ac9217468150237fe87e045, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b234bede9797914faa4e7158f6526fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1430479190
@@ -9318,7 +9114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -9330,7 +9126,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -9342,7 +9138,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -9354,7 +9150,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -9366,7 +9162,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -9501,7 +9297,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093328}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGraphic, Assembly-CSharp
         m_MethodName: SetFullScrean
         m_Mode: 0
@@ -9672,7 +9468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093327}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGameplay, Assembly-CSharp
         m_MethodName: GameplayApply
         m_Mode: 1
@@ -9684,7 +9480,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -9696,7 +9492,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -9708,7 +9504,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -9720,7 +9516,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -9732,7 +9528,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -9865,7 +9661,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -10378,7 +10174,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -10756,7 +10552,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093328}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGraphic, Assembly-CSharp
         m_MethodName: DefaultButon
         m_Mode: 1
@@ -10889,7 +10685,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093327}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGameplay, Assembly-CSharp
         m_MethodName: DefaultButton
         m_Mode: 1
@@ -11231,7 +11027,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -11619,7 +11415,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093328}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuGraphic, Assembly-CSharp
         m_MethodName: SetResolution
         m_Mode: 0
@@ -11873,7 +11669,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -12006,7 +11802,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -12538,8 +12334,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1428036043}
-        m_TargetAssemblyTypeName: BoutonQuit, Assembly-CSharp
-        m_MethodName: Quit
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12670,7 +12466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalbool
         m_Mode: 6
@@ -12682,7 +12478,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalCanvas
         m_Mode: 2
@@ -12694,7 +12490,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: transitionlocalGameObject
         m_Mode: 2
@@ -12706,7 +12502,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionCanvasGroup
         m_Mode: 2
@@ -12718,7 +12514,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 434093329}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TransitionFondu, Assembly-CSharp
         m_MethodName: BistransitionGameObject
         m_Mode: 2
@@ -12932,7 +12728,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434093324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BoutonLoadGame, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5

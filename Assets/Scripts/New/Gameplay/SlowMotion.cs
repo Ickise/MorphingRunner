@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class SlowMotion : MonoBehaviour
 
     private bool isSlowMotion;
 
+    private GameManager gameManager;
+
     // L'utilisation d'événement permet d'éviter d’appeler Update() en permanence et cela améliore les performances.
     private void OnEnable()
     {
@@ -20,6 +23,11 @@ public class SlowMotion : MonoBehaviour
     private void OnDisable()
     {
         inputManager.SlowMotionEvent -= ActivateSlowMotion;
+    }
+
+    private void Start()
+    {
+        gameManager = GameManager.instance;
     }
 
     private void ActivateSlowMotion()
@@ -44,6 +52,7 @@ public class SlowMotion : MonoBehaviour
 
     private IEnumerator SlowMotionCoroutine()
     {
+        if (gameManager.GameIsOver()) yield break;
         SetSlowMotion(0.5f, true);
         yield return new WaitForSecondsRealtime(slowMotionDuration); // WaitForSecondsRealtime ne dépend pas du timeScale. Cela permet de ne pas ralentir le temps d'attente.
         SetSlowMotion(1f, false);

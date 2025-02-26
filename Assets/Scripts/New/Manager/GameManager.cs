@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
    
    [SerializeField, Header("References")] private InputManager inputManager;
 
+   private bool gameIsOver;
+
    private UIManager uiManager;
    private void Awake()
    {
@@ -37,8 +39,13 @@ public class GameManager : MonoBehaviour
 
    public void GameOver()
    {
-      Debug.Log("GameOver");
+      gameIsOver = true;
       Time.timeScale = 0f;
       uiManager.GameOverUI();
+   }
+
+   public bool GameIsOver()
+   {
+      return gameIsOver;
    }
 }
