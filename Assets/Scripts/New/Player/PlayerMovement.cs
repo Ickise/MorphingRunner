@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,9 +17,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving;
     private Vector3 moveDirection = Vector3.forward;
 
+    private GameManager gameManager;
+
     private void OnEnable()
     {
         // Abonnement à l'événement de déplacement du SideManager.
+        gameManager = GameManager.instance;
         sideManager.OnPositionChanged += MoveToPosition;
         StartCoroutine(IncreaseSpeedOverTime());
     }
@@ -83,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     // La coroutine permet d'augmenter la speed toutes les X secondes. 
     private IEnumerator IncreaseSpeedOverTime()
     {
-        while (true)
+        while (!gameManager.GameIsOver())
         {
             yield return new WaitForSecondsRealtime(speedIncreaseInterval);
             movementSpeed += speedIncreaseAmount;

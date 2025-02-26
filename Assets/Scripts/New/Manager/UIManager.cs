@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -6,6 +7,8 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField, Header("References")] private GameObject deathCanvas;
+
+    [SerializeField] private TextMeshProUGUI scoreText;
     private void Awake()
     {
         if (instance == null)
@@ -21,10 +24,16 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         deathCanvas.SetActive(false);
+        scoreText.text = "Score: 0";
     }
 
     public void GameOverUI()
     {
         deathCanvas.SetActive(true);
+    }
+
+    public void UpdateScoreUI(int scoreValue)
+    {
+        scoreText.text = "Score: " + scoreValue;
     }
 }

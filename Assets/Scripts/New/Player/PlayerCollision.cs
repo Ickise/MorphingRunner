@@ -3,17 +3,28 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     // Script très court mais qui permet de respecter le Single Responsability Principle.
-    
+
     [SerializeField, Header("Settings")] private LayerMask isObstacleLayer;
-    
+
     private DNAManager dnaManager;
-    
+
     private GameManager gameManager;
+
+    private ScoreManager scoreManager;
+
+    private UIManager uiManager;
 
     private void Start()
     {
+        Initialize();
+    }
+
+    private void Initialize()
+    {
         dnaManager = DNAManager.instance;
         gameManager = GameManager.instance;
+        scoreManager = ScoreManager.instance;
+        uiManager = UIManager.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,14 +36,14 @@ public class PlayerCollision : MonoBehaviour
             gameManager.GameOver();
             return;
         }
-        
+
         // Ici je détecte uniquement les ADN pour récupérer un ADN précis.
         DNAType dnaType = other.GetComponent<DNAType>();
         if (dnaType != null)
         {
-            Debug.Log("DNA Collect");
             dnaManager.AddDNA(dnaType.GetDNAType());
-            //Destroy(other.gameObject);
+            scoreManager.AddScore(100);
+            uiManager.UpdateScoreUI(scoreManager.GetScore());
         }
     }
 }
