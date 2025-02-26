@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DNAManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class DNAManager : MonoBehaviour
 
     private int tRexDNAStock = 5;
     private int humanDNAStock = 5;
+
+    private UIManager uiManager;
 
     private void Awake()
     {
@@ -20,6 +23,12 @@ public class DNAManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        uiManager = UIManager.instance;
+        uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
     }
 
     public void AddDNA(DNAType.DnaType dnaType)
@@ -36,6 +45,8 @@ public class DNAManager : MonoBehaviour
             case DNAType.DnaType.AlienDNA:
                 break;
         }
+
+        uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
     }
 
     public bool ConsumeDNA(DNAType.DnaType dnaType, int amount)
@@ -50,6 +61,7 @@ public class DNAManager : MonoBehaviour
                 if (tRexDNAStock >= amount)
                 {
                     tRexDNAStock -= amount;
+                    uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
                     return true;
                 }
                 break;
@@ -57,6 +69,7 @@ public class DNAManager : MonoBehaviour
                 if (humanDNAStock >= amount)
                 {
                     humanDNAStock -= amount;
+                    uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
                     return true;
                 }
                 break;
