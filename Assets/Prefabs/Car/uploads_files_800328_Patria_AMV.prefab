@@ -3169,7 +3169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5694750127469449127}
   - component: {fileID: 2969760160188534677}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: uploads_files_800328_Patria_AMV
   m_TagString: Untagged
   m_Icon: {fileID: 0}

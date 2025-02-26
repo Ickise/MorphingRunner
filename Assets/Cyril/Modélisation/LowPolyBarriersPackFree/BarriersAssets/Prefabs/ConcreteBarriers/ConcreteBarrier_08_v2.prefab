@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6964103292492116288}
   - component: {fileID: 6964103292492116291}
   - component: {fileID: 7612034615810982615}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ConcreteBarrier_08_v2
   m_TagString: Collider
   m_Icon: {fileID: 0}
