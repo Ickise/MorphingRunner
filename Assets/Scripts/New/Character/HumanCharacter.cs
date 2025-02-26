@@ -6,13 +6,9 @@ public class HumanCharacter : Character
 
     public override void SpecialAbility(GameObject obstacle, Transform playerTransform)
     {
-        Animator policeWomen = obstacle.GetComponent<Animator>();
-
-        if (policeWomen == null)
+        if (obstacle.TryGetComponent(out PoliceGroup policeGroup))
         {
-            return;
+            policeGroup.ActivateBack();
         }
-
-        policeWomen.SetBool("Back", true);
     }
 }

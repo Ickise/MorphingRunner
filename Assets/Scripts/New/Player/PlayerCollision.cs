@@ -43,6 +43,11 @@ public class PlayerCollision : MonoBehaviour
                 gameManager.GameOver();
             }
         }
+        
+        if (transformationManager.GetCurrentCharacter() is HumanCharacter humanCharacter)
+        {
+            humanCharacter.SpecialAbility(other.gameObject, transform);
+        }
 
         // Ici je détecte uniquement les ADN pour récupérer un ADN précis.
         DNAType dnaType = other.GetComponent<DNAType>();
