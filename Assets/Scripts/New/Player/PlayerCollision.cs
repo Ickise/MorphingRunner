@@ -34,18 +34,9 @@ public class PlayerCollision : MonoBehaviour
         // Je pense que c'est la manière la plus optimisée pour ne pas utiliser de CompareTag ou ne pas avoir juste un script Obstacle sur tous les objets.
         if (((1 << other.gameObject.layer) & isObstacleLayer) != 0)
         {
-            if (transformationManager.GetCurrentCharacter() is TRexCharacter)
+            if (transformationManager.GetCurrentCharacter() is TRexCharacter tRexCharacter)
             {
-                Rigidbody obstacleRigidbody = other.gameObject.GetComponent<Rigidbody>();
-
-                if (obstacleRigidbody == null)
-                {
-                    obstacleRigidbody = other.gameObject.AddComponent<Rigidbody>();
-                    obstacleRigidbody.useGravity = false;
-                }
-
-                obstacleRigidbody.AddForce(transform.up * 35 + transform.forward * 30, ForceMode.Impulse);
-                obstacleRigidbody.AddRelativeTorque(Vector3.right * 20, ForceMode.Impulse);
+                tRexCharacter.SpecialAbility(other.gameObject, transform);
             }
             else
             {

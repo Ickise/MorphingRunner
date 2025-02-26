@@ -6,7 +6,7 @@ public abstract class Character
     // J'ai créé une classe abstraite Character dont héritent les classes TRexCharacter, AlienCharacter et HumanCharacter.
     // Cela permet de centraliser les caractéristiques communes à tous les personnages.
     public abstract float DodgeSpeed { get; }
-    public abstract void SpecialAbility();
+    public abstract void SpecialAbility(GameObject obstacle, Transform playerTransform);
 
     protected GameObject characterObject;
 

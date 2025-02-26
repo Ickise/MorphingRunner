@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +13,13 @@ public class TransformationManager : MonoBehaviour
     [SerializeField] private GameObject alienObject;
     [SerializeField] private GameObject tRexObject;
     
+    [SerializeField, Header("Settings")] private float transformationDuration = 10f;
+    
     private Character currentCharacter;
 
     private DNAManager dnaManager;
+
+    private List<GameObject> allCharacterObjects;
 
     // Stocke toutes les transformations en mémoire pour éviter de recréer les objets à chaque fois. Je pourrais tout simplement ajouter d'autres transformations si besoin.
     private Dictionary<Type, Character> characters = new Dictionary<Type, Character>
@@ -23,8 +28,6 @@ public class TransformationManager : MonoBehaviour
         { typeof(AlienCharacter), new AlienCharacter() },
         { typeof(HumanCharacter), new HumanCharacter() }
     };
-    
-    private List<GameObject> allCharacterObjects;
     
     private void Start()
     {
@@ -70,10 +73,22 @@ public class TransformationManager : MonoBehaviour
 
         SetCharacter<T>();
         slowMotion.DeactivateSlowMotion();
+        
+        
+        if (typeof(T) != typeof(AlienCharacter))
+        {
+            StartCoroutine(RevertToAlienAfterDuration());
+        }
     }
 
     public Character GetCurrentCharacter()
     {
         return currentCharacter;
+    }
+    
+    private IEnumerator RevertToAlienAfterDuration()
+    {
+        yield return new WaitForSeconds(transformationDuration);
+        SetCharacter<AlienCharacter>();
     }
 }
