@@ -42,6 +42,7 @@ public class TransformationManager : MonoBehaviour
     public void TRexTransformation() => TransformInto<TRexCharacter>(DNAType.DnaType.TRexDNA);
     public void HumanTransformation() => TransformInto<HumanCharacter>(DNAType.DnaType.HumanDNA);
 
+    // J'ai utilisé une generic pour optimiser. 
     private void TransformInto<T>(DNAType.DnaType dnaType) where T : Character
     {
         if (!dnaManager.ConsumeDNA(dnaType, 5))
@@ -50,7 +51,6 @@ public class TransformationManager : MonoBehaviour
             return;
         }
 
-        Debug.Log(typeof(T).Name);
         SetCharacter<T>();
         slowMotion.DeactivateSlowMotion();
     }

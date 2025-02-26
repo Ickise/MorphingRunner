@@ -5,7 +5,7 @@ public class LevelGenerator : MonoBehaviour
 {
     // Ce script remplace ChunGeneration. Il permet de générer des chunks de manière "procédurale" via un système de pool de chunks. 
     // Ce n'est pas réellement de la génération procédurale, mais plutôt de la réutilisation de chunks déjà créés.
-    // Cela fera l'affaire pour cet exercice d'optimisation, mais il faudra revoir le système pour de la génération procédurale réelle.
+    // Cela fera l'affaire pour cet exercice d'optimisation, mais il faudra peut être revoir le système pour de la génération procédurale réelle.
     [SerializeField, Header("Settings")] private float chunkSize = 70f;
     [SerializeField] private int initialChunkCount = 3;
 
@@ -17,11 +17,16 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
+       InitializeChunks(); 
+    }
+
+    private void InitializeChunks()
+    {
+        // J'initialise tous les chunks
         for (int i = 0; i < initialChunkCount; i++)
         {
             SpawnChunk();
         }
-        // StartCoroutine(SpawnChunks());
     }
 
     // Ici, j'initialise un chunk en le créant, en le positionnant et en démarrant son processus de désactivation après un délai. 
@@ -36,7 +41,8 @@ public class LevelGenerator : MonoBehaviour
         activeChunks.Enqueue(chunk);
     }
 
-    // Je suis un peu obligé d'utiliser une Update, j'avoue que je n'ai pas d'autre idée.
+    // Je suis un peu obligé d'utiliser une Update, je pense que le mieux serait de faire une UpdateManager et une interface IUpdate.
+    // En faisant cela, j'aurai une seule Update et tous les scripts ayant l'interface se lancerait dans l'Update.
     private void Update()
     {
         if (activeChunks.Count <= 0) return;

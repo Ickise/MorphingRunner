@@ -1,8 +1,8 @@
-using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+   // Ce script est un simple GameManager pour lancer un GameOver, enable les inputs etc... pour manager le jeu. 
    public static GameManager instance;
    
    [SerializeField, Header("References")] private InputManager inputManager;

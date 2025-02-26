@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+   // Ce script est un simple MenuManager pour gérer le lancement du jeu et pour le quitter. 
    public void Menu()
    {
       Time.timeScale = 1f;
