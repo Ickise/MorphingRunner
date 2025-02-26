@@ -39,6 +39,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int addingValue)
     {
         playerScore += addingValue;
+        uiManager.UpdateScoreUI(playerScore);
     }
 
     public int GetScore()

@@ -16,5 +16,6 @@ public class TRexCharacter : Character
 
         obstacleRigidbody.AddForce(playerTransform.up * 35 + playerTransform.forward * 30, ForceMode.Impulse);
         obstacleRigidbody.AddRelativeTorque(Vector3.right * 20, ForceMode.Impulse);
+        ScoreManager.instance.AddScore(100);
     }
 }

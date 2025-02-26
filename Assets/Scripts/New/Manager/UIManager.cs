@@ -7,8 +7,10 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField, Header("References")] private GameObject deathCanvas;
-
+    [SerializeField] private GameObject scoreCanvas;
+    
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI finalScoreText;
     [SerializeField] private TextMeshProUGUI tRexDNAStock;
     [SerializeField] private TextMeshProUGUI humanDNAStock;
 
@@ -39,6 +41,8 @@ public class UIManager : MonoBehaviour
     public void GameOverUI()
     {
         deathCanvas.SetActive(true);
+        scoreCanvas.SetActive(false);
+        finalScoreText.text = "Score: " + ScoreManager.instance.GetScore();
     }
     
     // Cette fonction me permet tout simplement de mettre à jour l'UI du score du joueur lors de certaines actions.

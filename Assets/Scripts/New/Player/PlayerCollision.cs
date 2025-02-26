@@ -55,7 +55,6 @@ public class PlayerCollision : MonoBehaviour
         {
             dnaManager.AddDNA(dnaType.GetDNAType());
             scoreManager.AddScore(100);
-            uiManager.UpdateScoreUI(scoreManager.GetScore());
         }
     }
 }
