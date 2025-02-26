@@ -1,8 +1,8 @@
-using System;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    // Ce script est un simple UIManager qui fait apparaitre les canvas lorsque la fonction est appelé, etc... 
     public static UIManager instance;
 
     [SerializeField, Header("References")] private GameObject deathCanvas;
