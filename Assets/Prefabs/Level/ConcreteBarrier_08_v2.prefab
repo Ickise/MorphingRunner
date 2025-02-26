@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6964103292492116288}
   - component: {fileID: 6964103292492116291}
   - component: {fileID: 7612034615810982615}
+  - component: {fileID: 8807236906462152974}
   m_Layer: 6
   m_Name: ConcreteBarrier_08_v2
   m_TagString: Collider
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.99999994, z: 0.75819993}
   m_Center: {x: 0, y: 0.49000022, z: 0}
+--- !u!114 &8807236906462152974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964103292492116413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83924c4885e7d541bc33c35f896600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

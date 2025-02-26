@@ -3169,8 +3169,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5694750127469449127}
   - component: {fileID: 2969760160188534677}
+  - component: {fileID: 3236217791248881471}
   m_Layer: 6
-  m_Name: uploads_files_800328_Patria_AMV
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3183,7 +3184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4921310405057123613}
-  m_LocalRotation: {x: 0, y: 0.9983166, z: 0, w: 0.057999633}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
@@ -3258,7 +3259,7 @@ Transform:
   - {fileID: 3653435772999566220}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 173.35, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &2969760160188534677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3272,6 +3273,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6373875, y: 3.8248112, z: 6.7203407}
   m_Center: {x: 0.011238456, y: 1.4124049, z: 0.082653165}
+--- !u!114 &3236217791248881471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921310405057123613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83924c4885e7d541bc33c35f896600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4947384689364161004
 GameObject:
   m_ObjectHideFlags: 0

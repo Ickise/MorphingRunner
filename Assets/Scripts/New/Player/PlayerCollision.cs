@@ -32,10 +32,25 @@ public class PlayerCollision : MonoBehaviour
     {
         // Ici je détecte les objets qui ont uniquement le layer IsObstacle pour lancer le GameOver.
         // Je pense que c'est la manière la plus optimisée pour ne pas utiliser de CompareTag ou ne pas avoir juste un script Obstacle sur tous les objets.
-        if (((1 << other.gameObject.layer) & isObstacleLayer) != 0 && !(transformationManager.GetCurrentCharacter() is TRexCharacter))
+        if (((1 << other.gameObject.layer) & isObstacleLayer) != 0)
         {
-            gameManager.GameOver();
-            return;
+            if (transformationManager.GetCurrentCharacter() is TRexCharacter)
+            {
+                Rigidbody obstacleRigidbody = other.gameObject.GetComponent<Rigidbody>();
+
+                if (obstacleRigidbody == null)
+                {
+                    obstacleRigidbody = other.gameObject.AddComponent<Rigidbody>();
+                    obstacleRigidbody.useGravity = false;
+                }
+
+                obstacleRigidbody.AddForce(transform.up * 35 + transform.forward * 30, ForceMode.Impulse);
+                obstacleRigidbody.AddRelativeTorque(Vector3.right * 20, ForceMode.Impulse);
+            }
+            else
+            {
+                gameManager.GameOver();
+            }
         }
 
         // Ici je détecte uniquement les ADN pour récupérer un ADN précis.
