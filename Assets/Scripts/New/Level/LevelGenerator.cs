@@ -18,6 +18,8 @@ public class LevelGenerator : MonoBehaviour
     private Queue<GameObject> activeChunks = new Queue<GameObject>();
     private Queue<GameObject> inactiveChunks = new Queue<GameObject>();
 
+    private int chunkNumber;
+
     private void Start()
     {
         InitializeChunks();
@@ -25,6 +27,8 @@ public class LevelGenerator : MonoBehaviour
 
     private void InitializeChunks()
     {
+        chunkNumber = activeChunkCount - 1;
+        
         Vector3 spawnPosition = Vector3.zero;
         
         for (int i = 0; i < totalChunks; i++)
@@ -70,7 +74,7 @@ public class LevelGenerator : MonoBehaviour
         {
             GameObject newChunk = inactiveChunks.Dequeue();
             Vector3 lastChunkPosition = activeChunks.Peek().transform.position;
-            newChunk.transform.position = lastChunkPosition + new Vector3(0f, 0f, chunkSize);
+            newChunk.transform.position = lastChunkPosition + new Vector3(0f, 0f, chunkSize * chunkNumber);
             newChunk.SetActive(true);
             activeChunks.Enqueue(newChunk);
         }
