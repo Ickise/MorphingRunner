@@ -3021,7 +3021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3574609631488265000, guid: 255536225745cc04b8b3ef28ed00b65a, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5028347490570767717, guid: 255536225745cc04b8b3ef28ed00b65a, type: 3}
       propertyPath: isObstacleLayer.m_Bits
