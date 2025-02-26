@@ -185,6 +185,7 @@ public class TransformationsChoices : MonoBehaviour
     public void Passe(GameObject _gameobjectTrigger)
     {
         // Cela ne devrait pas être ici, il faudrait centraliser le tout dans une autre classe comme la plupart des méthodes de ce script.
+        // De plus, la méthode est extrêmement bizarre, nous avons hardcodé pour récupéré l'enfant et nous avons mis les même lignes de code au lieu de refacto.
         Transform cops1 = _gameobjectTrigger.transform.parent.GetChild(4);
         Transform cops2 = _gameobjectTrigger.transform.parent.GetChild(5);
         Animator animatorCops1 = cops1.GetComponent<Animator>();
@@ -193,6 +194,7 @@ public class TransformationsChoices : MonoBehaviour
         animatorCops2.SetBool("Back", true);
     }
 
+    // Au lieu de mettre un ternaire pour les secondes, nous avions recréé une autre coroutine. L'invisibility n'était pas utile, c'est pour cela que je dis ça. 
     public IEnumerator TRexChrono()
     {
         yield return new WaitForSeconds(30f);
