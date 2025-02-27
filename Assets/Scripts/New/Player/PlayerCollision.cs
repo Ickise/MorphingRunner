@@ -13,7 +13,7 @@ public class PlayerCollision : MonoBehaviour
 
     private ScoreManager scoreManager;
 
-    private UIManager uiManager;
+    private AudioManager audioManager;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class PlayerCollision : MonoBehaviour
         dnaManager = DNAManager.instance;
         gameManager = GameManager.instance;
         scoreManager = ScoreManager.instance;
-        uiManager = UIManager.instance;
+        audioManager = AudioManager.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,6 +53,7 @@ public class PlayerCollision : MonoBehaviour
         DNAType dnaType = other.GetComponent<DNAType>();
         if (dnaType != null)
         {
+            audioManager.PlaySound(1);
             dnaManager.AddDNA(dnaType.GetDNAType());
             scoreManager.AddScore(100);
         }

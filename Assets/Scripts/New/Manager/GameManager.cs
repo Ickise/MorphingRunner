@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
    private bool gameIsOver;
 
    private UIManager uiManager;
+
+   private AudioManager audioManager;
+   
    private void Awake()
    {
       if (instance == null)
@@ -35,6 +38,9 @@ public class GameManager : MonoBehaviour
    private void Start()
    {
       uiManager = UIManager.instance;
+      audioManager = AudioManager.instance;
+      
+      audioManager.PlayMusic(0, true);
    }
 
    public void GameOver()

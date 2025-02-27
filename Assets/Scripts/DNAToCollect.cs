@@ -6,9 +6,14 @@ public class DNAToCollect : MonoBehaviour
     // Ce script gérer le stock de l'ADN sans aucune distinction. Il met également à jour l'UI.  
     // Lorsque le joueur récupérer de l'ADN, il pouvait l'utiliser pour devenir un TRex ou bien un humain.
     [Header("Set up")] // Il y a un effort de nomenclature, mais cela reste parfois abstrait. 
-    [SerializeField] DNA[] listDNA = new DNA[3];
+    [SerializeField]
+    DNA[] listDNA = new DNA[3];
 
-    [SerializeField] int[] listSpecialDNA = new int[3]; // Cette variable est inutile, je peux tout simplement utiliser un int que j'incrémente ou décrémente
+    [SerializeField]
+    int[]
+        listSpecialDNA =
+            new int[3]; // Cette variable est inutile, je peux tout simplement utiliser un int que j'incrémente ou décrémente
+
     // et un enum pour savoir le type d'ADN que je possède. 
     [SerializeField] int numberOfDNAToTransform = 10;
 
@@ -19,9 +24,8 @@ public class DNAToCollect : MonoBehaviour
     [SerializeField] int scoreToGain = 10;
 
     [SerializeField] AudioClip collectDNA;
-    
-    [Header("Data")]
-    [SerializeField] string stringButton;
+
+    [Header("Data")] [SerializeField] string stringButton;
 
     bool canTransform;
 
@@ -70,7 +74,7 @@ public class DNAToCollect : MonoBehaviour
             {
                 if (other.name == listDNA[i].dnaName)
                 {
-                    AudioManager._instance.PlaySFX(collectDNA);
+                    // AudioManager._instance.PlaySFX(collectDNA);
                     listSpecialDNA[i]++;
                     Scoring.scoring.score += scoreToGain;
                     Destroy(other.gameObject);
