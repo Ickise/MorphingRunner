@@ -11,10 +11,10 @@ public class TransformationManager : MonoBehaviour
 
     [SerializeField] private GameObject humanObject;
     [SerializeField] private GameObject alienObject;
-    [SerializeField] private GameObject tRexObject;
-    
+    [SerializeField] private GameObject pachyObject;
+
     [SerializeField, Header("Settings")] private float transformationDuration = 10f;
-    
+
     private Character currentCharacter;
 
     private DNAManager dnaManager;
@@ -24,21 +24,21 @@ public class TransformationManager : MonoBehaviour
     // Stocke toutes les transformations en mémoire pour éviter de recréer les objets à chaque fois. Je pourrais tout simplement ajouter d'autres transformations si besoin.
     private Dictionary<Type, Character> characters = new Dictionary<Type, Character>
     {
-        { typeof(TRexCharacter), new TRexCharacter() },
+        { typeof(PachyCharacter), new PachyCharacter() },
         { typeof(AlienCharacter), new AlienCharacter() },
         { typeof(HumanCharacter), new HumanCharacter() }
     };
-    
+
     private void Start()
     {
         dnaManager = DNAManager.instance;
-        
+
         characters[typeof(HumanCharacter)].SetCharacterObject(humanObject);
         characters[typeof(AlienCharacter)].SetCharacterObject(alienObject);
-        characters[typeof(TRexCharacter)].SetCharacterObject(tRexObject);
-        
-        allCharacterObjects = new List<GameObject> { humanObject, alienObject, tRexObject };
-        
+        characters[typeof(PachyCharacter)].SetCharacterObject(pachyObject);
+
+        allCharacterObjects = new List<GameObject> { humanObject, alienObject, pachyObject };
+
         SetCharacter<AlienCharacter>();
         currentCharacter.ChangeSkin(allCharacterObjects);
     }
@@ -49,7 +49,7 @@ public class TransformationManager : MonoBehaviour
     {
         currentCharacter = characters[typeof(T)];
         playerMovement.SetDodgeSpeed(currentCharacter.DodgeSpeed);
-        
+
         currentCharacter.ChangeSkin(allCharacterObjects);
     }
 
@@ -59,7 +59,7 @@ public class TransformationManager : MonoBehaviour
     //Cette méthode permet d'évite de recréer les objets inutilement à chaque transformation pour économiser de la mémoire.
 
     public void AlienTransformation() => TransformInto<AlienCharacter>(DNAType.DnaType.AlienDNA);
-    public void TRexTransformation() => TransformInto<TRexCharacter>(DNAType.DnaType.TRexDNA);
+    public void PachyTransformation() => TransformInto<PachyCharacter>(DNAType.DnaType.PachyDNA);
     public void HumanTransformation() => TransformInto<HumanCharacter>(DNAType.DnaType.HumanDNA);
 
     // J'ai utilisé une generic pour optimiser. 
@@ -73,8 +73,8 @@ public class TransformationManager : MonoBehaviour
 
         SetCharacter<T>();
         slowMotion.DeactivateSlowMotion();
-        
-        
+
+
         if (typeof(T) != typeof(AlienCharacter))
         {
             StartCoroutine(RevertToAlienAfterDuration());
@@ -85,7 +85,7 @@ public class TransformationManager : MonoBehaviour
     {
         return currentCharacter;
     }
-    
+
     private IEnumerator RevertToAlienAfterDuration()
     {
         yield return new WaitForSeconds(transformationDuration);

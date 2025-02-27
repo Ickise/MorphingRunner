@@ -36,7 +36,7 @@ public class DNAManager : MonoBehaviour
         // Cette méthode pourra être appelé dans PlayerCollision pour que lorsque le joueur touche de l'ADN alors il gagne celui-ci et l'ajoute au stock correspondant. 
         switch (dnaType)
         {
-            case DNAType.DnaType.TRexDNA:
+            case DNAType.DnaType.PachyDNA:
                 tRexDNAStock++;
                 break;
             case DNAType.DnaType.HumanDNA:
@@ -57,7 +57,7 @@ public class DNAManager : MonoBehaviour
         {
             case DNAType.DnaType.AlienDNA:
                 return true;
-            case DNAType.DnaType.TRexDNA:
+            case DNAType.DnaType.PachyDNA:
                 if (tRexDNAStock >= amount)
                 {
                     tRexDNAStock -= amount;
@@ -83,7 +83,7 @@ public class DNAManager : MonoBehaviour
         // Cette méthode permet de connaitre le nombre d'ADN en stock. Elle sera utile pour de l'UI ou d'autre fonction. 
         switch (dnaType)
         {
-            case DNAType.DnaType.TRexDNA:
+            case DNAType.DnaType.PachyDNA:
                 return tRexDNAStock;
             case DNAType.DnaType.HumanDNA:
                 return humanDNAStock;

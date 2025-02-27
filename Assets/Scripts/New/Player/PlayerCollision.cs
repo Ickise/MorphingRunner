@@ -34,7 +34,7 @@ public class PlayerCollision : MonoBehaviour
         // Je pense que c'est la manière la plus optimisée pour ne pas utiliser de CompareTag ou ne pas avoir juste un script Obstacle sur tous les objets.
         if (((1 << other.gameObject.layer) & isObstacleLayer) != 0)
         {
-            if (transformationManager.GetCurrentCharacter() is TRexCharacter tRexCharacter)
+            if (transformationManager.GetCurrentCharacter() is PachyCharacter tRexCharacter)
             {
                 tRexCharacter.SpecialAbility(other.gameObject, transform);
             }

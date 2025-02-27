@@ -7,7 +7,7 @@ public class DNAType : MonoBehaviour
     public enum DnaType
     {
         AlienDNA,
-        TRexDNA,
+        PachyDNA,
         HumanDNA,
     }
 
