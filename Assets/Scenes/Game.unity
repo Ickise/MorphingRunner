@@ -1182,7 +1182,7 @@ MonoBehaviour:
   slowMotion: {fileID: 342780820}
   humanObject: {fileID: 1293687332}
   alienObject: {fileID: 928607969}
-  tRexObject: {fileID: 1115778441}
+  pachyObject: {fileID: 1115778441}
   transformationDuration: 10
 --- !u!1 &784058365
 GameObject:
