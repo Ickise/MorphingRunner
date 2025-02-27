@@ -4,6 +4,9 @@ public class TRexCharacter : Character
 {
     public override float DodgeSpeed => 10f;
 
+    private float forceValue = 10f;
+    private float rotationValue = 20f;
+
     public override void SpecialAbility(GameObject obstacle, Transform playerTransform)
     {
         Rigidbody obstacleRigidbody = obstacle.GetComponent<Rigidbody>();
@@ -14,8 +17,9 @@ public class TRexCharacter : Character
             obstacleRigidbody.useGravity = false;
         }
 
-        obstacleRigidbody.AddForce(playerTransform.up * 35 + playerTransform.forward * 30, ForceMode.Impulse);
-        obstacleRigidbody.AddRelativeTorque(Vector3.right * 20, ForceMode.Impulse);
+        obstacleRigidbody.AddForce(playerTransform.up * forceValue + playerTransform.forward * forceValue,
+            ForceMode.Impulse);
+        obstacleRigidbody.AddRelativeTorque(Vector3.right * rotationValue, ForceMode.Impulse);
         ScoreManager.instance.AddScore(100);
     }
 }
