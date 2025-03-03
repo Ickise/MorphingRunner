@@ -1,8 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IUpdate
 {
     // Ce script permet de remplacer MoveDecor pour que cette fois c'est réellement le joueur qui se déplace.
     [SerializeField, Header("Settings")] private float dodgeSpeed = 10f;
@@ -15,29 +14,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SideManager sideManager;
 
     private bool isMoving;
+    
     private Vector3 moveDirection = Vector3.forward;
+
+    private float time;
 
     private GameManager gameManager;
 
     private void OnEnable()
     {
         // Abonnement à l'événement de déplacement du SideManager.
+        UpdateManager.RegisterUpdate(this);
         gameManager = GameManager.instance;
         sideManager.OnPositionChanged += MoveToPosition;
-        StartCoroutine(IncreaseSpeedOverTime());
     }
 
     private void OnDisable()
     {
         // Désabonnement à l'événement de déplacement du SideManager. Cela permet d'éviter les références nulles lors de la destruction de l'objet.
+        UpdateManager.UnregisterUpdate(this);
         sideManager.OnPositionChanged -= MoveToPosition;
         StopAllCoroutines();
-    }
-
-    // Malheureusement, pour que mon personnage se déplace en permanence, il faut que j'utilise une Update.
-    private void Update()
-    {
-        playerTransform.position += moveDirection * (movementSpeed * Time.deltaTime);
     }
 
     private void MoveToPosition(float newPosition)
@@ -84,13 +81,16 @@ public class PlayerMovement : MonoBehaviour
         dodgeSpeed = speed;
     }
 
-    // La coroutine permet d'augmenter la speed toutes les X secondes. 
-    private IEnumerator IncreaseSpeedOverTime()
+    public void UpdateTick()
     {
-        while (!gameManager.GameIsOver())
-        {
-            yield return new WaitForSecondsRealtime(speedIncreaseInterval);
-            movementSpeed += speedIncreaseAmount;
-        }
+        if (gameManager.GameIsOver()) return;
+        
+        time += Time.deltaTime;
+        
+        playerTransform.position += moveDirection * (movementSpeed * Time.deltaTime);
+
+        if (time <= speedIncreaseInterval) return;
+        movementSpeed += speedIncreaseAmount;
+        time = 0f;
     }
 }
