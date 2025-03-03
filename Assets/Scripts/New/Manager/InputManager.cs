@@ -5,53 +5,58 @@ using UnityEngine.InputSystem;
 [CreateAssetMenu(menuName = "ScriptableObjects/Input Reader")]
 public class InputManager : ScriptableObject, PlayerInputAction.IPlayerActions
 {
-   // Tous mes événements sont déclarés ici pour être accessibles dans d'autres scripts. Cela évite l'utilisation d'Update.
-   // Le fait que l'InputManager soit un ScriptableObject permet de rendre accessible ce script facilement partout dans le projet.
-   public event Action LeftMoveEvent = delegate {};
-   public event Action RightMoveEvent = delegate {};
-   public event Action SlowMotionEvent = delegate {};
+   // Ce script n'existait pas auparavant et gère tous les événements liés aux entrées du joueur, en évitant d'utiliser l'Update.
+   // Le fait que ce soit un ScriptableObject permet de rendre ce script facilement accessible depuis n'importe quel autre
+   // script dans le projet et optimise puisque ce n'est que de la data.
+   
+   public event Action LeftMoveEvent = delegate {}; // Événement appelé lorsque le joueur se déplace vers la gauche.
+   public event Action RightMoveEvent = delegate {}; // Événement appelé lorsque le joueur se déplace vers la droite.
+   public event Action SlowMotionEvent = delegate {}; // Événement appelé lorsque le joueur active le slow-motion.
    
    private PlayerInputAction inputActions;
 
    void OnEnable()
    {
-      // Vérifie si les actions ne sont pas déjà instanciées pour éviter de recréer des objets inutiles
+      // Je vérifie si les actions sont déjà instanciées pour éviter de recréer des objets inutiles.
       if (inputActions == null)
       {
-         // Si c'est null je crée une instance de PlayerInputAction et je définis cette classe comme gestionnaire des événements.
+         // Si l'instance d'inputActions est nulle, nous créeons une nouvelle instance de PlayerInputAction
+         // et nous définissons ce script comme manager des callbacks pour ces actions.
          inputActions = new PlayerInputAction();
-         inputActions.Player.SetCallbacks(this);
+         inputActions.Player.SetCallbacks(this); 
       }
    }
 
-   // J'active les inputs du joueur, cette fonction est apppelée dans le script GameManager.
+   // Cela permet d'activer les Inputs du joueur dans le GameManager
    public void EnablePlayerInputs()
    {
       inputActions.Enable();
    }
 
-   // Désactive les inputs du joueur.
+   // Cela permet de désactiver les Inputs du joueur dans le GameManager
    public void DisablePlayerInputs()
    {
       inputActions.Disable();
    }
    
-   // Détecte l'activation du slow-motion lorsque le joueur appuie sur la touche associée.
+   // Cette méthode est appelée lorsque le slow-motion est activé (si le joueur appuie sur la touche E).
    public void OnSlowMotion(InputAction.CallbackContext context)
    {
-      if (!context.performed) return; // Cette ligne permet de déclencher l'événement uniquement si l'action est "performed".
-      SlowMotionEvent.Invoke(); // Cette ligne permet notifier tous les abonnés que l'événement a été déclenché.
+      if (!context.performed) return;
+      SlowMotionEvent.Invoke(); // Cela notifie tous les abonnés que l'événement slow-motion a été déclenché.
    }
 
+   // Cette méthode est appelée lorsque le joueur appuie sur la touche Q.
    public void OnLeftMove(InputAction.CallbackContext context)
    {
       if (!context.performed) return;
-      LeftMoveEvent.Invoke();
+      LeftMoveEvent.Invoke(); // Cela notifie tous les abonnés que l'événement mouvement à gauche a été déclenché.
    }
 
+   // Cette méthode est appelée lorsque le joueur appuie sur la touche D.
    public void OnRightMove(InputAction.CallbackContext context)
    {
       if (!context.performed) return;
-      RightMoveEvent.Invoke();
+      RightMoveEvent.Invoke(); // Cela notifie tous les abonnés que l'événement mouvement à droite a été déclenché.
    }
 }

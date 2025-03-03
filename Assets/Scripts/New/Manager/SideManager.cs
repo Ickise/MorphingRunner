@@ -12,11 +12,15 @@ public enum HorizontalSide
 
 public class SideManager : MonoBehaviour
 {
-    // Ce script ne gère que le positionnement horizontal du joueur en fonction des inputs, mais je pourrais ajouter d'autres positions si nécessaire.
+    // Ce script ne gère que le positionnement horizontal du joueur en fonction des inputs, mais nous pourrions ajouter d'autres positions si nécessaire.
+    // Auparavant, cela se trouvait dans HorizontalSide.
 
-    public static SideManager instance; // Singleton de SideManager pour y accéder facilement.
+    public static SideManager
+        instance; // Singleton de SideManager pour y accéder facilement. Nous retrouverons cela dans dans d'autre script, notamment
+    // les managers.
 
-    public event Action<float> OnPositionChanged = delegate { }; // Événement déclenché lorsque la position change.
+    public event Action<float>
+        OnHorizontalPositionChanged = delegate { }; // Événement déclenché lorsque la position horizontale change.
 
     [SerializeField, Header("Settings")] private float addingXValue = 3f;
 
@@ -27,6 +31,11 @@ public class SideManager : MonoBehaviour
 
     private void Awake()
     {
+        Initialize();
+    }
+
+    private void Initialize()
+    {
         // Initialisation correcte du Singleton.
         if (instance == null)
         {
@@ -34,59 +43,67 @@ public class SideManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject); // Nous détruisons l'objet s'il existe déjà une instance pour éviter les doublons.
         }
     }
 
     private void OnEnable()
     {
-        // Abonnement aux événements.
+        // Abonnement aux différents événements.
         inputManager.LeftMoveEvent += () => Move(-1);
         inputManager.RightMoveEvent += () => Move(1);
     }
 
     private void OnDisable()
     {
-        // Désabonnement des événements.
+        // Désabonnement aux différents événements pour éviter les références nulles.
         inputManager.LeftMoveEvent -= () => Move(-1);
         inputManager.RightMoveEvent -= () => Move(1);
     }
 
     private void Start()
     {
-        horizontalSide = HorizontalSide.Mid; // Initialise de la position de départ du joueur. 
+        horizontalSide = HorizontalSide.Mid; // Nous définissons la position initiale du joueur.
     }
 
-    // Cette méthode permet d'indiquer au joueur sa position et ce qu'il doit faire par conséquence.
+    // Cette méthode permet de gérer le déplacement du joueur sur l'axe horizontal.
     private void Move(int direction)
     {
         float xPosition = 0f;
 
+        // Nous utilisons un switch pour chaque position (Left, Middle et Right) et selon la position, cela donne différente directive au script PlayerMovement.
         switch (horizontalSide)
         {
             case HorizontalSide.Left:
-                if (playerMovement.IsMoving()) return; // Je vérifie si le joueur est en mouvement.
-                xPosition = direction == -1 ? -addingXValue : 0; // Implémentation d'un ternaire qui vérifie si le joueur ne peut pas aller plus à gauche.
+                if (playerMovement.IsDodging()) return; // Nous vérifions si le joueur dodge ou non.
+                xPosition = direction == -1
+                    ? -addingXValue
+                    : 0; // Si le joueur est déjà à gauche, il ne peut pas aller plus loin.
                 horizontalSide = direction == -1 ? HorizontalSide.Left : HorizontalSide.Mid;
                 break;
 
             case HorizontalSide.Mid:
-                if (playerMovement.IsMoving()) return;
+                if (playerMovement.IsDodging()) return;
                 xPosition = direction == -1 ? -addingXValue : addingXValue;
-                horizontalSide = direction == -1 ? HorizontalSide.Left : HorizontalSide.Right; // Ternaire pour déterminer la direction.
+                horizontalSide =
+                    direction == -1
+                        ? HorizontalSide.Left
+                        : HorizontalSide.Right; // Mise à jour de la position horizontale.
                 break;
 
             case HorizontalSide.Right:
-                if (playerMovement.IsMoving()) return;
-                xPosition = direction == -1 ? 0f : addingXValue; // Implémentation d'un ternaire qui vérifie si le joueur ne peut pas aller plus à droite.
-                horizontalSide = direction == -1 ? HorizontalSide.Mid : HorizontalSide.Right; 
+                if (playerMovement.IsDodging()) return;
+                xPosition = direction == -1
+                    ? 0f
+                    : addingXValue; // Si le joueur est déjà à droite, il ne peut pas aller plus loin.
+                horizontalSide = direction == -1 ? HorizontalSide.Mid : HorizontalSide.Right;
                 break;
         }
 
-        OnPositionChanged.Invoke(xPosition); // Enfin, je notifie que la position a changé.
+        OnHorizontalPositionChanged.Invoke(xPosition); // Nous notifions que la position a changé.
     }
 
-    // Cette méthode permet de récupérer la position du joueur.
+    // Cette méthode permet de récupérer la position actuelle du joueur sur l'axe horizontal.
     public HorizontalSide GetHorizontalSide()
     {
         return horizontalSide;

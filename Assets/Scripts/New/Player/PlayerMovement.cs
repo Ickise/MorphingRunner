@@ -1,9 +1,8 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, IUpdate
 {
-    // Ce script permet de remplacer MoveDecor pour que cette fois c'est réellement le joueur qui se déplace.
+    // Ce script remplace MoveDecor pour que, cette fois, ça soit réellement le joueur qui se déplace.
     [SerializeField, Header("Settings")] private float dodgeSpeed = 10f;
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float speedIncreaseInterval = 10f;
@@ -13,45 +12,54 @@ public class PlayerMovement : MonoBehaviour, IUpdate
 
     [SerializeField] private SideManager sideManager;
 
-    private bool isMoving;
-
+    private bool isDodging;
+    
     private Vector3 moveDirection = Vector3.forward;
-
+    
     private float time;
     private float targetXPosition;
-
+    
     private GameManager gameManager;
 
     private void OnEnable()
     {
-        // Abonnement à l'événement de déplacement du SideManager.
-        UpdateManager.RegisterUpdate(this);
-        gameManager = GameManager.instance;
-        sideManager.OnPositionChanged += DodgeToPosition;
+       Subscribe();
     }
 
     private void OnDisable()
     {
-        // Désabonnement à l'événement de déplacement du SideManager. Cela permet d'éviter les références nulles lors de la destruction de l'objet.
+      Unsubscribe();
+    }
+
+    private void Subscribe()
+    {
+        // Nous nous abonnons à l'événement de déplacement du SideManager et à l'UpdateManager.
+        UpdateManager.RegisterUpdate(this);
+        gameManager = GameManager.instance;
+        sideManager.OnHorizontalPositionChanged += HorizontalPositionDodge;
+    }
+
+    private void Unsubscribe()
+    {
+        // Nous nous désabonnons pour éviter les références nulles lors de la destruction de l’objet.
         UpdateManager.UnregisterUpdate(this);
-        sideManager.OnPositionChanged -= DodgeToPosition;
+        sideManager.OnHorizontalPositionChanged -= HorizontalPositionDodge;
     }
 
-    private void DodgeToPosition(float newPosition)
+    private void HorizontalPositionDodge(float newPosition)
     {
-        // Ici, je déclenche le déplacement vers une nouvelle position si le joueur n'est pas déjà en mouvement.
+        // Ici, nous déclenchons le déplacement vers une nouvelle position latérale.
         targetXPosition = newPosition;
-
-        isMoving = true;
+        isDodging = true;
     }
 
-    // Je récupère l'état de déplacement du joueur pour l'utiliser dans d'autre script
-    public bool IsMoving()
+    // Nous récupérons l'état de déplacement du joueur pour l'utiliser dans d'autres scripts.
+    public bool IsDodging()
     {
-        return isMoving;
+        return isDodging;
     }
 
-    // Cela permet de modifier la vitesse de dodge selon la transformation.
+    // Cette méthode permet de modifier la vitesse de dodge selon la transformation actuelle.
     public void SetDodgeSpeed(float speed)
     {
         dodgeSpeed = speed;
@@ -60,17 +68,20 @@ public class PlayerMovement : MonoBehaviour, IUpdate
     private void Move()
     {
         if (gameManager.GameIsOver()) return;
-        
-        // Je stocke la position du joueur pour éviter les transform.position inutiles.
 
+        // Nous stockons la position du joueur pour éviter d’appeler transform.position inutilement.
         var position = playerTransform.position;
+        // Le MoveTowards permet d'être sûr d'atteindre la position souhaitée grâce au temps voulu, tandis qu'un lerp, plus il s'approche de la position voulue
+        // plus il réalise l'action lentement.
         position = Vector3.MoveTowards(position,
             new Vector3(targetXPosition, position.y, position.z), dodgeSpeed * Time.deltaTime);
+        
         playerTransform.position = position;
 
+        // Si nous sommes suffisamment proches de la position cible, nous arrêtons le mouvement.
         if (Mathf.Abs(playerTransform.position.x - targetXPosition) <= 0.01f)
         {
-            isMoving = false;
+            isDodging = false;
         }
     }
 
@@ -80,15 +91,20 @@ public class PlayerMovement : MonoBehaviour, IUpdate
 
         time += Time.deltaTime;
 
-        playerTransform.position += moveDirection * (movementSpeed * Time.deltaTime);
+        // Nous faisons avancer le joueur tout droit en continu sans utiliser Time.unscaledDeltaTime, puisque nous voulons que le scale influe
+        // la vitesse de la course pendant le slow motion.
+        playerTransform.position += moveDirection * (movementSpeed * Time.deltaTime); 
 
+        // Toutes les X secondes, nous augmentons la vitesse de déplacement.
         if (time >= speedIncreaseInterval)
         {
             movementSpeed += speedIncreaseAmount;
             time = 0f;
         }
 
-        if (!isMoving) return;
+        // Cela permet de bloquer légèrement le joueur en l'empêchant d'abuser des déplacements latéraux. Il ne peut pas passer de l'extrême droite
+        // à l'extrême gauche en un clin d'oeil, mais avec un très lèger temps d'attente, et inversement.
+        if (!isDodging) return;
         Move();
     }
 }

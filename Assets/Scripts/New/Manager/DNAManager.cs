@@ -1,20 +1,24 @@
-using System;
 using UnityEngine;
 
 public class DNAManager : MonoBehaviour
 {
-    // Ce script va gèrer le stock d'ADN de chaque type d'ADN. Il va permettre d'en ajouter ou d'en enlever au stock. 
-    // C'est un Singleton pour récupèrer facilement toutes les fonctions dans d'autre script.
+    // Ce script n'existait pas auparavant et gère le stock d'ADN pour différents types (comme Pachy, Humain, etc.).
+    // Il permet d'ajouter ou d'enlever de l'ADN à chaque type, et de mettre à jour l'UI en conséquence.
     public static DNAManager instance;
 
-    private int tRexDNAStock = 5;
+    private int pachyDNAStock = 5;
     private int humanDNAStock = 5;
 
     private UIManager uiManager;
 
     private void Awake()
     {
-        // J'initialise correctement le Singleton.
+        PreInitialize();
+    }
+
+    private void PreInitialize()
+    {
+        // Initialisation du Singleton, si une instance existe déjà, nous la détruisons.
         if (instance == null)
         {
             instance = this;
@@ -27,64 +31,76 @@ public class DNAManager : MonoBehaviour
 
     private void Start()
     {
-        uiManager = UIManager.instance;
-        uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        uiManager = UIManager.instance; // Nous récupèrons l'instance du UIManager pour éviter les appels inutile de UIManager.instance
+        uiManager.UpdateDNAStockUI(pachyDNAStock, humanDNAStock); // Nous mettons à jour l'UI avec les stocks actuels.
     }
 
     public void AddDNA(DNAType.DnaType dnaType)
     {
-        // Cette méthode pourra être appelé dans PlayerCollision pour que lorsque le joueur touche de l'ADN alors il gagne celui-ci et l'ajoute au stock correspondant. 
+        // Cette méthode permet d'ajouter de l'ADN au stock en fonction du type d'ADN récupéré.
+        // Elle est appelée dans PlayerCollision pour ajouter de l'ADN lors de la collision.
+        // Un switch est adéquat pour ce genre de fonction.
         switch (dnaType)
         {
             case DNAType.DnaType.PachyDNA:
-                tRexDNAStock++;
+                pachyDNAStock++;
                 break;
             case DNAType.DnaType.HumanDNA:
                 humanDNAStock++;
                 break;
             case DNAType.DnaType.AlienDNA:
-                break;
+                break; // Pas de gestion pour l'ADN Alien pour l'instant.
         }
 
-        uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
+        // Après chaque ajout, nous mettons à jour l'UI avec les nouveaux stocks.
+        uiManager.UpdateDNAStockUI(pachyDNAStock, humanDNAStock);
     }
 
     public bool ConsumeDNA(DNAType.DnaType dnaType, int amount)
     {
-        // Cette méthode renvoie un bool pour savoir si le joueur a assez d'ADN pour se transformer et si oui, dans ce cas le joueur perd un nombre X pour changer
-        // de forme et obtenir les caractéristiques de la transformation. 
+        // Cette méthode permet de consommer un certain nombre d'ADN du stock, en vérifiant si le joueur a assez d'ADN.
+        // Si oui, l'ADN est retiré et la fonction renvoie true.
+        // Si non, elle renvoie false pour indiquer que l'action est impossible.
         switch (dnaType)
         {
             case DNAType.DnaType.AlienDNA:
                 return true;
             case DNAType.DnaType.PachyDNA:
-                if (tRexDNAStock >= amount)
+                if (pachyDNAStock >= amount)
                 {
-                    tRexDNAStock -= amount;
-                    uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
+                    pachyDNAStock -= amount;
+                    uiManager.UpdateDNAStockUI(pachyDNAStock, humanDNAStock);
                     return true;
                 }
+
                 break;
             case DNAType.DnaType.HumanDNA:
                 if (humanDNAStock >= amount)
                 {
                     humanDNAStock -= amount;
-                    uiManager.UpdateDNAStockUI(tRexDNAStock, humanDNAStock);
+                    uiManager.UpdateDNAStockUI(pachyDNAStock, humanDNAStock);
                     return true;
                 }
+
                 break;
         }
 
-        return false;
+        return false; // Si le stock est insuffisant, nous renvoyons false.
     }
 
     public int GetDNAStock(DNAType.DnaType dnaType)
     {
-        // Cette méthode permet de connaitre le nombre d'ADN en stock. Elle sera utile pour de l'UI ou d'autre fonction. 
+        // Cette méthode retourne la quantité d'ADN d'un type spécifique.
+        // Elle a été créée en prévention. 
         switch (dnaType)
         {
             case DNAType.DnaType.PachyDNA:
-                return tRexDNAStock;
+                return pachyDNAStock;
             case DNAType.DnaType.HumanDNA:
                 return humanDNAStock;
             default:

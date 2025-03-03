@@ -1,9 +1,8 @@
-using System.Collections;
 using UnityEngine;
 
 public class SlowMotion : MonoBehaviour, IUpdate
 {
-    // Séparation claire, ce script ne s'occupe que du slow motion.
+    // Séparation claire, ce script ne s'occupe que du slow motion. Auparavant, le slow motion se faisait dans TransformationChoices.
     [SerializeField, Header("References")] private GameObject transformationCanvas;
     [SerializeField] private InputManager inputManager;
 
@@ -24,7 +23,7 @@ public class SlowMotion : MonoBehaviour, IUpdate
     // Nous nous désinscrivons lorsque le script est désactivé pour éviter les erreurs et les null références.
     private void OnDisable()
     {
-       Unsubscribe();
+        Unsubscribe();
     }
 
     private void Subscribe()
@@ -65,18 +64,22 @@ public class SlowMotion : MonoBehaviour, IUpdate
         isSlowMotion = active;
     }
 
+    // Cette méthode provient de l'interface pour avoir accès à l'Update de l'UpdateManager.
     public void UpdateTick()
     {
+        // Si la partie est perdue, alors nous arrêtons l'Update.
         if (gameManager.GameIsOver())
         {
+            // Nous désactivons le slow motion pour éviter un bug, si le joueur meurt et qu'il a activé le slow motion, alors à la fin cela remet le timeScale à 1.
             DeactivateSlowMotion();
             return;
         }
 
+        // Cela permet d'activer le slow motion tant que le bool est true, lorsque le temps atteint 0 ou moins, alors on désactive le slow motion.
         if (!isSlowMotion) return;
 
         slowMotionTimer -= Time.unscaledDeltaTime;
-        
+
         if (slowMotionTimer <= 0f)
         {
             DeactivateSlowMotion();
