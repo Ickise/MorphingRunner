@@ -5,7 +5,7 @@ public class TransformationsChoices : MonoBehaviour
 {
     // Le script gère trop de choses (les transformations, le slow motion, les collisions, etc...), il aurait été plus judicieux de séparer les responsabilités.
     // La nomenclature est incorrecte, il faut utiliser [SerializeField] et mettre les variables en private pour éviter de les mettre en public.
-    // Je pouvais également faire des getter/setter ou bien des méthodes qui sont publics et qui permettent de modifier les variables privées.
+    // Nous pouvions également faire des getter/setter ou bien des méthodes qui sont publics et qui permettent de modifier les variables privées.
     [Header("Set up")] [SerializeField] GameObject transformationChoices;
     public GameObject playerMesh;
     [SerializeField] GameObject _deathEcran;
@@ -22,7 +22,7 @@ public class TransformationsChoices : MonoBehaviour
 
     [Header("Data")]
 
-    // Ici j'aurai dû centraliser le tout dans une classe.
+    // Ici nous aurions dû centraliser le tout dans une classe.
     bool slowMotionActive = false;
 
     public bool isTrex;
@@ -42,8 +42,8 @@ public class TransformationsChoices : MonoBehaviour
 
     void Update()
     {
-        // L'Update s'exécute chaque frame alors que j'aurai pu utiliser un Event/InputManager.
-        // J'aurai pu également faire cela : if (!Input.GetKeyDown(KeyCode.E)) return;
+        // L'Update s'exécute chaque frame alors que nous aurions pu utiliser un Event/InputManager.
+        // Nous aurions pu également faire cela : if (!Input.GetKeyDown(KeyCode.E)) return;
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!slowMotionActive)
@@ -52,7 +52,8 @@ public class TransformationsChoices : MonoBehaviour
             }
             else
             {
-                StopCoroutine(SlowMotion()); // Cela ne stoppe pas correctement la coroutine. Je pouvais simplement mettre if(!slowMotionActive) yield break; dans la coroutine.
+                StopCoroutine(SlowMotion()); // Cela ne stoppe pas correctement la coroutine. Nous pouvions simplement mettre if(!slowMotionActive)
+                                             // yield break; dans la coroutine.
                 ReturnInRealTime();
             }
         }

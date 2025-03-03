@@ -4,9 +4,10 @@ using System.Collections;
 public class TRexExplosion : MonoBehaviour
 {
     // Ce script permettait de faire l'abilité spécial du TRex.
+    // Problème de nomenclature et de lissibilité.
     [SerializeField] Rigidbody ObstacleRigidbody;
     
-    // Nous avions utilisé un simple OnTriggerEnter mais avec des CompareTag, ce qui n'est pas optimisé.
+    // Nous avions utilisé un simple OnTriggerEnter, mais avec des CompareTag, ce qui n'est pas optimisé.
     private void OnTriggerEnter(Collider other) 
     {
         if(!other.CompareTag("Collider") && !other.CompareTag("Sign"))
@@ -18,7 +19,7 @@ public class TRexExplosion : MonoBehaviour
         Scoring.scoring.score += 10;
         GameObject Obstacle = other.gameObject;
         ObstacleRigidbody = Obstacle.GetComponent<Rigidbody>();
-        ObstacleRigidbody.AddForce(transform.up * 35 + transform.forward * 30,ForceMode.Impulse); // Forward inverser !!!
+        ObstacleRigidbody.AddForce(transform.up * 35 + transform.forward * 30,ForceMode.Impulse); // Ancien commentaire : Forward inverser !!!
         ObstacleRigidbody.AddRelativeTorque(Vector3.right * 20, ForceMode.Impulse); 
         ObstacleRigidbody.useGravity = true;
         StartCoroutine(WaitFor(other));

@@ -12,9 +12,8 @@ public class DNAToCollect : MonoBehaviour
     [SerializeField]
     int[]
         listSpecialDNA =
-            new int[3]; // Cette variable est inutile, je peux tout simplement utiliser un int que j'incrémente ou décrémente
-
-    // et un enum pour savoir le type d'ADN que je possède. 
+            new int[3]; // Cette variable est inutile, nous pouvons tout simplement utiliser un int que nous incrémentons ou décrémentons.
+                        // // et un enum pour connaître le type d'ADN que le joueur possède. 
     [SerializeField] int numberOfDNAToTransform = 10;
 
     [SerializeField] Button[] buttonList = new Button[3];
@@ -31,13 +30,14 @@ public class DNAToCollect : MonoBehaviour
 
     void Update()
     {
-        // J'utilise une Update pour mettre à jour en permanence de l'UI au lieu d'utiliser un event... cela serait beaucoup plus optimisé.
-        // De plus, je mélange l'UI avec les collisions et la logique de gestion du stock. 
+        // Nous utilisons une Update pour mettre à jour en permanence de l'UI au lieu d'utiliser un event... cela serait beaucoup plus optimisé.
+        // De plus, nous mélangeons l'UI avec les collisions et la logique de gestion du stock. 
         numberOfSpecialDNA[0].text = "" + listSpecialDNA[0];
         numberOfSpecialDNA[1].text = "" + listSpecialDNA[1];
 
-        // Pourquoi utiliser une boucle for ici ? Surtout dans une Update. Je n'ai pas besoin d'appeler en permanence cette boucle et je n'ai même pas besoin
-        // d'avoir une boucle. En utilisant un event que j'invoke ou même une fonction, je peux très bien actualiser tout ce dont j'ai besoin. 
+        // Pourquoi utiliser une boucle for ici ? Surtout dans une Update. Nous n'avons pas besoin d'appeler en permanence cette boucle et
+        // nous n'avons même pas besoin d'avoir une boucle. En utilisant un event et si nous faisons Invoke() ou même une fonction,
+        // nous pouvons très bien actualiser tout ce dont nous avons besoin. 
         for (int i = 0; i < listSpecialDNA.Length; i++)
         {
             if (listSpecialDNA[i] >= numberOfDNAToTransform)
@@ -65,11 +65,11 @@ public class DNAToCollect : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // J'utilise un CompareTag, ce que je pourrai optimiser via une autre façon de faire. 
+        // Nous utilisons un CompareTag, ce que nous pouvons optimiser via une autre façon de faire. 
         if (other.CompareTag("DNA"))
         {
             // L'utilisation d'une boucle for et beaucoup trop gourmande, cela n'apporte rien. 
-            // Je peux juste utiliser un event pour optimiser tout ça et l'invoke lors de la collision ou même une fonction. 
+            // Nous pouvons juste utiliser un event pour optimiser tout ça et l'invoke lors de la collision ou même une fonction. 
             for (int i = 0; i < listDNA.Length; i++)
             {
                 if (other.name == listDNA[i].dnaName)

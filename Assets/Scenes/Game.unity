@@ -1184,6 +1184,7 @@ MonoBehaviour:
   alienObject: {fileID: 928607969}
   pachyObject: {fileID: 1115778441}
   transformationDuration: 10
+  numberOfDNAToConsume: 5
 --- !u!1 &675542596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1240,7 @@ GameObject:
   - component: {fileID: 784058368}
   - component: {fileID: 784058367}
   m_Layer: 5
-  m_Name: TRexDNANumber
+  m_Name: PachyDNANumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,7 +1374,7 @@ GameObject:
   - component: {fileID: 861577794}
   - component: {fileID: 861577793}
   m_Layer: 5
-  m_Name: TRexDNARenderer
+  m_Name: PachyDNARenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3282,7 +3283,7 @@ MonoBehaviour:
   scoreCanvas: {fileID: 916209397}
   scoreText: {fileID: 1876812625}
   finalScoreText: {fileID: 1323906890}
-  tRexDNAStock: {fileID: 784058367}
+  pachyDNAStock: {fileID: 784058367}
   humanDNAStock: {fileID: 1324236993}
 --- !u!1 &1788389566
 GameObject:

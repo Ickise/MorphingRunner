@@ -21,22 +21,34 @@ public class ProcéduralPoint : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Nous effectuons cette détection à chaque FixedUpdate, ce qui est bien pour la physique, mais cela pourrait être appelé uniquement si nécessaire.
+        
         RaycastHit hit;
         _floorDetected = false;
 
-        if(Physics.SphereCast(transform.position + _shift,_radius,_sensorDirection, out hit, _maxDetectionDistance,_layerMaskDetection))
+        // SphereCast peut être gourmand en performances s’il est utilisé sur plusieurs objets à chaque frame.
+        // Une alternative serait d’optimiser la fréquence des appels ou d’utiliser un simple Raycast si un SphereCast n’est pas nécessaire.
+        
+        if (Physics.SphereCast(transform.position + _shift, _radius, _sensorDirection, out hit, _maxDetectionDistance, _layerMaskDetection))
         {
-            _floorDistance = hit.distance - Vector3.Project(_shift,_sensorDirection).magnitude;
+            // Calcul de la distance du sol en tenant compte du décalage initial (_shift).
+            _floorDistance = hit.distance - Vector3.Project(_shift, _sensorDirection).magnitude;
             _floorDetected = true;
 
-            Debug.DrawLine(transform.position + _shift, hit.point, Color.green, Time.fixedDeltaTime);    
+            // Debug.DrawLine est utile pour le Debug, mais inutile en production.
+            // Il pourrait être encapsulé dans une condition #if UNITY_EDITOR pour éviter les calculs inutiles en build final.
+            Debug.DrawLine(transform.position + _shift, hit.point, Color.green, Time.fixedDeltaTime);
             return;
         }
 
-        Debug.DrawLine(transform.position + _shift, transform.position + _sensorDirection.normalized * _maxDetectionDistance, Color.red, Time.fixedDeltaTime);    
+        // Si aucun sol détecté, nous dessinons un rayon rouge pour visualiser l'absence de détection.
+        Debug.DrawLine(transform.position + _shift, transform.position + _sensorDirection.normalized * _maxDetectionDistance, Color.red, Time.fixedDeltaTime);
     }
+
     public float GetDistance()
     {
+        // Fonction publique pour récupérer la distance du sol.
+        // Cette fonction pourrait retourner également un bool pour éviter d'appeler une autre variable externe.
         return _floorDistance;
     }
 }

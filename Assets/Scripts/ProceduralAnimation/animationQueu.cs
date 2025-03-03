@@ -20,7 +20,7 @@ public class animationQueu : MonoBehaviour
     void Update()
     {
         if (_Once) StartCoroutine(Slerp());
-        // A chaque frame, nous démarrons une coroutine si "_Once" est vrai.
+        // A chaque frame, nous démarrons une coroutine si _Once est vrai.
         // Cela risque de créer plusieurs coroutines en parallèle, ce qui est une mauvaise pratique.
         // Nous aurions dû désactiver "_Once" juste après le lancement de la coroutine.
 
@@ -39,7 +39,7 @@ public class animationQueu : MonoBehaviour
         while (_Jambe)
         {
             float elapsedTime = 0f;
-            _Once = false; // Nous désactivons "_Once" dans la coroutine au lieu de le faire dans Update().  
+            _Once = false; // Nous désactivons _Once dans la coroutine au lieu de le faire dans Update().  
             // Il aurait été plus logique de le désactiver immédiatement après le StartCoroutine dans Update() pour éviter les appels multiples.
 
             while (elapsedTime < lerpSpeed)
@@ -48,7 +48,7 @@ public class animationQueu : MonoBehaviour
                 Rotate =  Mathf.Lerp(Base,NoBase,elapsedTime/lerpSpeed);
                 elapsedTime += Time.smoothDeltaTime; 
                 yield return null;
-                // Time.smoothDeltaTime n'est pas nécessaire ici, "Time.deltaTime" aurait suffi.
+                // Time.smoothDeltaTime n'est pas nécessaire ici, Time.deltaTime aurait suffi.
                 // smoothDeltaTime est utile uniquement dans certains cas spécifiques d'interpolation graphique.
             }
             yield return new WaitForSeconds(0.1f);
