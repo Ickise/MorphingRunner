@@ -71,7 +71,7 @@ public class SlowMotion : MonoBehaviour, IUpdate
         if (gameManager.GameIsOver())
         {
             // Nous désactivons le slow motion pour éviter un bug, si le joueur meurt et qu'il a activé le slow motion, alors à la fin cela remet le timeScale à 1.
-            DeactivateSlowMotion();
+            transformationCanvas.SetActive(false);
             return;
         }
 
