@@ -6,6 +6,10 @@ using TMPro;
 
 public class MenuGraphic : MonoBehaviour
 {
+    // Nous aurions pu mettre le tout dans un script SettingManager.
+    // Nous aurions pu supprimer les fonctions vides puisque cela consomme des performances.
+    // Problème de nomenclature et de lissibilité.
+    
     // Start is called before the first frame update
     [Header("Brigness Settings")]
     [SerializeField] private Slider _brignessSlider;
@@ -30,6 +34,7 @@ public class MenuGraphic : MonoBehaviour
 
     void Start()
     {
+        // Nous aurions dû réellement tout initialiser ici et non parfois dans les méthodes du script.
         resolutions = Screen.resolutions;
         _dropdownResolution.ClearOptions();
 
@@ -67,6 +72,7 @@ public class MenuGraphic : MonoBehaviour
         _fullScrean = false;
         _toggleFullScrean.isOn = false;
 
+        // Screen.currentResolution renvoie la résolution actuelle, mais il faut l'appliquer correctement.
         Resolution resolutions = Screen.currentResolution;
         Screen.SetResolution(resolutions.width,resolutions.height,Screen.fullScreen);
         _dropdownResolution.value = resolutions.height;
@@ -95,7 +101,7 @@ public class MenuGraphic : MonoBehaviour
     {
         PlayerPrefs.SetFloat("Brigness", _brigness);
         Debug.Log("Brig" + _brigness);
-        // Faire un post porésing ou un filtre et le régler avec ce paramètre
+        // Ancien commentaire : Faire un post porésing ou un filtre et le régler avec ce paramètre
         PlayerPrefs.SetInt("Quality", _quality);
         Debug.Log("Quality" + _quality);
         QualitySettings.SetQualityLevel(_quality);

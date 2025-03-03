@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ProcéduralPoint : MonoBehaviour
 {
+    // Problème de nomenclature et de lissibilité.
+    // Je pense même que cela était possible de rendre ce script, PointMove et animatonQueu plus générique.
+    // En encapsulant les comportements communs dans une classe mère et en dérivant les spécificités dans des classes filles.
+
     [SerializeField] private Vector3 _shift = Vector3.up;
     [SerializeField] private Vector3 _sensorDirection = Vector3.down;
     [SerializeField] private float _maxDetectionDistance = 2;

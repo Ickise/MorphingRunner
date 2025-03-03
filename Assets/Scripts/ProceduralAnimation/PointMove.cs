@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class PointMove : MonoBehaviour
 {
+    // Problème de nomenclature et de lissibilité.
+    // Je pense même que cela était possible de rendre ce script, animationQueu et ProcéduralPoint plus générique.
+    // En encapsulant les comportements communs dans une classe mère et en dérivant les spécificités dans des classes filles.
+
     [Header("Important")] [SerializeField] private Transform _refLeg;
     public Transform _targetLeg;
     [SerializeField] private LayerMask _layerMask;
@@ -29,15 +33,18 @@ public class PointMove : MonoBehaviour
 
     private void Update()
     {
-        if (_cameraShake == null)
+        if (_cameraShake == null) // A chaque frame, nous vérifions si "_cameraShake" est null. Nous aurions pu utiliser un return.
         {
             GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
             _cameraShake = Camera.GetComponent<CameraShake>();
+            // Nous aurions dû faire cette assignation une seule fois dans Start() pour éviter de chercher la caméra à chaque Update().
         }
 
-        if (_Once == false)
+        if (_Once == false) 
         {
             StartCoroutine(LerpLoopCoroutine());
+            // Cette ligne risque de lancer plusieurs coroutines simultanément si "_Once" est faux pendant plusieurs frames.
+            // Nous aurions dû passer "_Once" à true immédiatement après avoir appelé la coroutine pour éviter cela.
         }
 
         RaycastHit _hit;
@@ -48,14 +55,17 @@ public class PointMove : MonoBehaviour
             _PointOfHit = _hit.point + _VectorUp;
         }
 
-        if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f)
+        if (_Contact && Vector3.Distance(_targetLeg.position, _PointOfHit) > 0.15f) 
         {
             _targetLeg.position = _PointOfHit + _PointOfHitAdd + new Vector3(X, 0, 0);
+            // Nous modifions directement la position sans interpolation, ce qui peut créer un mouvement saccadé.
+            // Nous aurions pu utiliser Vector3.Lerp pour rendre le déplacement de la jambe plus smooth et agréable.
         }
 
-        if (_time > 1.5f)
+        if (_time > 1.5f) 
         {
-            _time = 0;
+            _time = 0; 
+            // _time est utilisé et rénitialisé alors que nous ne l'utilisons pas ailleurs. Nous pouvons le supprimer.
         }
 
         Horizontal();
@@ -63,6 +73,8 @@ public class PointMove : MonoBehaviour
 
     private void Horizontal()
     {
+        // Nous appelons SideManager.instance.GetHorizontalSide() à chaque frame dans Update(), alors qu’il pourrait être appelé seulement
+        // lorsqu'un changement de direction est détecté.
         switch (SideManager.instance.GetHorizontalSide())
         {
             case HorizontalSide.Left:
@@ -79,11 +91,11 @@ public class PointMove : MonoBehaviour
 
     private IEnumerator LerpLoopCoroutine()
     {
-        if (_Once == false && _Jambe)
+        if (_Once == false && _Jambe) 
         {
             _basePosition = transform.position + new Vector3(0, 0, -50);
             _newPosition = new Vector3(transform.position.x, transform.position.y, -40);
-            _Once = true;
+            _Once = true; // _Once est passé à true ici alors que nous le vérifions avant d’appeler cette coroutine.
         }
 
         while (_Jambe)
@@ -98,12 +110,17 @@ public class PointMove : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.1f);
-            StartCoroutine(_cameraShake.Shake(0.1f, 0.1f));
-            _scriptPointMove._Jambe = true;
+            StartCoroutine(_cameraShake.Shake(0.1f, 0.1f)); 
+            // Nous lançons une nouvelle coroutine Shake() à chaque passage ici, ce qui peut causer une accumulation.
+            // Il aurait fallu vérifier si une autre instance de la coroutine était déjà en cours pour éviter cela.
+
+            _scriptPointMove._Jambe = true; // Modifier directement une variable public d’un autre script est une mauvaise chose.
+            // Nous aurions dû encapsuler cela dans une méthode publique du script concerné.
+
             elapsedTime = 0f;
             while (elapsedTime < lerpSpeed)
             {
-                _scriptPointMove._Jambe = true;
+                _scriptPointMove._Jambe = true; // Redondance de cette ligne dans la même boucle.
                 Déplacement = Vector3.Lerp(_newPosition, _basePosition, elapsedTime / lerpSpeed);
                 elapsedTime += Time.deltaTime;
                 yield return null;
@@ -117,7 +134,7 @@ public class PointMove : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (_Contact == true)
+        if (_Contact == true) 
         {
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(_PointOfHit, 0.05f);
@@ -125,6 +142,7 @@ public class PointMove : MonoBehaviour
         else
         {
             return;
+            // Le return est inutile ici.
         }
     }
 }

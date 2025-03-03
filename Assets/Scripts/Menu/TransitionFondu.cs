@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TransitionFondu : MonoBehaviour
 {
+    // Nous aurions pu mettre le tout dans un script TransitionManager.
+    // Problème de nomenclature et de lissibilité.
+    
     [Header ("Classique")]
     [SerializeField] private bool _On;
     [SerializeField] private bool _active;
@@ -21,8 +24,10 @@ public class TransitionFondu : MonoBehaviour
 
     void Update()
     {
+        // Nous aurions pu mettre if (!_active) return pour éviter les exécutions inutiles.
         if (_active)
         {
+            // Premier fondu similaire au second.
             if (_On)
             {
                 if (_Alpha < 1)
@@ -45,6 +50,7 @@ public class TransitionFondu : MonoBehaviour
                 }
             }
 
+            // Second fondu redondant.
             if (_On)
             {
                 if (_AlphaBis > 0)
@@ -59,6 +65,7 @@ public class TransitionFondu : MonoBehaviour
             }
             else
             {
+                // Nous aurions du mettre if(alphaBis < 1) pour éviter une boucle infinie si jamais _AlphaBis est déjà à 1.
                 if (_Alpha > 0)
                 {
                     _PanelBis.SetActive(true);

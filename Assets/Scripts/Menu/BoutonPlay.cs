@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoutonPlay : MonoBehaviour
 {
+    // Même commentaire que pour le script BoutonOption. De plus, nous aurions pu concentré le tout dans un script MenuManager.
     [SerializeField] private CanvasGroup _canvasGroupMenuBasique;
     [SerializeField] private CanvasGroup _canvasGroupMenuPlay;
     [SerializeField] private GameObject _canvasMenuPlay;
@@ -11,13 +12,11 @@ public class BoutonPlay : MonoBehaviour
     [SerializeField] private float _Alpha = 1;
     [SerializeField] private bool _MenuPress;
     [SerializeField] private bool _playPress;
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_playPress && _MenuPress != true)

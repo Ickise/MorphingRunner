@@ -4,63 +4,63 @@ using UnityEngine;
 
 public class LoadPréf : MonoBehaviour
 {
+    // Problème de nomenclature et de lissibilité.
+
     [SerializeField] private bool _useLoad = false;
-    [Header("Audio Settings")]
-    [SerializeField] private MenuAudio _scriptMenuAudio;
 
-    [Header("Gameplay Settings")]
-    [SerializeField] private MenuGameplay _scriptMenuGameplay;
+    [Header("Audio Settings")] [SerializeField]
+    private MenuAudio _scriptMenuAudio;
 
-    [Header("Graphic Settings")]
-    [SerializeField] private MenuGraphic _scriptMenuGraphic;
+    [Header("Gameplay Settings")] [SerializeField]
+    private MenuGameplay _scriptMenuGameplay;
+
+    [Header("Graphic Settings")] [SerializeField]
+    private MenuGraphic _scriptMenuGraphic;
+
     private void Awake()
     {
-        if(_useLoad)
+        if (_useLoad) // Si le chargement est activé, nous chargeons les réglages.
         {
-            if(PlayerPrefs.HasKey("MasterVolume"))
+            // Chargement du volume du son
+            if (PlayerPrefs.HasKey("MasterVolume"))
             {
                 float localVolume = PlayerPrefs.GetFloat("MasterVolume");
                 _scriptMenuAudio.SliderVolume(localVolume);
-                _scriptMenuAudio.VolumeApply();  
+                _scriptMenuAudio.VolumeApply();
             }
             else
             {
-                _scriptMenuAudio.DefaultVolume();
+                _scriptMenuAudio.DefaultVolume(); // Si aucune valeur n'est trouvée, nous restaurons la valeur par défaut.
             }
 
-            if(PlayerPrefs.HasKey("InvertY"))
+            // Chargement du réglage de l'inversion de l'axe Y.
+            if (PlayerPrefs.HasKey("InvertY"))
             {
                 int localInvertY = PlayerPrefs.GetInt("InvertY");
-                if(localInvertY == 0)
-                {
-                    _scriptMenuGameplay._InvertY.isOn = false;
-                }
-                else
-                {
-                    _scriptMenuGameplay._InvertY.isOn = true;  
-                }
-               _scriptMenuGameplay.GameplayApply();
+                _scriptMenuGameplay._InvertY.isOn = localInvertY == 1;
+                _scriptMenuGameplay.GameplayApply();
             }
             else
             {
                 _scriptMenuGameplay.DefaultButton();
             }
-            
-            if(PlayerPrefs.HasKey("Sensitivity"))
+
+            // Chargement de la sensibilité.
+            if (PlayerPrefs.HasKey("Sensitivity"))
             {
                 float localSensitivity = PlayerPrefs.GetFloat("Sensitivity");
-
                 _scriptMenuGameplay.SliderSensitivity(localSensitivity);
                 _scriptMenuGameplay.GameplayApply();
             }
             else
             {
-                _scriptMenuGameplay.DefaultButton();  
+                _scriptMenuGameplay.DefaultButton();
             }
-            if(PlayerPrefs.HasKey("Brigness"))
+
+            // Chargement de la luminosité.
+            if (PlayerPrefs.HasKey("Brigness"))
             {
                 float localBrigness = PlayerPrefs.GetFloat("Brigness");
-
                 _scriptMenuGraphic.SliderBrigness(localBrigness);
                 _scriptMenuGraphic.AppliSettings();
             }
@@ -68,48 +68,42 @@ public class LoadPréf : MonoBehaviour
             {
                 _scriptMenuGraphic.DefaultButon();
             }
-            if(PlayerPrefs.HasKey("Quality"))
+
+            // Chargement de la qualité graphique.
+            if (PlayerPrefs.HasKey("Quality"))
             {
                 int localQuality = PlayerPrefs.GetInt("Quality");
-                
                 _scriptMenuGraphic.SetQuality(localQuality);
                 _scriptMenuGraphic.AppliSettings();
             }
             else
             {
-                _scriptMenuGraphic.DefaultButon();  
+                _scriptMenuGraphic.DefaultButon();
             }
-            if(PlayerPrefs.HasKey("FullScrean"))
+
+            // Chargement du mode plein écran.
+            if (PlayerPrefs.HasKey("FullScrean"))
             {
                 int localFullscrean = PlayerPrefs.GetInt("FullScrean");
-
-                if(localFullscrean == 0)
-                {
-                    _scriptMenuGraphic.SetFullScrean(false);
-                }  
-                else
-                {
-                    _scriptMenuGraphic.SetFullScrean(true);
-                }
+                _scriptMenuGraphic.SetFullScrean(localFullscrean == 1);
                 _scriptMenuGraphic.AppliSettings();
             }
             else
             {
-                _scriptMenuGraphic.DefaultButon(); 
+                _scriptMenuGraphic.DefaultButon();
             }
 
-            if(PlayerPrefs.HasKey("Resolution"))
+            // Chargement de la résolution.
+            if (PlayerPrefs.HasKey("Resolution"))
             {
                 int localResolution = PlayerPrefs.GetInt("Resolution");
-                
                 _scriptMenuGraphic.SetResolution(localResolution);
                 _scriptMenuGraphic.AppliSettings();
             }
             else
             {
-               _scriptMenuGraphic.DefaultButon(); 
+                _scriptMenuGraphic.DefaultButon();
             }
         }
     }
-
 }
