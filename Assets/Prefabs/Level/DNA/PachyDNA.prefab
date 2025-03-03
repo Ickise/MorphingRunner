@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3227040289726155341}
   - component: {fileID: 7584960546740669854}
   m_Layer: 0
-  m_Name: T-Rex DNA
+  m_Name: PachyDNA
   m_TagString: DNA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
