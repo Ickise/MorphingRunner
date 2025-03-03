@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2042925706083895745}
   - component: {fileID: 2042925706083895774}
   m_Layer: 5
-  m_Name: T-RexButton
+  m_Name: PachyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

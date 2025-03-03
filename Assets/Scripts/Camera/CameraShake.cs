@@ -7,6 +7,7 @@ public class CameraShake : MonoBehaviour
     // Le problème d'optimisation ici est la gestion de la position de la caméra à chaque frame avec l'utilisation de Random.Range.
     // Chaque appel à Random.Range est relativement coûteux, surtout si cette fonction est appelée fréquemment.
     // De plus, nous modifions directement la position à chaque fois ce qui pourrait nuire aux performances en particulier dans les jeux plus complexes.
+    // L'utilisation de Cinemachine sur un petit projet comme celui-ci aurait été très intéressant.
 
     public IEnumerator Shake(float duration, float magnitude)
     {

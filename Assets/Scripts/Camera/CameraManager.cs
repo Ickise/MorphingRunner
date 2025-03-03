@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    // L'utilisation de Cinemachine sur un petit projet comme celui-ci aurait été très intéressant.
     [SerializeField] private Transform _PointBase;
     [SerializeField] private Transform _PointDown;
     [SerializeField] private Transform _PointTrex;
