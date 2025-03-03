@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class DNARotation : MonoBehaviour
+public class DNARotation : MonoBehaviour, IUpdate
 {
     [SerializeField, Header("Settings")] private float speedRotation = 90f;
     [SerializeField] private float amplitude = 0.5f;
@@ -10,18 +11,26 @@ public class DNARotation : MonoBehaviour
     private Vector3 tempPosition;
     private Transform dnaTransform;
 
+    private void OnEnable()
+    {
+        UpdateManager.RegisterUpdate(this);
+    }
+
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterUpdate(this);
+    }
+
     private void Start()
     {
         dnaTransform = transform;
         positionOffset = dnaTransform.position;
     }
 
-    private void Update()
+    public void UpdateTick()
     {
-        // Rotation
         dnaTransform.Rotate(Vector3.up * speedRotation * Time.deltaTime, Space.Self);
 
-        // Vertical movement
         tempPosition = positionOffset;
         tempPosition.y += Mathf.Sin(Time.time * Mathf.PI * frequency) * amplitude;
 

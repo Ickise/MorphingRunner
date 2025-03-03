@@ -2,18 +2,20 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : MonoBehaviour, IUpdate
 {
     // Le ScoreManager me permet de gérer le score et d'ajouter du score lorsque certaine action se passe. 
     public static ScoreManager instance;
-    
+
     [SerializeField, Header("Settings")] private float timeToGainScore = 1f;
     [SerializeField] private int scoreToAdd = 1;
-    
+
     private GameManager gameManager;
     private UIManager uiManager;
-    
+
     private int playerScore;
+
+    private float time;
 
     private void Awake()
     {
@@ -27,12 +29,21 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        UpdateManager.RegisterUpdate(this);
+    }
+
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterUpdate(this);
+    }
+
     private void Start()
     {
-        // J'initialise les variables et la coroutine.
+        // J'initialise les variables.
         gameManager = GameManager.instance;
         uiManager = UIManager.instance;
-        StartCoroutine(GainScore());
     }
 
     // J'ai créé des void pour ajouter du score et connaître le score du joueur pour mettre à jour certaines données.
@@ -47,14 +58,16 @@ public class ScoreManager : MonoBehaviour
         return playerScore;
     }
 
-    // Une simple coroutine pour gagner du score tant que la partie n'est pas perdu. 
-    private IEnumerator GainScore()
+    public void UpdateTick()
     {
-        while (!gameManager.GameIsOver())
-        {
-            yield return new WaitForSecondsRealtime(timeToGainScore);
-            playerScore += scoreToAdd;
-            uiManager.UpdateScoreUI(playerScore);
-        }
+        if (gameManager.GameIsOver()) return;
+
+        time += Time.deltaTime;
+
+        if (time <= timeToGainScore) return;
+
+        playerScore += scoreToAdd;
+        uiManager.UpdateScoreUI(playerScore);
+        time = 0;
     }
 }

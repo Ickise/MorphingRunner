@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGenerator : MonoBehaviour
+public class LevelGenerator : MonoBehaviour, IUpdate
 {
     // Ce script remplace ChunGeneration. Il permet de générer des chunks de manière "procédurale" via un système de pool de chunks. 
     // Ce n'est pas réellement de la génération procédurale, mais plutôt de la réutilisation de chunks déjà créés.
@@ -18,6 +19,16 @@ public class LevelGenerator : MonoBehaviour
     private Queue<GameObject> inactiveChunks = new Queue<GameObject>();
 
     private int chunkNumber;
+
+    private void OnEnable()
+    {
+        UpdateManager.RegisterUpdate(this);
+    }
+
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterUpdate(this);
+    }
 
     private void Start()
     {
@@ -47,21 +58,7 @@ public class LevelGenerator : MonoBehaviour
             }
         }
     }
-
-    // Je suis un peu obligé d'utiliser une Update, je pense que le mieux serait de faire une UpdateManager et une interface IUpdate.
-    // En faisant cela, j'aurai une seule Update et tous les scripts ayant l'interface se lancerait dans l'Update.
-    private void Update()
-    {
-        if (activeChunks.Count == 0 || inactiveChunks.Count == 0) return;
-        GameObject firstChunk = activeChunks.Peek();
-
-        // Si le joueur a dépassé le premier chunk + chunkSize alors je recycle le chunk.
-        if (playerTransform.position.z > firstChunk.transform.position.z + chunkSize)
-        {
-            RecycleChunk();
-        }
-    }
-
+    
     private void RecycleChunk()
     {
         GameObject oldChunk = activeChunks.Dequeue();
@@ -76,6 +73,18 @@ public class LevelGenerator : MonoBehaviour
             newChunk.transform.position = lastChunkPosition + new Vector3(0f, 0f, chunkSize * chunkNumber);
             newChunk.SetActive(true);
             activeChunks.Enqueue(newChunk);
+        }
+    }
+
+    public void UpdateTick()
+    {
+        if (activeChunks.Count == 0 || inactiveChunks.Count == 0) return;
+        GameObject firstChunk = activeChunks.Peek();
+
+        // Si le joueur a dépassé le premier chunk + chunkSize alors je recycle le chunk.
+        if (playerTransform.position.z > firstChunk.transform.position.z + chunkSize)
+        {
+            RecycleChunk();
         }
     }
 }
