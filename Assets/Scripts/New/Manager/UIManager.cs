@@ -3,19 +3,25 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    // Ce script est un simple UIManager qui fait apparaitre les canvas lorsque la fonction est appelé, etc... 
+    // Ce script est un simple UIManager qui fait apparaître les canvas lorsque la fonction est appelée, etc... Il n'existait pas auparavant. 
     public static UIManager instance;
 
     [SerializeField, Header("References")] private GameObject deathCanvas;
     [SerializeField] private GameObject scoreCanvas;
-    
+
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI finalScoreText;
-    [SerializeField] private TextMeshProUGUI tRexDNAStock;
+    [SerializeField] private TextMeshProUGUI pachyDNAStock;
     [SerializeField] private TextMeshProUGUI humanDNAStock;
 
     private void Awake()
     {
+        PreInitialize();
+    }
+
+    private void PreInitialize()
+    {
+        // Initialisation correcte du Singleton pour qu'il n'y ait qu'une seule instance de UIManager.
         if (instance == null)
         {
             instance = this;
@@ -28,7 +34,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        Initialize();
+        Initialize(); // Initialisation des éléments d'UI.
     }
 
     private void Initialize()
@@ -37,25 +43,24 @@ public class UIManager : MonoBehaviour
         scoreText.text = "Score: 0";
     }
 
-    // L'apparition du canvas lors de la mort.
+    // Active ou désactive l'UI et la met à jour lorsque la partie est perdue.
     public void GameOverUI()
     {
         deathCanvas.SetActive(true);
         scoreCanvas.SetActive(false);
         finalScoreText.text = "Score: " + ScoreManager.instance.GetScore();
     }
-    
-    // Cette fonction me permet tout simplement de mettre à jour l'UI du score du joueur lors de certaines actions.
+
+    // Cette fonction permet de mettre à jour le score du joueur pendant la partie.
     public void UpdateScoreUI(int scoreValue)
     {
         scoreText.text = "Score: " + scoreValue;
     }
 
-    // Cette fonction me permet tout simplement de mettre à jour l'UI du stock d'ADN lors de certaines actions.
-    // Je pourrai faire un système d'event avec de l'abonnement ou bien une interface et grâce à ça je notifie tous les subscribers.
-    public void UpdateDNAStockUI(int tRexStock, int humanStock)
+    // Cette fonction permet de mettre à jour les stocks d'ADN (Pachy et Humain) dans l'UI pendant la partie.
+    public void UpdateDNAStockUI(int pachyStock, int humanStock)
     {
-        tRexDNAStock.text = "" + tRexStock;
+        pachyDNAStock.text = "" + pachyStock;
         humanDNAStock.text = "" + humanStock;
     }
 }

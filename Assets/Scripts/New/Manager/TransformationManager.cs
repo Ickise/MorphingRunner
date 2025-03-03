@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class TransformationManager : MonoBehaviour
 {
-    // Séparation claire, ce script ne s'occupe que de la gestion des transformations.
+    // Ce script remplace TransformationChoices et gère les transformations du joueur en différentes formes.
+    
     [SerializeField, Header("References")] private PlayerMovement playerMovement;
+    
     [SerializeField] private SlowMotion slowMotion;
 
     [SerializeField] private GameObject humanObject;
@@ -15,24 +17,33 @@ public class TransformationManager : MonoBehaviour
 
     [SerializeField, Header("Settings")] private float transformationDuration = 10f;
 
+    [SerializeField] private int numberOfDNAToConsume = 5;
+    
     private Character currentCharacter;
 
     private DNAManager dnaManager;
 
     private List<GameObject> allCharacterObjects;
 
-    // Stocke toutes les transformations en mémoire pour éviter de recréer les objets à chaque fois. Je pourrais tout simplement ajouter d'autres transformations si besoin.
+    // Dictionnaire pour stocker les types de transformations disponibles (ex: Alien, Pachy, Human) et leurs classes associées.
     private Dictionary<Type, Character> characters = new Dictionary<Type, Character>
     {
-        { typeof(PachyCharacter), new PachyCharacter() },
-        { typeof(AlienCharacter), new AlienCharacter() },
-        { typeof(HumanCharacter), new HumanCharacter() }
+        { typeof(PachyCharacter), new PachyCharacter() }, // Transformation en Pachy
+        { typeof(AlienCharacter), new AlienCharacter() }, // Transformation en Alien
+        { typeof(HumanCharacter), new HumanCharacter() }  // Transformation en Humain
     };
 
     private void Start()
     {
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        // Initialisation des données.
         dnaManager = DNAManager.instance;
 
+        // Nous attribuons le personnage correspondant à chaque prefab.
         characters[typeof(HumanCharacter)].SetCharacterObject(humanObject);
         characters[typeof(AlienCharacter)].SetCharacterObject(alienObject);
         characters[typeof(PachyCharacter)].SetCharacterObject(pachyObject);
@@ -43,52 +54,55 @@ public class TransformationManager : MonoBehaviour
         currentCharacter.ChangeSkin(allCharacterObjects);
     }
 
-    // J'utilise une méthode pour définir le personnage actuel. Je pourrais la modifier pour rajouter le changement d'autres paramètres tel que le mesh, etc...
-    // Définit le personnage actuel en utilisant le dictionnaire
+    // Méthode générique pour définir le Character actuel. Cette méthode peut facilement être modifiée pour inclure des changements de mesh,
+    // de textures, etc... Elle permet de centraliser la logique du changement de personnage.
     private void SetCharacter<T>() where T : Character
     {
         currentCharacter = characters[typeof(T)];
-        playerMovement.SetDodgeSpeed(currentCharacter.DodgeSpeed);
+        playerMovement.SetDodgeSpeed(currentCharacter.DodgeSpeed); // Nous assignons la vitesse de dodge selon fonction le Character.
 
+        // Nous changeons le mesh du personnage.
         currentCharacter.ChangeSkin(allCharacterObjects);
     }
 
-    // J'ai centralisé la gestion des transformations via une classe Character dont hérité les classes TRexCharacter, AlienCharacter et HumanCharacter.
-    // Cela permettra de rajouter facilement d'autres transformations.
-
-    //Cette méthode permet d'évite de recréer les objets inutilement à chaque transformation pour économiser de la mémoire.
-
+    // Ces méthodes permettent de transformer le joueur en différents personnages. J'ai assigné ces fonctions aux différents boutons.
     public void AlienTransformation() => TransformInto<AlienCharacter>(DNAType.DnaType.AlienDNA);
     public void PachyTransformation() => TransformInto<PachyCharacter>(DNAType.DnaType.PachyDNA);
     public void HumanTransformation() => TransformInto<HumanCharacter>(DNAType.DnaType.HumanDNA);
 
-    // J'ai utilisé une generic pour optimiser. 
+    // Cette méthode générique permet de réaliser la transformation.
     private void TransformInto<T>(DNAType.DnaType dnaType) where T : Character
     {
-        if (!dnaManager.ConsumeDNA(dnaType, 5))
+        // Si le joueur n'a pas suffisamment d'ADN, la transformation échoue.
+        if (!dnaManager.ConsumeDNA(dnaType, numberOfDNAToConsume))
         {
             slowMotion.DeactivateSlowMotion();
             return;
         }
 
+        // Sinon, nous effectuons la transformation en appelant SetCharacter pour changer le personnage.
         SetCharacter<T>();
         slowMotion.DeactivateSlowMotion();
 
-
+        // Si la transformation n'est pas AlienCharacter, alors nous lançons une coroutine pour retourner dans la forme Alien.
         if (typeof(T) != typeof(AlienCharacter))
         {
             StartCoroutine(RevertToAlienAfterDuration());
         }
     }
 
+    // Cela permet de savoir quel forme le joueur a actuellement. Nous l'utilisons notamment dans PlayerCollision pour utiliser les SpecificAbility lors
+    // de collision avec d'autre objet.
     public Character GetCurrentCharacter()
     {
         return currentCharacter;
     }
 
+    // La coroutine permet de revenir automatiquement à la forme Alien après un certain temps.
     private IEnumerator RevertToAlienAfterDuration()
     {
         yield return new WaitForSeconds(transformationDuration);
+        
         SetCharacter<AlienCharacter>();
     }
 }

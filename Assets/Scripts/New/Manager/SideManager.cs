@@ -31,10 +31,10 @@ public class SideManager : MonoBehaviour
 
     private void Awake()
     {
-        Initialize();
+        PreInitialize();
     }
 
-    private void Initialize()
+    private void PreInitialize()
     {
         // Initialisation correcte du Singleton.
         if (instance == null)
@@ -62,6 +62,11 @@ public class SideManager : MonoBehaviour
     }
 
     private void Start()
+    {
+        Initialize();
+    }
+
+    private void Initialize()
     {
         horizontalSide = HorizontalSide.Mid; // Nous définissons la position initiale du joueur.
     }
