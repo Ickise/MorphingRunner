@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SlowMotion : MonoBehaviour
+public class SlowMotion : MonoBehaviour, IUpdate
 {
     // Séparation claire, ce script ne s'occupe que du slow motion.
     [SerializeField, Header("References")] private GameObject transformationCanvas;
@@ -11,37 +11,53 @@ public class SlowMotion : MonoBehaviour
 
     private bool isSlowMotion;
 
+    private float slowMotionTimer;
+
     private GameManager gameManager;
 
-    // L'utilisation d'événement permet d'éviter d’appeler Update() en permanence et cela améliore les performances.
+    // Nous souscrivons à l'événement lorsque le script est activé pour utiliser les Inputs et s'abonner à l'UpdateManager.
     private void OnEnable()
     {
+        Subscribe();
+    }
+
+    // Nous nous désinscrivons lorsque le script est désactivé pour éviter les erreurs et les null références.
+    private void OnDisable()
+    {
+       Unsubscribe();
+    }
+
+    private void Subscribe()
+    {
+        UpdateManager.RegisterUpdate(this);
         inputManager.SlowMotionEvent += ActivateSlowMotion;
     }
 
-    private void OnDisable()
+    private void Unsubscribe()
     {
+        UpdateManager.UnregisterUpdate(this);
         inputManager.SlowMotionEvent -= ActivateSlowMotion;
     }
 
     private void Start()
     {
-        gameManager = GameManager.instance;
+        gameManager =
+            GameManager.instance; // Nous récupérons l'instance du GameManager pour éviter les GameManager.instance et optimiser.
     }
 
     private void ActivateSlowMotion()
     {
-        if (isSlowMotion) return;
-        StartCoroutine(SlowMotionCoroutine());
+        if (isSlowMotion) return; // Si le slow motion est déjà activé, nous faisons un return.
+        SetSlowMotion(0.5f, true); // Au contraire, s'il n'est pas activé alors nous lançons le slow motion.
+        slowMotionTimer = slowMotionDuration; // Ici, je set la valeur de slowMotionTimer
     }
 
     public void DeactivateSlowMotion()
     {
-        SetSlowMotion(1f, false);
-        StopAllCoroutines(); // Cela évite que plusieurs instances de la coroutine tournent en parallèle.
+        SetSlowMotion(1f, false); // Nous remettons le temps à la normale et nous désactivons l'effet.
     }
 
-    // J'ai créé une méthode pour éviter de répéter le code. Je set le slow motion et j'active/désactive le canvas.
+    // Méthode pour éviter la répétition du code : elle change le timeScale et active/désactive le canvas.
     private void SetSlowMotion(float timeScale, bool active)
     {
         Time.timeScale = timeScale;
@@ -49,18 +65,21 @@ public class SlowMotion : MonoBehaviour
         isSlowMotion = active;
     }
 
-    private IEnumerator SlowMotionCoroutine()
+    public void UpdateTick()
     {
-        SetSlowMotion(0.5f, true);
-        yield return
-            new WaitForSecondsRealtime(
-                slowMotionDuration); // WaitForSecondsRealtime ne dépend pas du timeScale. Cela permet de ne pas ralentir le temps d'attente.
         if (gameManager.GameIsOver())
         {
-            transformationCanvas.SetActive(false);
-            yield break;
+            DeactivateSlowMotion();
+            return;
         }
 
-        SetSlowMotion(1f, false);
+        if (!isSlowMotion) return;
+
+        slowMotionTimer -= Time.unscaledDeltaTime;
+        
+        if (slowMotionTimer <= 0f)
+        {
+            DeactivateSlowMotion();
+        }
     }
 }

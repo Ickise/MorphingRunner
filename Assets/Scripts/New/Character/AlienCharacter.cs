@@ -6,6 +6,7 @@ public class AlienCharacter : Character
 
     public override void SpecialAbility(GameObject obstacle, Transform playerTransform)
     {
-        // Specific ability
+        // L'abilité spécifique du personnage.
+        // L'alien n'en a pas puisque c'est le personnage de base.
     }
 }

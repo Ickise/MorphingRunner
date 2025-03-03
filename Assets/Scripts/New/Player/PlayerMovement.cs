@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour, IUpdate
 
     private void Move()
     {
+        if (gameManager.GameIsOver()) return;
+        
         // Je stocke la position du joueur pour éviter les transform.position inutiles.
 
         var position = playerTransform.position;
