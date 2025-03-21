@@ -51,7 +51,6 @@ public class InputManager : ScriptableObject, PlayerInputAction.IPlayerActions
    {
       if (!context.performed) return;
       LeftMoveEvent.Invoke(); // Cela notifie tous les abonnés que l'événement mouvement à gauche a été déclenché.
-      Debug.Log("Left Move");
    }
 
    // Cette méthode est appelée lorsque le joueur appuie sur la touche D.
